@@ -1,0 +1,714 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		49CEEB9ABAA3EF7A1CCA6F61 /* Pods_VodaFoodies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 554FF41C2F0035BC9D671657 /* Pods_VodaFoodies.framework */; };
+		6B680607037036D3EFDF3850 /* Pods_VodaFoodiesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48B353CC71B73EAB1795DF76 /* Pods_VodaFoodiesTests.framework */; };
+		8A1248DF1F3AE44800C80DFF /* PhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1248DE1F3AE44800C80DFF /* PhoneViewController.swift */; };
+		8AA4FA671F32DFAE00048C90 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8AA4FA661F32DFAE00048C90 /* GoogleService-Info.plist */; };
+		8AA4FA681F32E00800048C90 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8AA4FA661F32DFAE00048C90 /* GoogleService-Info.plist */; };
+		8AA768E51F34C6D7005BF1AB /* LoginMgr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA768E41F34C6D7005BF1AB /* LoginMgr.swift */; };
+		8AD527A41F32DE5A00CDACA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD527A31F32DE5A00CDACA3 /* AppDelegate.swift */; };
+		8AD527A61F32DE5A00CDACA3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD527A51F32DE5A00CDACA3 /* LoginViewController.swift */; };
+		8AD527A91F32DE5A00CDACA3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AD527A71F32DE5A00CDACA3 /* Main.storyboard */; };
+		8AD527AE1F32DE5A00CDACA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AD527AD1F32DE5A00CDACA3 /* Assets.xcassets */; };
+		8AD527B11F32DE5A00CDACA3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AD527AF1F32DE5A00CDACA3 /* LaunchScreen.storyboard */; };
+		8AD527BC1F32DE5A00CDACA3 /* VodaFoodiesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD527BB1F32DE5A00CDACA3 /* VodaFoodiesTests.swift */; };
+		8AEC76191F36036500547422 /* OpenOrderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AEC76181F36036500547422 /* OpenOrderCell.swift */; };
+		8AEC761B1F36037700547422 /* MenuItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AEC761A1F36037700547422 /* MenuItemCell.swift */; };
+		8AEC761E1F3609EF00547422 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AEC761D1F3609EF00547422 /* User.swift */; };
+		8AEC76201F360A0000547422 /* Venue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AEC761F1F360A0000547422 /* Venue.swift */; };
+		8AEC76221F360A1200547422 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AEC76211F360A1200547422 /* MenuItem.swift */; };
+		8AEC76241F360BDF00547422 /* VenueOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AEC76231F360BDF00547422 /* VenueOrder.swift */; };
+		8AEC76261F360E0800547422 /* UserOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AEC76251F360E0800547422 /* UserOrder.swift */; };
+		8AEC76281F36113B00547422 /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AEC76271F36113B00547422 /* FirebaseManager.swift */; };
+		8AFD7E601F35EB6400E57A20 /* OpenOrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFD7E5F1F35EB6400E57A20 /* OpenOrdersViewController.swift */; };
+		8AFD7E621F35EB7300E57A20 /* MyOrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFD7E611F35EB7300E57A20 /* MyOrdersViewController.swift */; };
+		8AFD7E641F35EB8700E57A20 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFD7E631F35EB8700E57A20 /* ProfileViewController.swift */; };
+		8AFD7E681F35EBB800E57A20 /* OrderDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFD7E671F35EBB800E57A20 /* OrderDetailsViewController.swift */; };
+		8AFD7E6B1F35EBF700E57A20 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFD7E6A1F35EBF700E57A20 /* BaseViewController.swift */; };
+		8AFD7E6F1F35EC4000E57A20 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFD7E6E1F35EC4000E57A20 /* BaseNavigationController.swift */; };
+		8AFD7E711F35EC5900E57A20 /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFD7E701F35EC5900E57A20 /* BaseTabBarController.swift */; };
+		8AFD7E731F35EC9B00E57A20 /* VenuesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFD7E721F35EC9B00E57A20 /* VenuesTableViewController.swift */; };
+		8AFD7E751F35ED5B00E57A20 /* MenueTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFD7E741F35ED5B00E57A20 /* MenueTableViewController.swift */; };
+		8AFD7E7B1F35EEDD00E57A20 /* OrderListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFD7E7A1F35EEDD00E57A20 /* OrderListViewController.swift */; };
+		8AFD7E7D1F35EEE900E57A20 /* PeopleListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFD7E7C1F35EEE900E57A20 /* PeopleListViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8AD527B81F32DE5A00CDACA3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8AD527981F32DE5A00CDACA3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8AD5279F1F32DE5A00CDACA3;
+			remoteInfo = VodaFoodies;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		48B353CC71B73EAB1795DF76 /* Pods_VodaFoodiesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VodaFoodiesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4EE5A742978F522433889DAC /* Pods-VodaFoodies.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VodaFoodies.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VodaFoodies/Pods-VodaFoodies.debug.xcconfig"; sourceTree = "<group>"; };
+		554FF41C2F0035BC9D671657 /* Pods_VodaFoodies.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VodaFoodies.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		64F11B373F515E4507C26797 /* Pods-VodaFoodiesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VodaFoodiesTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VodaFoodiesTests/Pods-VodaFoodiesTests.debug.xcconfig"; sourceTree = "<group>"; };
+		8A1248DE1F3AE44800C80DFF /* PhoneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneViewController.swift; sourceTree = "<group>"; };
+		8AA4FA661F32DFAE00048C90 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8AA768E41F34C6D7005BF1AB /* LoginMgr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginMgr.swift; sourceTree = "<group>"; };
+		8AD527A01F32DE5A00CDACA3 /* VodaFoodies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VodaFoodies.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8AD527A31F32DE5A00CDACA3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8AD527A51F32DE5A00CDACA3 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = ../LoginViewController.swift; sourceTree = "<group>"; };
+		8AD527A81F32DE5A00CDACA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8AD527AD1F32DE5A00CDACA3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8AD527B01F32DE5A00CDACA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8AD527B21F32DE5A00CDACA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8AD527B71F32DE5A00CDACA3 /* VodaFoodiesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VodaFoodiesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8AD527BB1F32DE5A00CDACA3 /* VodaFoodiesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VodaFoodiesTests.swift; sourceTree = "<group>"; };
+		8AD527BD1F32DE5A00CDACA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8AEC76181F36036500547422 /* OpenOrderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenOrderCell.swift; sourceTree = "<group>"; };
+		8AEC761A1F36037700547422 /* MenuItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuItemCell.swift; sourceTree = "<group>"; };
+		8AEC761D1F3609EF00547422 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		8AEC761F1F360A0000547422 /* Venue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Venue.swift; sourceTree = "<group>"; };
+		8AEC76211F360A1200547422 /* MenuItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
+		8AEC76231F360BDF00547422 /* VenueOrder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VenueOrder.swift; sourceTree = "<group>"; };
+		8AEC76251F360E0800547422 /* UserOrder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserOrder.swift; sourceTree = "<group>"; };
+		8AEC76271F36113B00547422 /* FirebaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
+		8AFD7E5F1F35EB6400E57A20 /* OpenOrdersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenOrdersViewController.swift; sourceTree = "<group>"; };
+		8AFD7E611F35EB7300E57A20 /* MyOrdersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyOrdersViewController.swift; sourceTree = "<group>"; };
+		8AFD7E631F35EB8700E57A20 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		8AFD7E671F35EBB800E57A20 /* OrderDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderDetailsViewController.swift; sourceTree = "<group>"; };
+		8AFD7E6A1F35EBF700E57A20 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		8AFD7E6E1F35EC4000E57A20 /* BaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
+		8AFD7E701F35EC5900E57A20 /* BaseTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
+		8AFD7E721F35EC9B00E57A20 /* VenuesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VenuesTableViewController.swift; sourceTree = "<group>"; };
+		8AFD7E741F35ED5B00E57A20 /* MenueTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenueTableViewController.swift; sourceTree = "<group>"; };
+		8AFD7E7A1F35EEDD00E57A20 /* OrderListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderListViewController.swift; sourceTree = "<group>"; };
+		8AFD7E7C1F35EEE900E57A20 /* PeopleListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleListViewController.swift; sourceTree = "<group>"; };
+		A5BE0DDBCA152954A8FEB561 /* Pods-VodaFoodies.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VodaFoodies.release.xcconfig"; path = "Pods/Target Support Files/Pods-VodaFoodies/Pods-VodaFoodies.release.xcconfig"; sourceTree = "<group>"; };
+		F323394F720EAD18A4C476AF /* Pods-VodaFoodiesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VodaFoodiesTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-VodaFoodiesTests/Pods-VodaFoodiesTests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8AD5279D1F32DE5A00CDACA3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49CEEB9ABAA3EF7A1CCA6F61 /* Pods_VodaFoodies.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8AD527B41F32DE5A00CDACA3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B680607037036D3EFDF3850 /* Pods_VodaFoodiesTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8AA768E31F34C697005BF1AB /* Business */ = {
+			isa = PBXGroup;
+			children = (
+				8AEC761C1F3609D200547422 /* Models */,
+				8AA768E41F34C6D7005BF1AB /* LoginMgr.swift */,
+				8AEC76271F36113B00547422 /* FirebaseManager.swift */,
+			);
+			path = Business;
+			sourceTree = "<group>";
+		};
+		8AD527971F32DE5A00CDACA3 = {
+			isa = PBXGroup;
+			children = (
+				8AD527A21F32DE5A00CDACA3 /* VodaFoodies */,
+				8AD527BA1F32DE5A00CDACA3 /* VodaFoodiesTests */,
+				8AD527A11F32DE5A00CDACA3 /* Products */,
+				9E73C53C9766D6D42BC88D13 /* Pods */,
+				C7B651EAD66D47DF6CA5DE67 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		8AD527A11F32DE5A00CDACA3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8AD527A01F32DE5A00CDACA3 /* VodaFoodies.app */,
+				8AD527B71F32DE5A00CDACA3 /* VodaFoodiesTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8AD527A21F32DE5A00CDACA3 /* VodaFoodies */ = {
+			isa = PBXGroup;
+			children = (
+				8AFD7E5E1F35EA0000E57A20 /* VieControllers */,
+				8AA768E31F34C697005BF1AB /* Business */,
+				8AD527A31F32DE5A00CDACA3 /* AppDelegate.swift */,
+				8AD527A71F32DE5A00CDACA3 /* Main.storyboard */,
+				8AD527AD1F32DE5A00CDACA3 /* Assets.xcassets */,
+				8AD527AF1F32DE5A00CDACA3 /* LaunchScreen.storyboard */,
+				8AD527B21F32DE5A00CDACA3 /* Info.plist */,
+				8AA4FA661F32DFAE00048C90 /* GoogleService-Info.plist */,
+			);
+			path = VodaFoodies;
+			sourceTree = "<group>";
+		};
+		8AD527BA1F32DE5A00CDACA3 /* VodaFoodiesTests */ = {
+			isa = PBXGroup;
+			children = (
+				8AD527BB1F32DE5A00CDACA3 /* VodaFoodiesTests.swift */,
+				8AD527BD1F32DE5A00CDACA3 /* Info.plist */,
+			);
+			path = VodaFoodiesTests;
+			sourceTree = "<group>";
+		};
+		8AEC76171F36032700547422 /* CustomCells */ = {
+			isa = PBXGroup;
+			children = (
+				8AEC76181F36036500547422 /* OpenOrderCell.swift */,
+				8AEC761A1F36037700547422 /* MenuItemCell.swift */,
+			);
+			path = CustomCells;
+			sourceTree = "<group>";
+		};
+		8AEC761C1F3609D200547422 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8AEC761D1F3609EF00547422 /* User.swift */,
+				8AEC761F1F360A0000547422 /* Venue.swift */,
+				8AEC76211F360A1200547422 /* MenuItem.swift */,
+				8AEC76251F360E0800547422 /* UserOrder.swift */,
+				8AEC76231F360BDF00547422 /* VenueOrder.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8AFD7E5E1F35EA0000E57A20 /* VieControllers */ = {
+			isa = PBXGroup;
+			children = (
+				8AEC76171F36032700547422 /* CustomCells */,
+				8AFD7E691F35EBD000E57A20 /* BaseViews */,
+				8AD527A51F32DE5A00CDACA3 /* LoginViewController.swift */,
+				8AFD7E5F1F35EB6400E57A20 /* OpenOrdersViewController.swift */,
+				8AFD7E611F35EB7300E57A20 /* MyOrdersViewController.swift */,
+				8AFD7E631F35EB8700E57A20 /* ProfileViewController.swift */,
+				8AFD7E671F35EBB800E57A20 /* OrderDetailsViewController.swift */,
+				8AFD7E721F35EC9B00E57A20 /* VenuesTableViewController.swift */,
+				8AFD7E741F35ED5B00E57A20 /* MenueTableViewController.swift */,
+				8AFD7E7A1F35EEDD00E57A20 /* OrderListViewController.swift */,
+				8AFD7E7C1F35EEE900E57A20 /* PeopleListViewController.swift */,
+				8A1248DE1F3AE44800C80DFF /* PhoneViewController.swift */,
+			);
+			name = VieControllers;
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		8AFD7E691F35EBD000E57A20 /* BaseViews */ = {
+			isa = PBXGroup;
+			children = (
+				8AFD7E6A1F35EBF700E57A20 /* BaseViewController.swift */,
+				8AFD7E6E1F35EC4000E57A20 /* BaseNavigationController.swift */,
+				8AFD7E701F35EC5900E57A20 /* BaseTabBarController.swift */,
+			);
+			path = BaseViews;
+			sourceTree = "<group>";
+		};
+		9E73C53C9766D6D42BC88D13 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4EE5A742978F522433889DAC /* Pods-VodaFoodies.debug.xcconfig */,
+				A5BE0DDBCA152954A8FEB561 /* Pods-VodaFoodies.release.xcconfig */,
+				64F11B373F515E4507C26797 /* Pods-VodaFoodiesTests.debug.xcconfig */,
+				F323394F720EAD18A4C476AF /* Pods-VodaFoodiesTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C7B651EAD66D47DF6CA5DE67 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				554FF41C2F0035BC9D671657 /* Pods_VodaFoodies.framework */,
+				48B353CC71B73EAB1795DF76 /* Pods_VodaFoodiesTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8AD5279F1F32DE5A00CDACA3 /* VodaFoodies */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8AD527C01F32DE5A00CDACA3 /* Build configuration list for PBXNativeTarget "VodaFoodies" */;
+			buildPhases = (
+				2A512D49112DFA3547BF0EB6 /* [CP] Check Pods Manifest.lock */,
+				8AD5279C1F32DE5A00CDACA3 /* Sources */,
+				8AD5279D1F32DE5A00CDACA3 /* Frameworks */,
+				8AD5279E1F32DE5A00CDACA3 /* Resources */,
+				5D4470BAC77BF5E97F87DFF6 /* [CP] Embed Pods Frameworks */,
+				1D2DD153B6377C73E9194EF0 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VodaFoodies;
+			productName = VodaFoodies;
+			productReference = 8AD527A01F32DE5A00CDACA3 /* VodaFoodies.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8AD527B61F32DE5A00CDACA3 /* VodaFoodiesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8AD527C31F32DE5A00CDACA3 /* Build configuration list for PBXNativeTarget "VodaFoodiesTests" */;
+			buildPhases = (
+				E98EA0748E21A29A1B7375AB /* [CP] Check Pods Manifest.lock */,
+				8AD527B31F32DE5A00CDACA3 /* Sources */,
+				8AD527B41F32DE5A00CDACA3 /* Frameworks */,
+				8AD527B51F32DE5A00CDACA3 /* Resources */,
+				EB1EE73A3B95A64E159B2E57 /* [CP] Embed Pods Frameworks */,
+				F470B1BB1001D4A861F9C243 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8AD527B91F32DE5A00CDACA3 /* PBXTargetDependency */,
+			);
+			name = VodaFoodiesTests;
+			productName = VodaFoodiesTests;
+			productReference = 8AD527B71F32DE5A00CDACA3 /* VodaFoodiesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8AD527981F32DE5A00CDACA3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Michael Attia";
+				TargetAttributes = {
+					8AD5279F1F32DE5A00CDACA3 = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+					};
+					8AD527B61F32DE5A00CDACA3 = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 8AD5279F1F32DE5A00CDACA3;
+					};
+				};
+			};
+			buildConfigurationList = 8AD5279B1F32DE5A00CDACA3 /* Build configuration list for PBXProject "VodaFoodies" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8AD527971F32DE5A00CDACA3;
+			productRefGroup = 8AD527A11F32DE5A00CDACA3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8AD5279F1F32DE5A00CDACA3 /* VodaFoodies */,
+				8AD527B61F32DE5A00CDACA3 /* VodaFoodiesTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8AD5279E1F32DE5A00CDACA3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8AD527B11F32DE5A00CDACA3 /* LaunchScreen.storyboard in Resources */,
+				8AA4FA671F32DFAE00048C90 /* GoogleService-Info.plist in Resources */,
+				8AD527AE1F32DE5A00CDACA3 /* Assets.xcassets in Resources */,
+				8AD527A91F32DE5A00CDACA3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8AD527B51F32DE5A00CDACA3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8AA4FA681F32E00800048C90 /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1D2DD153B6377C73E9194EF0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VodaFoodies/Pods-VodaFoodies-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2A512D49112DFA3547BF0EB6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VodaFoodies-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5D4470BAC77BF5E97F87DFF6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-VodaFoodies/Pods-VodaFoodies-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookLogin/FacebookLogin.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookLogin.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VodaFoodies/Pods-VodaFoodies-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E98EA0748E21A29A1B7375AB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VodaFoodiesTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EB1EE73A3B95A64E159B2E57 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VodaFoodiesTests/Pods-VodaFoodiesTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F470B1BB1001D4A861F9C243 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VodaFoodiesTests/Pods-VodaFoodiesTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8AD5279C1F32DE5A00CDACA3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8AFD7E681F35EBB800E57A20 /* OrderDetailsViewController.swift in Sources */,
+				8AFD7E641F35EB8700E57A20 /* ProfileViewController.swift in Sources */,
+				8AFD7E621F35EB7300E57A20 /* MyOrdersViewController.swift in Sources */,
+				8AA768E51F34C6D7005BF1AB /* LoginMgr.swift in Sources */,
+				8AEC76281F36113B00547422 /* FirebaseManager.swift in Sources */,
+				8AFD7E601F35EB6400E57A20 /* OpenOrdersViewController.swift in Sources */,
+				8AFD7E7B1F35EEDD00E57A20 /* OrderListViewController.swift in Sources */,
+				8AFD7E6B1F35EBF700E57A20 /* BaseViewController.swift in Sources */,
+				8AEC761E1F3609EF00547422 /* User.swift in Sources */,
+				8AEC761B1F36037700547422 /* MenuItemCell.swift in Sources */,
+				8AFD7E6F1F35EC4000E57A20 /* BaseNavigationController.swift in Sources */,
+				8AEC76261F360E0800547422 /* UserOrder.swift in Sources */,
+				8AFD7E711F35EC5900E57A20 /* BaseTabBarController.swift in Sources */,
+				8AD527A61F32DE5A00CDACA3 /* LoginViewController.swift in Sources */,
+				8AFD7E731F35EC9B00E57A20 /* VenuesTableViewController.swift in Sources */,
+				8A1248DF1F3AE44800C80DFF /* PhoneViewController.swift in Sources */,
+				8AEC76201F360A0000547422 /* Venue.swift in Sources */,
+				8AEC76241F360BDF00547422 /* VenueOrder.swift in Sources */,
+				8AFD7E7D1F35EEE900E57A20 /* PeopleListViewController.swift in Sources */,
+				8AFD7E751F35ED5B00E57A20 /* MenueTableViewController.swift in Sources */,
+				8AD527A41F32DE5A00CDACA3 /* AppDelegate.swift in Sources */,
+				8AEC76191F36036500547422 /* OpenOrderCell.swift in Sources */,
+				8AEC76221F360A1200547422 /* MenuItem.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8AD527B31F32DE5A00CDACA3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8AD527BC1F32DE5A00CDACA3 /* VodaFoodiesTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8AD527B91F32DE5A00CDACA3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8AD5279F1F32DE5A00CDACA3 /* VodaFoodies */;
+			targetProxy = 8AD527B81F32DE5A00CDACA3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8AD527A71F32DE5A00CDACA3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8AD527A81F32DE5A00CDACA3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8AD527AF1F32DE5A00CDACA3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8AD527B01F32DE5A00CDACA3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8AD527BE1F32DE5A00CDACA3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8AD527BF1F32DE5A00CDACA3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8AD527C11F32DE5A00CDACA3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4EE5A742978F522433889DAC /* Pods-VodaFoodies.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = VodaFoodies/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mikeattia.VodaFoodies;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		8AD527C21F32DE5A00CDACA3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A5BE0DDBCA152954A8FEB561 /* Pods-VodaFoodies.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = VodaFoodies/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mikeattia.VodaFoodies;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		8AD527C41F32DE5A00CDACA3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 64F11B373F515E4507C26797 /* Pods-VodaFoodiesTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = VodaFoodiesTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mikeattia.VodaFoodiesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VodaFoodies.app/VodaFoodies";
+			};
+			name = Debug;
+		};
+		8AD527C51F32DE5A00CDACA3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F323394F720EAD18A4C476AF /* Pods-VodaFoodiesTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = VodaFoodiesTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mikeattia.VodaFoodiesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VodaFoodies.app/VodaFoodies";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8AD5279B1F32DE5A00CDACA3 /* Build configuration list for PBXProject "VodaFoodies" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8AD527BE1F32DE5A00CDACA3 /* Debug */,
+				8AD527BF1F32DE5A00CDACA3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8AD527C01F32DE5A00CDACA3 /* Build configuration list for PBXNativeTarget "VodaFoodies" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8AD527C11F32DE5A00CDACA3 /* Debug */,
+				8AD527C21F32DE5A00CDACA3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8AD527C31F32DE5A00CDACA3 /* Build configuration list for PBXNativeTarget "VodaFoodiesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8AD527C41F32DE5A00CDACA3 /* Debug */,
+				8AD527C51F32DE5A00CDACA3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8AD527981F32DE5A00CDACA3 /* Project object */;
+}
