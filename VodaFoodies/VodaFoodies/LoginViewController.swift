@@ -26,28 +26,28 @@ class LoginViewController: BaseViewController {
     
     @IBAction func signIn(_ sender: UIButton) {
         
-        self.performSegue(withIdentifier: "gotohome", sender: nil)
+//        self.performSegue(withIdentifier: "gotohome", sender: nil)
         
         //WARNING: Remove the line above and uncomment the code below
         
         
-//        //TODO: Start the loading indicator
-//        
-//        let loginManager = LoginMgr()
-//        loginManager.loginUser(controller: self) { result in
-//            
-//            switch result{
-//            case .success:
-//                //TODO: end the loading indicator
-//                self.performSegue(withIdentifier: "gotohome", sender: nil)
-//                break
-//            case .fail(let error):
-//                print(error)
-//                break
-//            case .cancelled:
-//                break
-//            }
-//        }
+        //TODO: Start the loading indicator
+        
+        let loginManager = LoginMgr()
+        loginManager.loginUser(controller: self) { result in
+            
+            switch result{
+            case .success:
+                //TODO: end the loading indicator
+                self.performSegue(withIdentifier: "gotohome", sender: nil)
+                break
+            case .fail(let error):
+                print(error)
+                break
+            case .cancelled:
+                break
+            }
+        }
         
     }
     

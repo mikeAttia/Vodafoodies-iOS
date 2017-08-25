@@ -19,7 +19,7 @@ class LoginMgr {
         case success
         case fail(Error)
         case cancelled
-        case noPhone
+//        case noPhone
     }
     
     func loginUser(controller: UIViewController, completion:@escaping (LoginResult)->Void ) {
@@ -42,38 +42,40 @@ class LoginMgr {
                                 
                                 switch result{
                                 case .success(grantedPermissions: _, declinedPermissions: _, token: let token):
-                                    self.getUserDataFromFacebook(token: token)
+                                    self.loginUserToFirebase(token: token)
+//                                    self.getUserDataFromFacebook(token: token)
                                 case .failed(let error):
-                                    self.completionHandler(LoginResult.fail(error))
-                                case .cancelled:
-                                    self.completionHandler(LoginResult.cancelled)
+//                                    self.completionHandler(LoginResult.fail(error))
+                                    print(error)
+                                case .cancelled: break
+//                                    self.completionHandler(LoginResult.cancelled)
                                 }
         }
     }
     
-    private func getUserDataFromFacebook(token: AccessToken){
-        
-        let request = GraphRequest(graphPath: token.userId!,
-                                   parameters: ["fields":"name,email,picture.type(large)"],
-                                   accessToken: token,
-                                   httpMethod: .GET,
-                                   apiVersion: .defaultVersion)
-        
-        request.start { (response, result) in
-            
-            switch response{
-            case .some(_):
-                //TODO: Parse the user data coming from facebook into a User Object
-                //TODO: Cache the user object into the UserDefaults
-                print(result)
-                //TODO: Login User to Firebase
-                self.loginUserToFirebase(token: token)
-            case .none:
-                //TODO: Call the completion handler with an error object of can't get user data
-                break
-            }
-        }
-    }
+//    private func getUserDataFromFacebook(token: AccessToken){
+//        
+//        let request = GraphRequest(graphPath: token.userId!,
+//                                   parameters: ["fields":"name,email,picture.type(large)"],
+//                                   accessToken: token,
+//                                   httpMethod: .GET,
+//                                   apiVersion: .defaultVersion)
+//        
+//        request.start { (response, result) in
+//            
+//            switch response{
+//            case .some(_):
+//                //TODO: Parse the user data coming from facebook into a User Object
+//                //TODO: Cache the user object into the UserDefaults
+//                print(result)
+//                //TODO: Login User to Firebase
+//                self.loginUserToFirebase(token: token)
+//            case .none:
+//                //TODO: Call the completion handler with an error object of can't get user data
+//                break
+//            }
+//        }
+//    }
     
     private func loginUserToFirebase(token: AccessToken){
         
@@ -82,7 +84,7 @@ class LoginMgr {
             
             if let error = error {
                 print(error)
-                self.completionHandler(LoginResult.fail(error))
+//                self.completionHandler(LoginResult.fail(error))
                 return
             }
             
@@ -91,15 +93,15 @@ class LoginMgr {
             // TODO: call the writeUserDataToFirebase to create the user node on firebase with the user details from the user defaults (or get it from previous method)
             print("+++++++======+=+=====++==+=+=++=+=+=+++++Firebase Login Success")
             print(user?.uid)
-            guard (user?.uid) != nil else{
-                //TODO: compose an error object and call the completion handler
-                return
-            }
+//            guard (user?.uid) != nil else{
+//                //TODO: compose an error object and call the completion handler
+//                return
+//            }
             
-            guard (user?.phoneNumber) != nil else{
-                self.completionHandler(LoginResult.noPhone)
-                return
-            }
+//            guard (user?.phoneNumber) != nil else{
+//                self.completionHandler(LoginResult.noPhone)
+//                return
+//            }
             
             self.completionHandler(LoginResult.success)
         
