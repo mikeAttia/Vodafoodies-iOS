@@ -9,12 +9,16 @@ target 'VodaFoodies' do
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
 
-  #Facebook Dependecies
+  # Facebook Dependecies
   pod 'FacebookCore'
   pod 'FacebookLogin'
 
-  #Kingfisher for loading and caching images
+  # Alamofire for networking
+  pod 'Alamofire', '~> 4.4'
+  # Kingfisher for loading and caching images
   pod 'Kingfisher', '~> 3.0'
+  # gif support
+  pod 'Gifu'
 
 
   target 'VodaFoodiesTests' do

@@ -19,30 +19,33 @@ class LoginViewController: BaseViewController {
         
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func tryAnimation(_ sender: Any) {
+        
+        let sb = UIStoryboard(name: "loadingView", bundle: Bundle.main)
+        let loadingView = sb.instantiateInitialViewController() as! LoadingViewController
+        loadingView.modalPresentationStyle = .overCurrentContext
+        self.present(loadingView, animated: true, completion: nil)
+        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(4), execute: {
+            // Put your code which should be executed with a delay here
+            loadingView.dismiss(animated: true, completion: nil)
+        })
     }
-    
     @IBAction func signIn(_ sender: UIButton) {
-        
-//        self.performSegue(withIdentifier: "gotohome", sender: nil)
-        
-        //WARNING: Remove the line above and uncomment the code below
-        
         
         //TODO: Start the loading indicator
         
         let loginManager = LoginMgr()
         loginManager.loginUser(controller: self) { result in
             
+            //TODO: end the loading indicator
+            
             switch result{
             case .success:
-                //TODO: end the loading indicator
                 self.performSegue(withIdentifier: "gotohome", sender: nil)
                 break
             case .fail(let error):
                 print(error)
+                //TODO : Show an error message to the user
                 break
             case .cancelled:
                 break

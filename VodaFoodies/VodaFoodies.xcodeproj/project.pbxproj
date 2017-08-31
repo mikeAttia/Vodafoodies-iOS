@@ -9,7 +9,15 @@
 /* Begin PBXBuildFile section */
 		49CEEB9ABAA3EF7A1CCA6F61 /* Pods_VodaFoodies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 554FF41C2F0035BC9D671657 /* Pods_VodaFoodies.framework */; };
 		6B680607037036D3EFDF3850 /* Pods_VodaFoodiesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48B353CC71B73EAB1795DF76 /* Pods_VodaFoodiesTests.framework */; };
-		8A1248DF1F3AE44800C80DFF /* PhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1248DE1F3AE44800C80DFF /* PhoneViewController.swift */; };
+		8A36B9B41F51FCAA00A5A847 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A36B9B31F51FCAA00A5A847 /* User.swift */; };
+		8A36B9B71F51FEAE00A5A847 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A36B9B61F51FEAE00A5A847 /* LoadingViewController.swift */; };
+		8A36B9B91F51FECA00A5A847 /* loadingView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A36B9B81F51FECA00A5A847 /* loadingView.storyboard */; };
+		8A36B9BF1F52048700A5A847 /* loading.gif in Resources */ = {isa = PBXBuildFile; fileRef = 8A36B9BE1F52048700A5A847 /* loading.gif */; };
+		8A38A9DD1F589B5100DEEBAE /* RequestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A38A9DC1F589B5100DEEBAE /* RequestType.swift */; };
+		8A38A9DF1F589B5B00DEEBAE /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A38A9DE1F589B5B00DEEBAE /* RequestManager.swift */; };
+		8A38A9E21F589B8500DEEBAE /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A38A9E11F589B8500DEEBAE /* DataStore.swift */; };
+		8A38A9E41F589BA700DEEBAE /* ResponseParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A38A9E31F589BA700DEEBAE /* ResponseParser.swift */; };
+		8A38A9E61F58AC9700DEEBAE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A38A9E51F58AC9700DEEBAE /* Constants.swift */; };
 		8AA4FA671F32DFAE00048C90 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8AA4FA661F32DFAE00048C90 /* GoogleService-Info.plist */; };
 		8AA4FA681F32E00800048C90 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8AA4FA661F32DFAE00048C90 /* GoogleService-Info.plist */; };
 		8AA768E51F34C6D7005BF1AB /* LoginMgr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA768E41F34C6D7005BF1AB /* LoginMgr.swift */; };
@@ -19,25 +27,9 @@
 		8AD527AE1F32DE5A00CDACA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AD527AD1F32DE5A00CDACA3 /* Assets.xcassets */; };
 		8AD527B11F32DE5A00CDACA3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AD527AF1F32DE5A00CDACA3 /* LaunchScreen.storyboard */; };
 		8AD527BC1F32DE5A00CDACA3 /* VodaFoodiesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD527BB1F32DE5A00CDACA3 /* VodaFoodiesTests.swift */; };
-		8AEC76191F36036500547422 /* OpenOrderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AEC76181F36036500547422 /* OpenOrderCell.swift */; };
-		8AEC761B1F36037700547422 /* MenuItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AEC761A1F36037700547422 /* MenuItemCell.swift */; };
-		8AEC761E1F3609EF00547422 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AEC761D1F3609EF00547422 /* User.swift */; };
-		8AEC76201F360A0000547422 /* Venue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AEC761F1F360A0000547422 /* Venue.swift */; };
-		8AEC76221F360A1200547422 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AEC76211F360A1200547422 /* MenuItem.swift */; };
-		8AEC76241F360BDF00547422 /* VenueOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AEC76231F360BDF00547422 /* VenueOrder.swift */; };
-		8AEC76261F360E0800547422 /* UserOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AEC76251F360E0800547422 /* UserOrder.swift */; };
-		8AEC76281F36113B00547422 /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AEC76271F36113B00547422 /* FirebaseManager.swift */; };
-		8AFD7E601F35EB6400E57A20 /* OpenOrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFD7E5F1F35EB6400E57A20 /* OpenOrdersViewController.swift */; };
-		8AFD7E621F35EB7300E57A20 /* MyOrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFD7E611F35EB7300E57A20 /* MyOrdersViewController.swift */; };
-		8AFD7E641F35EB8700E57A20 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFD7E631F35EB8700E57A20 /* ProfileViewController.swift */; };
-		8AFD7E681F35EBB800E57A20 /* OrderDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFD7E671F35EBB800E57A20 /* OrderDetailsViewController.swift */; };
 		8AFD7E6B1F35EBF700E57A20 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFD7E6A1F35EBF700E57A20 /* BaseViewController.swift */; };
 		8AFD7E6F1F35EC4000E57A20 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFD7E6E1F35EC4000E57A20 /* BaseNavigationController.swift */; };
 		8AFD7E711F35EC5900E57A20 /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFD7E701F35EC5900E57A20 /* BaseTabBarController.swift */; };
-		8AFD7E731F35EC9B00E57A20 /* VenuesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFD7E721F35EC9B00E57A20 /* VenuesTableViewController.swift */; };
-		8AFD7E751F35ED5B00E57A20 /* MenueTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFD7E741F35ED5B00E57A20 /* MenueTableViewController.swift */; };
-		8AFD7E7B1F35EEDD00E57A20 /* OrderListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFD7E7A1F35EEDD00E57A20 /* OrderListViewController.swift */; };
-		8AFD7E7D1F35EEE900E57A20 /* PeopleListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFD7E7C1F35EEE900E57A20 /* PeopleListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,7 +47,15 @@
 		4EE5A742978F522433889DAC /* Pods-VodaFoodies.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VodaFoodies.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VodaFoodies/Pods-VodaFoodies.debug.xcconfig"; sourceTree = "<group>"; };
 		554FF41C2F0035BC9D671657 /* Pods_VodaFoodies.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VodaFoodies.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		64F11B373F515E4507C26797 /* Pods-VodaFoodiesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VodaFoodiesTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VodaFoodiesTests/Pods-VodaFoodiesTests.debug.xcconfig"; sourceTree = "<group>"; };
-		8A1248DE1F3AE44800C80DFF /* PhoneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneViewController.swift; sourceTree = "<group>"; };
+		8A36B9B31F51FCAA00A5A847 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		8A36B9B61F51FEAE00A5A847 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
+		8A36B9B81F51FECA00A5A847 /* loadingView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = loadingView.storyboard; sourceTree = "<group>"; };
+		8A36B9BE1F52048700A5A847 /* loading.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = loading.gif; sourceTree = "<group>"; };
+		8A38A9DC1F589B5100DEEBAE /* RequestType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestType.swift; sourceTree = "<group>"; };
+		8A38A9DE1F589B5B00DEEBAE /* RequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
+		8A38A9E11F589B8500DEEBAE /* DataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
+		8A38A9E31F589BA700DEEBAE /* ResponseParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseParser.swift; sourceTree = "<group>"; };
+		8A38A9E51F58AC9700DEEBAE /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		8AA4FA661F32DFAE00048C90 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8AA768E41F34C6D7005BF1AB /* LoginMgr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginMgr.swift; sourceTree = "<group>"; };
 		8AD527A01F32DE5A00CDACA3 /* VodaFoodies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VodaFoodies.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -68,25 +68,9 @@
 		8AD527B71F32DE5A00CDACA3 /* VodaFoodiesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VodaFoodiesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AD527BB1F32DE5A00CDACA3 /* VodaFoodiesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VodaFoodiesTests.swift; sourceTree = "<group>"; };
 		8AD527BD1F32DE5A00CDACA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8AEC76181F36036500547422 /* OpenOrderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenOrderCell.swift; sourceTree = "<group>"; };
-		8AEC761A1F36037700547422 /* MenuItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuItemCell.swift; sourceTree = "<group>"; };
-		8AEC761D1F3609EF00547422 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		8AEC761F1F360A0000547422 /* Venue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Venue.swift; sourceTree = "<group>"; };
-		8AEC76211F360A1200547422 /* MenuItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
-		8AEC76231F360BDF00547422 /* VenueOrder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VenueOrder.swift; sourceTree = "<group>"; };
-		8AEC76251F360E0800547422 /* UserOrder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserOrder.swift; sourceTree = "<group>"; };
-		8AEC76271F36113B00547422 /* FirebaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
-		8AFD7E5F1F35EB6400E57A20 /* OpenOrdersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenOrdersViewController.swift; sourceTree = "<group>"; };
-		8AFD7E611F35EB7300E57A20 /* MyOrdersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyOrdersViewController.swift; sourceTree = "<group>"; };
-		8AFD7E631F35EB8700E57A20 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		8AFD7E671F35EBB800E57A20 /* OrderDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderDetailsViewController.swift; sourceTree = "<group>"; };
 		8AFD7E6A1F35EBF700E57A20 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		8AFD7E6E1F35EC4000E57A20 /* BaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		8AFD7E701F35EC5900E57A20 /* BaseTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
-		8AFD7E721F35EC9B00E57A20 /* VenuesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VenuesTableViewController.swift; sourceTree = "<group>"; };
-		8AFD7E741F35ED5B00E57A20 /* MenueTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenueTableViewController.swift; sourceTree = "<group>"; };
-		8AFD7E7A1F35EEDD00E57A20 /* OrderListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderListViewController.swift; sourceTree = "<group>"; };
-		8AFD7E7C1F35EEE900E57A20 /* PeopleListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleListViewController.swift; sourceTree = "<group>"; };
 		A5BE0DDBCA152954A8FEB561 /* Pods-VodaFoodies.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VodaFoodies.release.xcconfig"; path = "Pods/Target Support Files/Pods-VodaFoodies/Pods-VodaFoodies.release.xcconfig"; sourceTree = "<group>"; };
 		F323394F720EAD18A4C476AF /* Pods-VodaFoodiesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VodaFoodiesTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-VodaFoodiesTests/Pods-VodaFoodiesTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -111,12 +95,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8A36B9B51F51FE8D00A5A847 /* LoadingView */ = {
+			isa = PBXGroup;
+			children = (
+				8A36B9BE1F52048700A5A847 /* loading.gif */,
+				8A36B9B61F51FEAE00A5A847 /* LoadingViewController.swift */,
+				8A36B9B81F51FECA00A5A847 /* loadingView.storyboard */,
+			);
+			path = LoadingView;
+			sourceTree = "<group>";
+		};
+		8A38A9DB1F589B2D00DEEBAE /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				8A38A9DC1F589B5100DEEBAE /* RequestType.swift */,
+				8A38A9DE1F589B5B00DEEBAE /* RequestManager.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		8A38A9E01F589B6C00DEEBAE /* DataStore */ = {
+			isa = PBXGroup;
+			children = (
+				8A38A9E11F589B8500DEEBAE /* DataStore.swift */,
+				8A38A9E31F589BA700DEEBAE /* ResponseParser.swift */,
+			);
+			path = DataStore;
+			sourceTree = "<group>";
+		};
 		8AA768E31F34C697005BF1AB /* Business */ = {
 			isa = PBXGroup;
 			children = (
 				8AEC761C1F3609D200547422 /* Models */,
 				8AA768E41F34C6D7005BF1AB /* LoginMgr.swift */,
-				8AEC76271F36113B00547422 /* FirebaseManager.swift */,
 			);
 			path = Business;
 			sourceTree = "<group>";
@@ -144,7 +155,9 @@
 		8AD527A21F32DE5A00CDACA3 /* VodaFoodies */ = {
 			isa = PBXGroup;
 			children = (
-				8AFD7E5E1F35EA0000E57A20 /* VieControllers */,
+				8A38A9E01F589B6C00DEEBAE /* DataStore */,
+				8A38A9DB1F589B2D00DEEBAE /* Networking */,
+				8AFD7E5E1F35EA0000E57A20 /* Views */,
 				8AA768E31F34C697005BF1AB /* Business */,
 				8AD527A31F32DE5A00CDACA3 /* AppDelegate.swift */,
 				8AD527A71F32DE5A00CDACA3 /* Main.storyboard */,
@@ -152,6 +165,7 @@
 				8AD527AF1F32DE5A00CDACA3 /* LaunchScreen.storyboard */,
 				8AD527B21F32DE5A00CDACA3 /* Info.plist */,
 				8AA4FA661F32DFAE00048C90 /* GoogleService-Info.plist */,
+				8A38A9E51F58AC9700DEEBAE /* Constants.swift */,
 			);
 			path = VodaFoodies;
 			sourceTree = "<group>";
@@ -168,8 +182,6 @@
 		8AEC76171F36032700547422 /* CustomCells */ = {
 			isa = PBXGroup;
 			children = (
-				8AEC76181F36036500547422 /* OpenOrderCell.swift */,
-				8AEC761A1F36037700547422 /* MenuItemCell.swift */,
 			);
 			path = CustomCells;
 			sourceTree = "<group>";
@@ -177,32 +189,20 @@
 		8AEC761C1F3609D200547422 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				8AEC761D1F3609EF00547422 /* User.swift */,
-				8AEC761F1F360A0000547422 /* Venue.swift */,
-				8AEC76211F360A1200547422 /* MenuItem.swift */,
-				8AEC76251F360E0800547422 /* UserOrder.swift */,
-				8AEC76231F360BDF00547422 /* VenueOrder.swift */,
+				8A36B9B31F51FCAA00A5A847 /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
 		};
-		8AFD7E5E1F35EA0000E57A20 /* VieControllers */ = {
+		8AFD7E5E1F35EA0000E57A20 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				8A36B9B51F51FE8D00A5A847 /* LoadingView */,
 				8AEC76171F36032700547422 /* CustomCells */,
 				8AFD7E691F35EBD000E57A20 /* BaseViews */,
 				8AD527A51F32DE5A00CDACA3 /* LoginViewController.swift */,
-				8AFD7E5F1F35EB6400E57A20 /* OpenOrdersViewController.swift */,
-				8AFD7E611F35EB7300E57A20 /* MyOrdersViewController.swift */,
-				8AFD7E631F35EB8700E57A20 /* ProfileViewController.swift */,
-				8AFD7E671F35EBB800E57A20 /* OrderDetailsViewController.swift */,
-				8AFD7E721F35EC9B00E57A20 /* VenuesTableViewController.swift */,
-				8AFD7E741F35ED5B00E57A20 /* MenueTableViewController.swift */,
-				8AFD7E7A1F35EEDD00E57A20 /* OrderListViewController.swift */,
-				8AFD7E7C1F35EEE900E57A20 /* PeopleListViewController.swift */,
-				8A1248DE1F3AE44800C80DFF /* PhoneViewController.swift */,
 			);
-			name = VieControllers;
+			name = Views;
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
@@ -326,6 +326,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8AD527B11F32DE5A00CDACA3 /* LaunchScreen.storyboard in Resources */,
+				8A36B9BF1F52048700A5A847 /* loading.gif in Resources */,
+				8A36B9B91F51FECA00A5A847 /* loadingView.storyboard in Resources */,
 				8AA4FA671F32DFAE00048C90 /* GoogleService-Info.plist in Resources */,
 				8AD527AE1F32DE5A00CDACA3 /* Assets.xcassets in Resources */,
 				8AD527A91F32DE5A00CDACA3 /* Main.storyboard in Resources */,
@@ -383,23 +385,27 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-VodaFoodies/Pods-VodaFoodies-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework",
 				"${BUILT_PRODUCTS_DIR}/FacebookLogin/FacebookLogin.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/Gifu/Gifu.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookCore.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookLogin.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Gifu.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 			);
@@ -463,29 +469,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8AFD7E681F35EBB800E57A20 /* OrderDetailsViewController.swift in Sources */,
-				8AFD7E641F35EB8700E57A20 /* ProfileViewController.swift in Sources */,
-				8AFD7E621F35EB7300E57A20 /* MyOrdersViewController.swift in Sources */,
 				8AA768E51F34C6D7005BF1AB /* LoginMgr.swift in Sources */,
-				8AEC76281F36113B00547422 /* FirebaseManager.swift in Sources */,
-				8AFD7E601F35EB6400E57A20 /* OpenOrdersViewController.swift in Sources */,
-				8AFD7E7B1F35EEDD00E57A20 /* OrderListViewController.swift in Sources */,
 				8AFD7E6B1F35EBF700E57A20 /* BaseViewController.swift in Sources */,
-				8AEC761E1F3609EF00547422 /* User.swift in Sources */,
-				8AEC761B1F36037700547422 /* MenuItemCell.swift in Sources */,
 				8AFD7E6F1F35EC4000E57A20 /* BaseNavigationController.swift in Sources */,
-				8AEC76261F360E0800547422 /* UserOrder.swift in Sources */,
+				8A36B9B41F51FCAA00A5A847 /* User.swift in Sources */,
+				8A38A9E21F589B8500DEEBAE /* DataStore.swift in Sources */,
+				8A36B9B71F51FEAE00A5A847 /* LoadingViewController.swift in Sources */,
+				8A38A9DF1F589B5B00DEEBAE /* RequestManager.swift in Sources */,
+				8A38A9E61F58AC9700DEEBAE /* Constants.swift in Sources */,
 				8AFD7E711F35EC5900E57A20 /* BaseTabBarController.swift in Sources */,
 				8AD527A61F32DE5A00CDACA3 /* LoginViewController.swift in Sources */,
-				8AFD7E731F35EC9B00E57A20 /* VenuesTableViewController.swift in Sources */,
-				8A1248DF1F3AE44800C80DFF /* PhoneViewController.swift in Sources */,
-				8AEC76201F360A0000547422 /* Venue.swift in Sources */,
-				8AEC76241F360BDF00547422 /* VenueOrder.swift in Sources */,
-				8AFD7E7D1F35EEE900E57A20 /* PeopleListViewController.swift in Sources */,
-				8AFD7E751F35ED5B00E57A20 /* MenueTableViewController.swift in Sources */,
 				8AD527A41F32DE5A00CDACA3 /* AppDelegate.swift in Sources */,
-				8AEC76191F36036500547422 /* OpenOrderCell.swift in Sources */,
-				8AEC76221F360A1200547422 /* MenuItem.swift in Sources */,
+				8A38A9DD1F589B5100DEEBAE /* RequestType.swift in Sources */,
+				8A38A9E41F589BA700DEEBAE /* ResponseParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

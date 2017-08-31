@@ -62,5 +62,13 @@
         <string>fbauth2</string>
         <string>fbshareextension</string>
     </array>
+    
+<!--    Allowing insecure Connections -->
+    
+    <key>NSAppTransportSecurity</key>
+    <dict>
+        <key>NSAllowsArbitraryLoads</key>
+        <true/>
+    </dict>
 </dict>
 </plist>

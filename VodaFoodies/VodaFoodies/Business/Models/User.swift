@@ -14,5 +14,6 @@ struct User {
     var imageURL: String
     var phoneNo: String
     var email: String
+    var profile: String
     
 }
