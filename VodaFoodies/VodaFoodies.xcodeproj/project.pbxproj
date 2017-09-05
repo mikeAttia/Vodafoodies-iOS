@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		49CEEB9ABAA3EF7A1CCA6F61 /* Pods_VodaFoodies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 554FF41C2F0035BC9D671657 /* Pods_VodaFoodies.framework */; };
+		4C7B79611F5A796300D9638A /* RequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7B79601F5A796300D9638A /* RequestBuilder.swift */; };
 		6B680607037036D3EFDF3850 /* Pods_VodaFoodiesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48B353CC71B73EAB1795DF76 /* Pods_VodaFoodiesTests.framework */; };
 		8A36B9B41F51FCAA00A5A847 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A36B9B31F51FCAA00A5A847 /* User.swift */; };
 		8A36B9B71F51FEAE00A5A847 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A36B9B61F51FEAE00A5A847 /* LoadingViewController.swift */; };
@@ -44,6 +45,7 @@
 
 /* Begin PBXFileReference section */
 		48B353CC71B73EAB1795DF76 /* Pods_VodaFoodiesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VodaFoodiesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C7B79601F5A796300D9638A /* RequestBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestBuilder.swift; sourceTree = "<group>"; };
 		4EE5A742978F522433889DAC /* Pods-VodaFoodies.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VodaFoodies.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VodaFoodies/Pods-VodaFoodies.debug.xcconfig"; sourceTree = "<group>"; };
 		554FF41C2F0035BC9D671657 /* Pods_VodaFoodies.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VodaFoodies.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		64F11B373F515E4507C26797 /* Pods-VodaFoodiesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VodaFoodiesTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VodaFoodiesTests/Pods-VodaFoodiesTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 			children = (
 				8A38A9DC1F589B5100DEEBAE /* RequestType.swift */,
 				8A38A9DE1F589B5B00DEEBAE /* RequestManager.swift */,
+				4C7B79601F5A796300D9638A /* RequestBuilder.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -375,7 +378,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		5D4470BAC77BF5E97F87DFF6 /* [CP] Embed Pods Frameworks */ = {
@@ -429,7 +432,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		EB1EE73A3B95A64E159B2E57 /* [CP] Embed Pods Frameworks */ = {
@@ -476,6 +479,7 @@
 				8A38A9E21F589B8500DEEBAE /* DataStore.swift in Sources */,
 				8A36B9B71F51FEAE00A5A847 /* LoadingViewController.swift in Sources */,
 				8A38A9DF1F589B5B00DEEBAE /* RequestManager.swift in Sources */,
+				4C7B79611F5A796300D9638A /* RequestBuilder.swift in Sources */,
 				8A38A9E61F58AC9700DEEBAE /* Constants.swift in Sources */,
 				8AFD7E711F35EC5900E57A20 /* BaseTabBarController.swift in Sources */,
 				8AD527A61F32DE5A00CDACA3 /* LoginViewController.swift in Sources */,

@@ -13,7 +13,6 @@ class RequestManager {
     
     
     static func sendRequest(_ req: RequestType, reqID: String, callBack: ()->Void){
-        let request = RequestType.buildRequest(req) // Should return an alamofire request
         
         
     }

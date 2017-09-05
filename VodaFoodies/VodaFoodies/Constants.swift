@@ -35,30 +35,36 @@ struct Const {
     }
     
     /// The constants of Requests
-    struct ReqConst {
+    struct Request {
         
+        struct Keys {
+            static let userId = "uid"
+        }
         
-        //Base url
-        static let baseURL = "https://us-central1-vodafoodies-e3f2f.cloudfunctions.net"
+        struct Path{
+            //Base url
+            static let baseURL = "https://us-central1-vodafoodies-e3f2f.cloudfunctions.net"
+            
+            //user requests
+            static let updateUserDataPath = "/updateUserData"
+            
+            //Venue requests
+            static let listedVenuesPath = "/listedVenues"
+            static let venueMenuPath = "/getVenueMenu"
+            
+            //Venue orders requests
+            static let addVenueOrderPath = "/addVenueOrder"
+            static let getOpenOrdersPath = "/getOpenOrders"
+            static let getOrderSumPath = "/getOrderSum"
+            static let getOrderItemUsersPath = "/getOrderItemUsers"
+            static let getVenueOrderUsersPath = "/getVenueOrderUsers"
+            
+            //User orders requests
+            static let addUserOrderPath = "/addUserOrder"
+            static let getUserOrdersPath = "/getUserOrders"
+            static let deleteUserOrderItemPath = "/deleteUserOrderItem"
+            static let deleteUserOrderPath = "/deleteUserOrder"
+        }
         
-        //user requests
-        static let updateUserDataPath = "/updateUserData"
-        
-        //Venue requests
-        static let listedVenuesPath = "/listedVenues"
-        static let venueMenuPath = "/getVenueMenu"
-        
-        //Venue orders requests
-        static let addVenueOrderPath = "/addVenueOrder"
-        static let getOpenOrdersPath = "/getOpenOrders"
-        static let getOrderSumPath = "/getOrderSum"
-        static let getOrderItemUsersPath = "/getOrderItemUsers"
-        static let getVenueOrderUsersPath = "/getVenueOrderUsers"
-        
-        //User orders requests
-        static let addUserOrderPath = "/addUserOrder"
-        static let getUserOrdersPath = "/getUserOrders"
-        static let deleteUserOrderItemPath = "/deleteUserOrderItem"
-        static let deleteUserOrderPath = "/deleteUserOrder"
     }
 }
