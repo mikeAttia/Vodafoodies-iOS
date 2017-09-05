@@ -10,9 +10,9 @@ import Foundation
 import Alamofire
 
 class RequestBuilder{
-
+    
     /// Use to generate a request object from the type sent
-    static func buildRequest(_ req: RequestType)/*should return a request object*/{
+    static func buildRequest(_ req: Request)-> DataRequest{
         
         switch req {
         case .user(let request):
@@ -24,44 +24,69 @@ class RequestBuilder{
         case .venueOrder(let request):
             return buildVenueOrderRequest(request)
         }
-        
     }
     
-    private static func buildUserRequest(_ req: RequestType.UserRequest)/*should return a request object*/{
+    private static func buildUserRequest(_ req: Request.UserRequest)-> DataRequest{
         
         switch req {
-        case .updateUserData:// TODO: Associated value is User object
-            break
+        case .updateUserData(userData: let userData, callBack: _):
+            let params: Parameters = [userData.firebaseID : [
+                "name" :userData.name,
+                "email" : userData.email,
+                "img" : userData.imageURL,
+                "phone" : userData.phoneNo,
+                "fb_profile" : userData.profile
+                ]]
+            
+            return alamofireRequest(path: Const.Request.Path.updateUserDataPath,
+                                    method: .post,
+                                    parameters: params)
         }
     }
     
-    private static func buildVenueRequest(_ req: RequestType.VenueRequest)/*should return a request object*/{
+    private static func buildVenueRequest(_ req: Request.VenueRequest)-> DataRequest{
         
         switch req {
-        case .listedVenues:
-//            return alamofireRequest(path: Const.Request.Path.listedVenuesPath)
-            break
-        case .venueMenu(venueID: _):break
-        }
-        
-    }
-    
-    private static func buildVenueOrderRequest(_ req: RequestType.VenueOrderRequest)/*should return a request object*/{
-        switch req {
-        case .addVenueOrder:break
-        case .getOpenOrders: break
-        case .getOrderItemUsers(venueOrderId: _, itemId: _): break
-        case .getOrderSum(venueOrderId: _): break
-        case .getVenueOrderUsers(venueOrderId: _): break
+        case .listedVenues(callBack: _):
+            return alamofireRequest(path: Const.Request.Path.listedVenuesPath)
+        case .venueMenu(venueID: let venueID, callBack: _):
+            let params: Parameters = ["venue_id" : venueID]
+            return alamofireRequest(path: Const.Request.Path.venueMenuPath,
+                                    method: .get,
+                                    parameters: params)
         }
     }
     
-    private static func buildUserOrderRequest(_ req: RequestType.UserOrderRequest)/*should return a request object*/{
+    private static func buildVenueOrderRequest(_ req: Request.VenueOrderRequest)-> DataRequest{
         switch req {
-        case .addUserOrder: break
-        case .deleteUserOrder(venueOrderId: _): break
-        case .deleteUserOrderItem(venueOrderId: _, itemId: _): break
-        case .getUserOrders(venueID: _): break
+        case .addVenueOrder:
+            fatalError("NOT IMPLEMENTED YET")
+        case .getOpenOrders:
+            return alamofireRequest(path: Const.Request.Path.getOpenOrdersPath)
+        case .getOrderItemUsers(venueOrderId: _, itemId: _, callBack: _):
+            fatalError("NOT IMPLEMENTED YET")
+        case .getOrderSum(venueOrderId: _):
+            fatalError("NOT IMPLEMENTED YET")
+        case .getVenueOrderUsers(venueOrderId: _):
+            fatalError("NOT IMPLEMENTED YET")
+        }
+    }
+    
+    private static func buildUserOrderRequest(_ req: Request.UserOrderRequest)-> DataRequest{
+        switch req {
+        case .addUserOrder:
+            fatalError("NOT IMPLEMENTED YET")
+        case .deleteUserOrder(venueOrderId: _):
+            fatalError("NOT IMPLEMENTED YET")
+        case .deleteUserOrderItem(venueOrderId: _, itemId: _, callBack: _):
+            fatalError("NOT IMPLEMENTED YET")
+        case .getUserOrders(venueOrderID: let venueOrderID, callBack: _):
+            if let voID = venueOrderID{
+                let params: Parameters = ["venue_order_id" : voID]
+                return alamofireRequest(path: Const.Request.Path.getUserOrdersPath,
+                                        parameters: params)
+            }
+            return alamofireRequest(path: Const.Request.Path.getUserOrdersPath)
         }
     }
     
@@ -74,9 +99,5 @@ class RequestBuilder{
                           headers: headers)
     }
     
-//    Alamofire.request(<#T##url: URLConvertible##URLConvertible#>,
-//    method: <#T##HTTPMethod#>,
-//    parameters: <#T##Parameters?#>,
-//    encoding: <#T##ParameterEncoding#>,
-//    headers: <#T##HTTPHeaders?#>)
+    
 }

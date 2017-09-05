@@ -34,7 +34,7 @@ class LoginViewController: BaseViewController {
         
         //TODO: Start the loading indicator
         
-        let loginManager = LoginMgr()
+        let loginManager = LoginManager()
         loginManager.loginUser(controller: self) { result in
             
             //TODO: end the loading indicator

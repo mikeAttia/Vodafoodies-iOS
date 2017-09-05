@@ -15,5 +15,4 @@ struct User {
     var phoneNo: String
     var email: String
     var profile: String
-    
 }

@@ -12,7 +12,7 @@ import FacebookLogin
 import FirebaseAuth
 import Alamofire
 
-class LoginMgr {
+class LoginManager {
     
     var completionHandler: ((LoginResult)->Void)!
     var userData: User?
@@ -29,7 +29,6 @@ class LoginMgr {
     func loginUser(controller: UIViewController, completion:@escaping (LoginResult)->Void ) {
         
         self.completionHandler = completion
-        
         startLoginChain(controller: controller)
         
     }
@@ -40,7 +39,7 @@ class LoginMgr {
     
     private func loginUserWithFb(controller: UIViewController){
         
-        LoginManager().logIn([.publicProfile, .email],
+        FacebookLogin.LoginManager().logIn([.publicProfile, .email],
                              viewController: controller) { result in
                                 
                                 switch result{
@@ -48,7 +47,7 @@ class LoginMgr {
                                     self.getUserDataFromFacebook(token: token)
                                 case .failed(let error):
                                     self.completionHandler(LoginResult.fail(error))
-                                    print(error)
+                                    printError(error.localizedDescription, title: "Facebook Login Error")
                                 case .cancelled:
                                     self.completionHandler(LoginResult.cancelled)
                                 }
@@ -90,13 +89,14 @@ class LoginMgr {
                         
                         self.loginUserToFirebase(token: token)
                     case .failed(let error):
-                        print(error)
-                        self.completionHandler(LoginMgr.LoginResult.fail(error))
+                        printError(error.localizedDescription, title: "Facebook Graph Request Error")
+                        self.completionHandler(LoginManager.LoginResult.fail(error))
                     }
                     
                 case .none:
                     //TODO: Call the completion handler with an error object of can't get user data
-                    break
+                    let err = RequestError(error: "Couldn't get user data from facebook")
+                    self.completionHandler(LoginResult.fail(err))
                 }
         }
     }
@@ -107,19 +107,20 @@ class LoginMgr {
         Auth.auth().signIn(with: credential){ (user, error) in
             
             if let error = error {
-                print(error)
+                printError(error.localizedDescription, title: "FireBase Login Error")
                 self.completionHandler(LoginResult.fail(error))
                 return
             }
             
             
             guard let userID = user?.uid else{
-                //TODO: compose an error object can't sign in to firebase and call the completion handler
+                let err = RequestError(error: "Couldn't get user id from firebase")
+                self.completionHandler(LoginResult.fail(err))
                 return
             }
             
             self.userData?.firebaseID = userID
-            
+            Const.Global.userID = userID
             self.writeUserDataToFirebase()
             self.completionHandler(LoginResult.success)
         }
@@ -128,20 +129,17 @@ class LoginMgr {
     
     private func writeUserDataToFirebase(){
         
-        let parameters: Parameters = [
-            (userData?.firebaseID)! :
-                ["name" : (userData?.name)!,
-                 "email" : (userData?.email)!,
-                 "img" : (userData?.imageURL)!,
-                 "phone" : (userData?.phoneNo)!
-            ]
-        ]
-        //TODO: - Replse the following with an Alamofire Request
+        func callBack(_ err: RequestError?){
+            if let err = err{
+                printError(err.error, title: "Submitting user data to Firebase error")
+            }
+        }
         
-        //        Alamofire.request("http://localhost:5000/vodafoodies-e3f2f/us-central1/updateUserData", method: .post, parameters: parameters).response { res in
-        //
-        //            print(res.response ?? "response")
-        //        }
+        if let userData = userData{
+            let request = VodaFoodies.Request.user(.updateUserData(userData: userData,callBack: callBack))
+            DataStore.shared.getData(req: request)
+        }
+        
         
     }
 }

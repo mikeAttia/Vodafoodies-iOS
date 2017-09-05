@@ -10,18 +10,21 @@
 		49CEEB9ABAA3EF7A1CCA6F61 /* Pods_VodaFoodies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 554FF41C2F0035BC9D671657 /* Pods_VodaFoodies.framework */; };
 		4C7B79611F5A796300D9638A /* RequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7B79601F5A796300D9638A /* RequestBuilder.swift */; };
 		6B680607037036D3EFDF3850 /* Pods_VodaFoodiesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48B353CC71B73EAB1795DF76 /* Pods_VodaFoodiesTests.framework */; };
+		8A28E9091F5EB35E00200B28 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A28E9081F5EB35E00200B28 /* Logger.swift */; };
+		8A28E90B1F5EC83000200B28 /* Venue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A28E90A1F5EC83000200B28 /* Venue.swift */; };
+		8A28E90D1F5ED3AB00200B28 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A28E90C1F5ED3AB00200B28 /* Item.swift */; };
 		8A36B9B41F51FCAA00A5A847 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A36B9B31F51FCAA00A5A847 /* User.swift */; };
 		8A36B9B71F51FEAE00A5A847 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A36B9B61F51FEAE00A5A847 /* LoadingViewController.swift */; };
 		8A36B9B91F51FECA00A5A847 /* loadingView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A36B9B81F51FECA00A5A847 /* loadingView.storyboard */; };
 		8A36B9BF1F52048700A5A847 /* loading.gif in Resources */ = {isa = PBXBuildFile; fileRef = 8A36B9BE1F52048700A5A847 /* loading.gif */; };
-		8A38A9DD1F589B5100DEEBAE /* RequestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A38A9DC1F589B5100DEEBAE /* RequestType.swift */; };
+		8A38A9DD1F589B5100DEEBAE /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A38A9DC1F589B5100DEEBAE /* Request.swift */; };
 		8A38A9DF1F589B5B00DEEBAE /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A38A9DE1F589B5B00DEEBAE /* RequestManager.swift */; };
 		8A38A9E21F589B8500DEEBAE /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A38A9E11F589B8500DEEBAE /* DataStore.swift */; };
 		8A38A9E41F589BA700DEEBAE /* ResponseParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A38A9E31F589BA700DEEBAE /* ResponseParser.swift */; };
 		8A38A9E61F58AC9700DEEBAE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A38A9E51F58AC9700DEEBAE /* Constants.swift */; };
 		8AA4FA671F32DFAE00048C90 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8AA4FA661F32DFAE00048C90 /* GoogleService-Info.plist */; };
 		8AA4FA681F32E00800048C90 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8AA4FA661F32DFAE00048C90 /* GoogleService-Info.plist */; };
-		8AA768E51F34C6D7005BF1AB /* LoginMgr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA768E41F34C6D7005BF1AB /* LoginMgr.swift */; };
+		8AA768E51F34C6D7005BF1AB /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA768E41F34C6D7005BF1AB /* LoginManager.swift */; };
 		8AD527A41F32DE5A00CDACA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD527A31F32DE5A00CDACA3 /* AppDelegate.swift */; };
 		8AD527A61F32DE5A00CDACA3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD527A51F32DE5A00CDACA3 /* LoginViewController.swift */; };
 		8AD527A91F32DE5A00CDACA3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AD527A71F32DE5A00CDACA3 /* Main.storyboard */; };
@@ -49,17 +52,20 @@
 		4EE5A742978F522433889DAC /* Pods-VodaFoodies.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VodaFoodies.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VodaFoodies/Pods-VodaFoodies.debug.xcconfig"; sourceTree = "<group>"; };
 		554FF41C2F0035BC9D671657 /* Pods_VodaFoodies.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VodaFoodies.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		64F11B373F515E4507C26797 /* Pods-VodaFoodiesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VodaFoodiesTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VodaFoodiesTests/Pods-VodaFoodiesTests.debug.xcconfig"; sourceTree = "<group>"; };
+		8A28E9081F5EB35E00200B28 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		8A28E90A1F5EC83000200B28 /* Venue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Venue.swift; sourceTree = "<group>"; };
+		8A28E90C1F5ED3AB00200B28 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		8A36B9B31F51FCAA00A5A847 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		8A36B9B61F51FEAE00A5A847 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 		8A36B9B81F51FECA00A5A847 /* loadingView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = loadingView.storyboard; sourceTree = "<group>"; };
 		8A36B9BE1F52048700A5A847 /* loading.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = loading.gif; sourceTree = "<group>"; };
-		8A38A9DC1F589B5100DEEBAE /* RequestType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestType.swift; sourceTree = "<group>"; };
+		8A38A9DC1F589B5100DEEBAE /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		8A38A9DE1F589B5B00DEEBAE /* RequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
 		8A38A9E11F589B8500DEEBAE /* DataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 		8A38A9E31F589BA700DEEBAE /* ResponseParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseParser.swift; sourceTree = "<group>"; };
 		8A38A9E51F58AC9700DEEBAE /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		8AA4FA661F32DFAE00048C90 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		8AA768E41F34C6D7005BF1AB /* LoginMgr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginMgr.swift; sourceTree = "<group>"; };
+		8AA768E41F34C6D7005BF1AB /* LoginManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginManager.swift; path = ../Business/LoginManager.swift; sourceTree = "<group>"; };
 		8AD527A01F32DE5A00CDACA3 /* VodaFoodies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VodaFoodies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AD527A31F32DE5A00CDACA3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8AD527A51F32DE5A00CDACA3 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = ../LoginViewController.swift; sourceTree = "<group>"; };
@@ -97,6 +103,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8A28E9071F5EB33300200B28 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				8A28E9081F5EB35E00200B28 /* Logger.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		8A36B9B51F51FE8D00A5A847 /* LoadingView */ = {
 			isa = PBXGroup;
 			children = (
@@ -110,9 +124,10 @@
 		8A38A9DB1F589B2D00DEEBAE /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				8A38A9DC1F589B5100DEEBAE /* RequestType.swift */,
+				8A38A9DC1F589B5100DEEBAE /* Request.swift */,
 				8A38A9DE1F589B5B00DEEBAE /* RequestManager.swift */,
 				4C7B79601F5A796300D9638A /* RequestBuilder.swift */,
+				8AA768E41F34C6D7005BF1AB /* LoginManager.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -124,15 +139,6 @@
 				8A38A9E31F589BA700DEEBAE /* ResponseParser.swift */,
 			);
 			path = DataStore;
-			sourceTree = "<group>";
-		};
-		8AA768E31F34C697005BF1AB /* Business */ = {
-			isa = PBXGroup;
-			children = (
-				8AEC761C1F3609D200547422 /* Models */,
-				8AA768E41F34C6D7005BF1AB /* LoginMgr.swift */,
-			);
-			path = Business;
 			sourceTree = "<group>";
 		};
 		8AD527971F32DE5A00CDACA3 = {
@@ -158,10 +164,11 @@
 		8AD527A21F32DE5A00CDACA3 /* VodaFoodies */ = {
 			isa = PBXGroup;
 			children = (
+				8A28E9071F5EB33300200B28 /* Utils */,
 				8A38A9E01F589B6C00DEEBAE /* DataStore */,
 				8A38A9DB1F589B2D00DEEBAE /* Networking */,
+				8AEC761C1F3609D200547422 /* Models */,
 				8AFD7E5E1F35EA0000E57A20 /* Views */,
-				8AA768E31F34C697005BF1AB /* Business */,
 				8AD527A31F32DE5A00CDACA3 /* AppDelegate.swift */,
 				8AD527A71F32DE5A00CDACA3 /* Main.storyboard */,
 				8AD527AD1F32DE5A00CDACA3 /* Assets.xcassets */,
@@ -193,8 +200,11 @@
 			isa = PBXGroup;
 			children = (
 				8A36B9B31F51FCAA00A5A847 /* User.swift */,
+				8A28E90A1F5EC83000200B28 /* Venue.swift */,
+				8A28E90C1F5ED3AB00200B28 /* Item.swift */,
 			);
-			path = Models;
+			name = Models;
+			path = Business/Models;
 			sourceTree = "<group>";
 		};
 		8AFD7E5E1F35EA0000E57A20 /* Views */ = {
@@ -378,7 +388,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		5D4470BAC77BF5E97F87DFF6 /* [CP] Embed Pods Frameworks */ = {
@@ -398,6 +408,7 @@
 				"${BUILT_PRODUCTS_DIR}/Gifu/Gifu.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -411,6 +422,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Gifu.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -432,7 +444,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		EB1EE73A3B95A64E159B2E57 /* [CP] Embed Pods Frameworks */ = {
@@ -472,8 +484,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8AA768E51F34C6D7005BF1AB /* LoginMgr.swift in Sources */,
+				8AA768E51F34C6D7005BF1AB /* LoginManager.swift in Sources */,
 				8AFD7E6B1F35EBF700E57A20 /* BaseViewController.swift in Sources */,
+				8A28E90D1F5ED3AB00200B28 /* Item.swift in Sources */,
 				8AFD7E6F1F35EC4000E57A20 /* BaseNavigationController.swift in Sources */,
 				8A36B9B41F51FCAA00A5A847 /* User.swift in Sources */,
 				8A38A9E21F589B8500DEEBAE /* DataStore.swift in Sources */,
@@ -481,10 +494,12 @@
 				8A38A9DF1F589B5B00DEEBAE /* RequestManager.swift in Sources */,
 				4C7B79611F5A796300D9638A /* RequestBuilder.swift in Sources */,
 				8A38A9E61F58AC9700DEEBAE /* Constants.swift in Sources */,
+				8A28E90B1F5EC83000200B28 /* Venue.swift in Sources */,
 				8AFD7E711F35EC5900E57A20 /* BaseTabBarController.swift in Sources */,
+				8A28E9091F5EB35E00200B28 /* Logger.swift in Sources */,
 				8AD527A61F32DE5A00CDACA3 /* LoginViewController.swift in Sources */,
 				8AD527A41F32DE5A00CDACA3 /* AppDelegate.swift in Sources */,
-				8A38A9DD1F589B5100DEEBAE /* RequestType.swift in Sources */,
+				8A38A9DD1F589B5100DEEBAE /* Request.swift in Sources */,
 				8A38A9E41F589BA700DEEBAE /* ResponseParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
