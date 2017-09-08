@@ -17,22 +17,39 @@ struct Const {
         static var userID: String{
             set{
                 _userID = newValue
-                UserDefaults.standard.set(newValue, forKey: Const.UDKeys.uidKey)
+                UserDefaults.standard.set(newValue, forKey: "UID")
             }
             get{
                 if let uid = _userID{
                     return uid
                 }
-                _userID = UserDefaults.standard.string(forKey: Const.UDKeys.uidKey) ?? ""
+                _userID = UserDefaults.standard.string(forKey: "UID") ?? ""
                 return _userID!
             }
         }
+        
+        //User Gender
+        private static var _userGender: String? = nil
+        static var userGender: String{
+            set{
+                _userGender = newValue
+                UserDefaults.standard.set(newValue, forKey: "ugender")
+            }
+            get{
+                if let gender = _userGender{
+                    return gender
+                }
+                _userGender = UserDefaults.standard.string(forKey: "ugender") ?? ""
+                return _userGender!
+            }
+        }
+        
+        //User Data
+        
+        
     }
     
-    /// UserDefaults Constants
-    struct UDKeys {
-        static let uidKey = "UID"
-    }
+    
     
     /// The constants of Requests
     struct Request {

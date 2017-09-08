@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13178.6" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13156.2"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -113,10 +112,10 @@
             </objects>
             <point key="canvasLocation" x="221.59999999999999" y="847.82608695652175"/>
         </scene>
-        <!--View Controller-->
+        <!--Open Orders View Controller-->
         <scene sceneID="0db-Jd-5ed">
             <objects>
-                <viewController id="eoY-Fy-CHg" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="eoY-Fy-CHg" customClass="OpenOrdersViewController" customModule="VodaFoodies" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="K6D-S3-tDr"/>
                         <viewControllerLayoutGuide type="bottom" id="5Cm-5A-odk"/>
@@ -125,24 +124,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3dU-pv-wNe">
-                                <rect key="frame" x="67" y="269" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3dU-pv-wNe">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="3dU-pv-wNe" secondAttribute="trailing" id="4VH-S2-3IZ"/>
+                            <constraint firstItem="5Cm-5A-odk" firstAttribute="top" secondItem="3dU-pv-wNe" secondAttribute="bottom" id="FkK-yv-xp1"/>
+                            <constraint firstItem="3dU-pv-wNe" firstAttribute="top" secondItem="K6D-S3-tDr" secondAttribute="bottom" id="puW-l5-8HD"/>
+                            <constraint firstItem="3dU-pv-wNe" firstAttribute="leading" secondItem="2dJ-aG-nHT" secondAttribute="leading" id="vhW-fk-oKk"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="k3n-xB-HbL"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rvq-yA-dr4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="222" y="1579"/>
+            <point key="canvasLocation" x="221.59999999999999" y="1578.2608695652175"/>
         </scene>
-        <!--View Controller-->
+        <!--My Food View Controller-->
         <scene sceneID="Yrn-T2-DUm">
             <objects>
-                <viewController id="zms-Wq-3kN" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="zms-Wq-3kN" customClass="MyFoodViewController" customModule="VodaFoodies" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cbH-Hy-sVz"/>
                         <viewControllerLayoutGuide type="bottom" id="rOa-Vx-qY3"/>
@@ -151,13 +155,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0iA-Ly-3OU">
-                                <rect key="frame" x="67" y="269" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0iA-Ly-3OU">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0iA-Ly-3OU" firstAttribute="top" secondItem="cbH-Hy-sVz" secondAttribute="bottom" id="5ar-Og-vR1"/>
+                            <constraint firstItem="0iA-Ly-3OU" firstAttribute="leading" secondItem="GRu-XN-z3h" secondAttribute="leading" id="63G-ej-B2w"/>
+                            <constraint firstAttribute="trailing" secondItem="0iA-Ly-3OU" secondAttribute="trailing" id="dOA-Jo-FNW"/>
+                            <constraint firstItem="rOa-Vx-qY3" firstAttribute="top" secondItem="0iA-Ly-3OU" secondAttribute="bottom" id="xOW-Sl-76J"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Ivt-oS-cLX"/>
                 </viewController>
@@ -165,10 +174,10 @@
             </objects>
             <point key="canvasLocation" x="918" y="1578"/>
         </scene>
-        <!--View Controller-->
+        <!--Profile View Controller-->
         <scene sceneID="Ao3-aa-avb">
             <objects>
-                <viewController id="HLm-Ai-Bec" sceneMemberID="viewController">
+                <viewController id="HLm-Ai-Bec" customClass="ProfileViewController" customModule="VodaFoodies" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ATE-b6-2Jr"/>
                         <viewControllerLayoutGuide type="bottom" id="Lmw-zL-1EM"/>
@@ -176,13 +185,41 @@
                     <view key="view" contentMode="scaleToFill" id="9A5-lb-hIX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VHf-hL-7aN">
+                                <rect key="frame" x="33" y="233" width="309" height="231"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hWq-ui-INC">
+                                        <rect key="frame" x="79" y="-79" width="150" height="150"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vn5-ZA-Omm">
+                                        <rect key="frame" x="134" y="79" width="41" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Name"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w9q-Rr-pM3">
+                                        <rect key="frame" x="132" y="109" width="44" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Phone"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wTQ-MZ-pSJ">
+                                        <rect key="frame" x="134" y="147" width="37" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Email"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="NtX-Fx-BsZ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Axp-lA-udX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1646" y="1578"/>
+            <point key="canvasLocation" x="1645.5999999999999" y="1577.3613193403301"/>
         </scene>
         <!--My Orders-->
         <scene sceneID="sij-og-D0P">

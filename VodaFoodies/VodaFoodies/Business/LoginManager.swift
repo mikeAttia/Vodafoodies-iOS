@@ -57,7 +57,7 @@ class LoginManager {
     private func getUserDataFromFacebook(token: AccessToken){
         
         GraphRequest(graphPath: token.userId!,
-                     parameters: ["fields":"name,email,link,picture.type(large)"],
+                     parameters: ["fields":"name,gender,email,link,picture.type(large)"],
                      accessToken: token,
                      httpMethod: .GET,
                      apiVersion: .defaultVersion)
@@ -72,14 +72,21 @@ class LoginManager {
                         let userName = userData?["name"] as? String
                         let userMail = userData?["email"] as? String
                         let userProfile = userData?["link"] as? String
+                        let userGender = userData?["gender"] as? String
                         let pictureData = userData?["picture"] as? [String : Any]
                         let imageData = pictureData?["data"] as? [String : Any]
                         let isSilhouette = imageData?["is_silhouette"] as? Int ?? 0
+                        
+                        //Saving user's gender
+                        Const.Global.userGender = userGender ?? ""
+                        
+                        //saving user image
                         var imageUrl : String?
                         if isSilhouette == 0{
                             imageUrl = imageData?["url"] as? String
                         }
                         
+                        // Saving user data Object
                         self.userData = User(firebaseID: "",
                                              name: userName ?? "user",
                                              imageURL: imageUrl ?? "http://menshealthnz.org.nz/wp-content/uploads/2016/05/placeholder-user-photo.png",
@@ -87,6 +94,7 @@ class LoginManager {
                                              email: userMail ?? "not found",
                                              profile: userProfile ?? "no profile link")
                         
+                        //Continue login chain
                         self.loginUserToFirebase(token: token)
                     case .failed(let error):
                         printError(error.localizedDescription, title: "Facebook Graph Request Error")

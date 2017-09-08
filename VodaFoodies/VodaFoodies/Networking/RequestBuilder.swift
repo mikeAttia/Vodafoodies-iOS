@@ -90,12 +90,21 @@ class RequestBuilder{
         }
     }
     
-    private static func alamofireRequest(path: String, method: HTTPMethod = .get, parameters: Parameters = [:]) -> DataRequest{
+    private static func alamofireRequest(path: String, method: HTTPMethod = .get, parameters: Parameters? = nil) -> DataRequest{
         let headers = [Const.Request.Keys.userId : Const.Global.userID]
+        let encoding: ParameterEncoding?
+        switch method {
+        case .post:
+            encoding = JSONEncoding.default
+        case .get:
+            encoding = URLEncoding.methodDependent
+        default:
+            encoding = URLEncoding.methodDependent
+        }
         return Alamofire.request(Const.Request.Path.baseURL + path,
                           method: method,
                           parameters: parameters,
-                          encoding: JSONEncoding.default,
+                          encoding: encoding!,
                           headers: headers)
     }
     
