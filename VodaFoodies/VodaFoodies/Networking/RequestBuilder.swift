@@ -59,8 +59,11 @@ class RequestBuilder{
     
     private static func buildVenueOrderRequest(_ req: Request.VenueOrderRequest)-> DataRequest{
         switch req {
-        case .addVenueOrder:
-            fatalError("NOT IMPLEMENTED YET")
+        case .addVenueOrder(venueID: let venueId,time: let time, order: let orderItems, callBack: _):
+            
+            return alamofireRequest(path: Const.Request.Path.addVenueOrderPath,
+                                    method: .post,
+                                    parameters: self.venueOrderParameters(vid: venueId,time: time, items: orderItems))
         case .getOpenOrders:
             return alamofireRequest(path: Const.Request.Path.getOpenOrdersPath)
         case .getOrderItemUsers(venueOrderId: _, itemId: _, callBack: _):
@@ -106,6 +109,28 @@ class RequestBuilder{
                           parameters: parameters,
                           encoding: encoding!,
                           headers: headers)
+    }
+    
+    private static func venueOrderParameters(vid: String, time: Double, items: [OrderItem]) -> Parameters{
+        var dict: Parameters = [:]
+        dict["venue_id"] = vid
+        dict["order_time"] = Int(time)
+        dict["order_items"] = orderItemsList(items: items)
+        return dict
+    }
+    
+    private static func orderItemsList(items: [OrderItem]) -> [Parameters]{
+        var list: [Parameters] = []
+        for item in items{
+            var listItem: Parameters = [:]
+            listItem["item_id"] = item.item.id
+            listItem["item_size"] = item.size
+            listItem["category"] = item.item.category
+            listItem["name"] = item.item.name
+            listItem["price"] = item.item.sizes[item.size]!
+            list.append(listItem)
+        }
+        return list
     }
     
     

@@ -1,0 +1,54 @@
+
+/* Class = "UILabel"; text = "Your Order"; ObjectID = "2V7-TU-PRb"; */
+"2V7-TU-PRb.text" = "Your Order";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "43V-tu-nCL"; */
+"43V-tu-nCL.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Sign in with Facebook"; ObjectID = "CgH-RM-hUw"; */
+"CgH-RM-hUw.normalTitle" = "Sign in with Facebook";
+
+/* Class = "UINavigationItem"; title = "Title"; ObjectID = "GbP-fE-645"; */
+"GbP-fE-645.title" = "Title";
+
+/* Class = "UITabBarItem"; title = "Profile"; ObjectID = "Gv2-qD-JIe"; */
+"Gv2-qD-JIe.title" = "Profile";
+
+/* Class = "UILabel"; text = "00 - 00 EGP"; ObjectID = "I7Q-8j-yRv"; */
+"I7Q-8j-yRv.text" = "00 - 00 EGP";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Jgj-Fn-xj4"; */
+"Jgj-Fn-xj4.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "00 - 00 EGP"; ObjectID = "NHb-2z-4RN"; */
+"NHb-2z-4RN.text" = "00 - 00 EGP";
+
+/* Class = "UILabel"; text = "Vodafoodies"; ObjectID = "PhE-JQ-fY1"; */
+"PhE-JQ-fY1.text" = "Vodafoodies";
+
+/* Class = "UITabBarItem"; title = "Open Orders"; ObjectID = "QRW-On-1c7"; */
+"QRW-On-1c7.title" = "Open Orders";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Ubf-fo-oOZ"; */
+"Ubf-fo-oOZ.text" = "Label";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "Uhx-m1-ygO"; */
+"Uhx-m1-ygO.text" = "Title";
+
+/* Class = "UIButton"; normalTitle = "Place Order"; ObjectID = "lT6-b9-9ui"; */
+"lT6-b9-9ui.normalTitle" = "Place Order";
+
+/* Class = "UITabBarItem"; title = "My Food"; ObjectID = "mMC-DS-SrV"; */
+"mMC-DS-SrV.title" = "My Food";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "vU5-F5-9fg"; */
+"vU5-F5-9fg.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Name"; ObjectID = "vn5-ZA-Omm"; */
+"vn5-ZA-Omm.normalTitle" = "Name";
+
+/* Class = "UIButton"; normalTitle = "Phone"; ObjectID = "w9q-Rr-pM3"; */
+"w9q-Rr-pM3.normalTitle" = "Phone";
+
+/* Class = "UIButton"; normalTitle = "Email"; ObjectID = "wTQ-MZ-pSJ"; */
+"wTQ-MZ-pSJ.normalTitle" = "Email";

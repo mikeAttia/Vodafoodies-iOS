@@ -13,6 +13,7 @@ class MenuViewController: BaseViewController, UITableViewDelegate, UITableViewDa
     //Constants
     let pageTitle = "Menu"
     let cellIdentifier = "menuItem"
+    let confirmSegueID = "confirmOrder"
     
     //Instance variables
     var venue: Venue?
@@ -193,10 +194,21 @@ class MenuViewController: BaseViewController, UITableViewDelegate, UITableViewDa
     // User pressed done button
     @IBAction func finalizeAction(_ sender: Any) {
         print("final order \(selectedIndexes), item: \(orderItems)")
+        performSegue(withIdentifier: confirmSegueID, sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let confirmView = segue.destination as? ConfirmOrderViewController{
+            confirmView.owner = self.owner
+            confirmView.venue = self.venue
+            confirmView.orderItems = self.orderItems
+        }
     }
 }
 
-// MARK: extending CategoryHeaderDelegate
+
+    // MARK: extending CategoryHeaderDelegate
+
 extension MenuViewController: CategoryHeaderDelegate {
     func userTappedSectoinWithIndex(_ index: Int) {
         let selected = selectedCategoryIndex

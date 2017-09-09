@@ -30,6 +30,7 @@
 		8AA4FA671F32DFAE00048C90 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8AA4FA661F32DFAE00048C90 /* GoogleService-Info.plist */; };
 		8AA4FA681F32E00800048C90 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8AA4FA661F32DFAE00048C90 /* GoogleService-Info.plist */; };
 		8AA768E51F34C6D7005BF1AB /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA768E41F34C6D7005BF1AB /* LoginManager.swift */; };
+		8AB517271F6415FF00080F1E /* ConfirmOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB517261F6415FF00080F1E /* ConfirmOrderViewController.swift */; };
 		8AD527A41F32DE5A00CDACA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD527A31F32DE5A00CDACA3 /* AppDelegate.swift */; };
 		8AD527A61F32DE5A00CDACA3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD527A51F32DE5A00CDACA3 /* LoginViewController.swift */; };
 		8AD527A91F32DE5A00CDACA3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AD527A71F32DE5A00CDACA3 /* Main.storyboard */; };
@@ -76,6 +77,7 @@
 		8A38A9E51F58AC9700DEEBAE /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		8AA4FA661F32DFAE00048C90 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8AA768E41F34C6D7005BF1AB /* LoginManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginManager.swift; path = ../Business/LoginManager.swift; sourceTree = "<group>"; };
+		8AB517261F6415FF00080F1E /* ConfirmOrderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmOrderViewController.swift; sourceTree = "<group>"; };
 		8AD527A01F32DE5A00CDACA3 /* VodaFoodies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VodaFoodies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AD527A31F32DE5A00CDACA3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8AD527A51F32DE5A00CDACA3 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = ../../LoginViewController.swift; sourceTree = "<group>"; };
@@ -118,7 +120,7 @@
 			children = (
 				8AD527A51F32DE5A00CDACA3 /* LoginViewController.swift */,
 				8A27FA941F62EE0400DC3391 /* OpenOrdersTab */,
-				8A27FA951F62F9D700DC3391 /* AddOrderVies */,
+				8A27FA951F62F9D700DC3391 /* AddOrderViews */,
 				8A1F88E11F61233200A91D33 /* MyFoodViewController.swift */,
 				8A1F88E31F61233C00A91D33 /* ProfileViewcontroller.swift */,
 			);
@@ -133,13 +135,14 @@
 			name = OpenOrdersTab;
 			sourceTree = "<group>";
 		};
-		8A27FA951F62F9D700DC3391 /* AddOrderVies */ = {
+		8A27FA951F62F9D700DC3391 /* AddOrderViews */ = {
 			isa = PBXGroup;
 			children = (
 				8A27FA921F62C9F700DC3391 /* VenuesListViewController.swift */,
 				8A27FA961F62FA1200DC3391 /* MenuViewController.swift */,
+				8AB517261F6415FF00080F1E /* ConfirmOrderViewController.swift */,
 			);
-			name = AddOrderVies;
+			name = AddOrderViews;
 			sourceTree = "<group>";
 		};
 		8A28E9071F5EB33300200B28 /* Utils */ = {
@@ -208,13 +211,13 @@
 				8A38A9DB1F589B2D00DEEBAE /* Networking */,
 				8AEC761C1F3609D200547422 /* Models */,
 				8AFD7E5E1F35EA0000E57A20 /* Views */,
+				8A38A9E51F58AC9700DEEBAE /* Constants.swift */,
 				8AD527A31F32DE5A00CDACA3 /* AppDelegate.swift */,
 				8AD527A71F32DE5A00CDACA3 /* Main.storyboard */,
 				8AD527AD1F32DE5A00CDACA3 /* Assets.xcassets */,
 				8AD527AF1F32DE5A00CDACA3 /* LaunchScreen.storyboard */,
 				8AD527B21F32DE5A00CDACA3 /* Info.plist */,
 				8AA4FA661F32DFAE00048C90 /* GoogleService-Info.plist */,
-				8A38A9E51F58AC9700DEEBAE /* Constants.swift */,
 			);
 			path = VodaFoodies;
 			sourceTree = "<group>";
@@ -534,6 +537,7 @@
 				8A27FA971F62FA1200DC3391 /* MenuViewController.swift in Sources */,
 				8A28E9091F5EB35E00200B28 /* Logger.swift in Sources */,
 				8AD527A61F32DE5A00CDACA3 /* LoginViewController.swift in Sources */,
+				8AB517271F6415FF00080F1E /* ConfirmOrderViewController.swift in Sources */,
 				8A1F88E21F61233200A91D33 /* MyFoodViewController.swift in Sources */,
 				8AD527A41F32DE5A00CDACA3 /* AppDelegate.swift in Sources */,
 				8A38A9DD1F589B5100DEEBAE /* Request.swift in Sources */,

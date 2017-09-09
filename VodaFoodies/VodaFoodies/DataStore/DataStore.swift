@@ -94,8 +94,8 @@ class DataStore {
     
     private func handleVenueOrderResult(_ req: Request.VenueOrderRequest, result: Any?, error: RequestError?){
         switch req {
-        case .addVenueOrder(callBack: _):
-            fatalError("NOT IMPLEMENTED YET")
+        case .addVenueOrder(venueID: _, time: _, order: _, callBack: let callBack):
+            callBack(error)
         case .getOpenOrders(callBack: _):
             break
         case .getOrderItemUsers(venueOrderId: _, itemId: _, callBack: _):

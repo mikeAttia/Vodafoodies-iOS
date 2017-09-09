@@ -25,7 +25,7 @@ enum Request{
     }
     
     enum VenueOrderRequest {
-        case addVenueOrder(callBack: (_ error: RequestError?)->Void)
+        case addVenueOrder(venueID: String, time: Double, order: [OrderItem],callBack: (_ error: RequestError?)->Void)
         // TODO: Associated value is order object
         case getOpenOrders(callBack: (_ error: RequestError?)->Void)
         // TODO: Parameter in callback for list of open orders

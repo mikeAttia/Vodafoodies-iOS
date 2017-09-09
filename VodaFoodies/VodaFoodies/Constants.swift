@@ -60,7 +60,8 @@ struct Const {
         
         struct Path{
             //Base url
-            static let baseURL = "https://us-central1-vodafoodies-e3f2f.cloudfunctions.net"
+            static let baseURL = "http://localhost:5000/vodafoodies-e3f2f/us-central1"
+//            static let baseURL = "https://us-central1-vodafoodies-e3f2f.cloudfunctions.net"
             
             //user requests
             static let updateUserDataPath = "/updateUserData"
