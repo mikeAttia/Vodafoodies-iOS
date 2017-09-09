@@ -13,6 +13,8 @@
 		8A1F88E01F61231E00A91D33 /* OpenOrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1F88DF1F61231E00A91D33 /* OpenOrdersViewController.swift */; };
 		8A1F88E21F61233200A91D33 /* MyFoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1F88E11F61233200A91D33 /* MyFoodViewController.swift */; };
 		8A1F88E41F61233C00A91D33 /* ProfileViewcontroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1F88E31F61233C00A91D33 /* ProfileViewcontroller.swift */; };
+		8A27FA931F62C9F700DC3391 /* VenuesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A27FA921F62C9F700DC3391 /* VenuesListViewController.swift */; };
+		8A27FA971F62FA1200DC3391 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A27FA961F62FA1200DC3391 /* MenuViewController.swift */; };
 		8A28E9091F5EB35E00200B28 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A28E9081F5EB35E00200B28 /* Logger.swift */; };
 		8A28E90B1F5EC83000200B28 /* Venue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A28E90A1F5EC83000200B28 /* Venue.swift */; };
 		8A28E90D1F5ED3AB00200B28 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A28E90C1F5ED3AB00200B28 /* Item.swift */; };
@@ -58,6 +60,8 @@
 		8A1F88DF1F61231E00A91D33 /* OpenOrdersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenOrdersViewController.swift; sourceTree = "<group>"; };
 		8A1F88E11F61233200A91D33 /* MyFoodViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyFoodViewController.swift; sourceTree = "<group>"; };
 		8A1F88E31F61233C00A91D33 /* ProfileViewcontroller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewcontroller.swift; sourceTree = "<group>"; };
+		8A27FA921F62C9F700DC3391 /* VenuesListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VenuesListViewController.swift; sourceTree = "<group>"; };
+		8A27FA961F62FA1200DC3391 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		8A28E9081F5EB35E00200B28 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		8A28E90A1F5EC83000200B28 /* Venue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Venue.swift; sourceTree = "<group>"; };
 		8A28E90C1F5ED3AB00200B28 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
@@ -74,7 +78,7 @@
 		8AA768E41F34C6D7005BF1AB /* LoginManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginManager.swift; path = ../Business/LoginManager.swift; sourceTree = "<group>"; };
 		8AD527A01F32DE5A00CDACA3 /* VodaFoodies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VodaFoodies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AD527A31F32DE5A00CDACA3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8AD527A51F32DE5A00CDACA3 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = ../LoginViewController.swift; sourceTree = "<group>"; };
+		8AD527A51F32DE5A00CDACA3 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = ../../LoginViewController.swift; sourceTree = "<group>"; };
 		8AD527A81F32DE5A00CDACA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8AD527AD1F32DE5A00CDACA3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8AD527B01F32DE5A00CDACA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -112,11 +116,30 @@
 		8A1F88DE1F6122B900A91D33 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				8A1F88DF1F61231E00A91D33 /* OpenOrdersViewController.swift */,
+				8AD527A51F32DE5A00CDACA3 /* LoginViewController.swift */,
+				8A27FA941F62EE0400DC3391 /* OpenOrdersTab */,
+				8A27FA951F62F9D700DC3391 /* AddOrderVies */,
 				8A1F88E11F61233200A91D33 /* MyFoodViewController.swift */,
 				8A1F88E31F61233C00A91D33 /* ProfileViewcontroller.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		8A27FA941F62EE0400DC3391 /* OpenOrdersTab */ = {
+			isa = PBXGroup;
+			children = (
+				8A1F88DF1F61231E00A91D33 /* OpenOrdersViewController.swift */,
+			);
+			name = OpenOrdersTab;
+			sourceTree = "<group>";
+		};
+		8A27FA951F62F9D700DC3391 /* AddOrderVies */ = {
+			isa = PBXGroup;
+			children = (
+				8A27FA921F62C9F700DC3391 /* VenuesListViewController.swift */,
+				8A27FA961F62FA1200DC3391 /* MenuViewController.swift */,
+			);
+			name = AddOrderVies;
 			sourceTree = "<group>";
 		};
 		8A28E9071F5EB33300200B28 /* Utils */ = {
@@ -222,7 +245,6 @@
 				8A1F88DE1F6122B900A91D33 /* Controllers */,
 				8AFD7E691F35EBD000E57A20 /* BaseViews */,
 				8A36B9B51F51FE8D00A5A847 /* LoadingView */,
-				8AD527A51F32DE5A00CDACA3 /* LoginViewController.swift */,
 			);
 			name = Views;
 			path = ViewControllers;
@@ -314,6 +336,7 @@
 				TargetAttributes = {
 					8AD5279F1F32DE5A00CDACA3 = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 855NGKW9YC;
 						ProvisioningStyle = Automatic;
 					};
 					8AD527B61F32DE5A00CDACA3 = {
@@ -501,12 +524,14 @@
 				8AFD7E6F1F35EC4000E57A20 /* BaseNavigationController.swift in Sources */,
 				8A36B9B41F51FCAA00A5A847 /* User.swift in Sources */,
 				8A38A9E21F589B8500DEEBAE /* DataStore.swift in Sources */,
+				8A27FA931F62C9F700DC3391 /* VenuesListViewController.swift in Sources */,
 				8A36B9B71F51FEAE00A5A847 /* LoadingViewController.swift in Sources */,
 				8A38A9DF1F589B5B00DEEBAE /* RequestManager.swift in Sources */,
 				4C7B79611F5A796300D9638A /* RequestBuilder.swift in Sources */,
 				8A38A9E61F58AC9700DEEBAE /* Constants.swift in Sources */,
 				8A28E90B1F5EC83000200B28 /* Venue.swift in Sources */,
 				8AFD7E711F35EC5900E57A20 /* BaseTabBarController.swift in Sources */,
+				8A27FA971F62FA1200DC3391 /* MenuViewController.swift in Sources */,
 				8A28E9091F5EB35E00200B28 /* Logger.swift in Sources */,
 				8AD527A61F32DE5A00CDACA3 /* LoginViewController.swift in Sources */,
 				8A1F88E21F61233200A91D33 /* MyFoodViewController.swift in Sources */,
@@ -652,6 +677,7 @@
 			baseConfigurationReference = 4EE5A742978F522433889DAC /* Pods-VodaFoodies.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 855NGKW9YC;
 				INFOPLIST_FILE = VodaFoodies/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -666,6 +692,7 @@
 			baseConfigurationReference = A5BE0DDBCA152954A8FEB561 /* Pods-VodaFoodies.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 855NGKW9YC;
 				INFOPLIST_FILE = VodaFoodies/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

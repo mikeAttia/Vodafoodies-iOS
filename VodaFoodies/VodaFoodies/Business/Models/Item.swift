@@ -14,3 +14,8 @@ struct Item {
     let category: String
     let sizes: [String: Int]
 }
+
+struct OrderItem{
+    let item: Item
+    let size: String
+}
