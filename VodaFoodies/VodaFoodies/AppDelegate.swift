@@ -19,12 +19,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        
         //Loading Firebase configurations
         FirebaseApp.configure()
         
         //In case it is coming back from a facebook dialogue or app
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
+        
+        //Setting root view controller
+        if let _ = Auth.auth().currentUser, let _ = FBSDKAccessToken.current(){
+            window?.rootViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "tabBar")
+        }
         
         return true
     }

@@ -14,7 +14,7 @@ class ResponseParser {
     
     /// Get list of venues from json
     static func getVenuesFrom(_ data: Any?)->[Venue]?{
-        guard let data = data, let json = data as? [String: Any] else{
+        guard let json = data as? [String: Any] else{
             return nil
         }
         var venuesList: [Venue] = []
@@ -30,7 +30,7 @@ class ResponseParser {
     
     /// Get list of tuples containing categories and related items
     static func getMenuFrom(_ data: Any?)->[(String, [Item])]?{
-        guard let data = data, let json = data as? [String : Any] else{
+        guard let json = data as? [String : Any] else{
             return nil
         }
         var menu: [(String, [Item])] = []
@@ -46,7 +46,7 @@ class ResponseParser {
     
     /// get list of items from json
     static func getItemsFrom(_ data: Any?)->[Item]{
-        guard let data = data, let json = data as? [String: Any] else{
+        guard let json = data as? [String: Any] else{
             return []
         }
         var items: [Item] = []
@@ -64,5 +64,50 @@ class ResponseParser {
         
         return items
         
+    }
+    
+    static func getUserOrdersFrom(_ data: Any?) -> [UserOrder]{
+        guard let result = data as? [String: Any], let json = result["result"] as? [[String: Any]] else{
+            return []
+        }
+        var userOrders: [UserOrder] = []
+        for order in json{
+            userOrders.append(UserOrder(venueOrderId: order["venue_order_id"] as? String ?? "",
+                                        orderTime: order["venue_order_id"] as? Double ?? Date().timeIntervalSince1970,
+                                        orderStatus: OrderStatus(rawValue: order["order_status"] as? String ?? "cancelled")!,
+                                        venue: Venue(id: order["venue_id"] as? String ?? "", name: order["venue_name"] as? String ?? "", img: "", phones: []),
+                                        admin: getUserDataFrom(order["venue_order_admin"]),
+                                        items: getOrderItemsFrom(order["items"])))
+            
+        }
+        
+        return userOrders
+    }
+    
+    static func getOrderItemsFrom(_ data: Any?) -> [OrderItem]{
+        guard let json = data as? [[String: Any]] else {
+            return []
+        }
+        var orderItmes: [OrderItem] = []
+        for item in json{
+            orderItmes.append(OrderItem(item: Item(id: item["item_id"] as? String ?? "",
+                                                   name: item["name"] as? String ?? "",
+                                                   category: item["category"] as? String ?? "",
+                                                   sizes: [item["item_size"] as? String ?? "" : item["price"] as? Int ?? 0] ),
+                                        size: item["item_size"] as? String ?? ""))
+        }
+        return orderItmes
+    }
+    
+    static func getUserDataFrom(_ data: Any?) -> User{
+        guard let json = data as? [String : String] else{
+            return User(firebaseID: "", name: "", imageURL: "", phoneNo: "", email: "", profile: "")
+        }
+        return User(firebaseID: json["id"] ?? "",
+                    name: json["name"] ?? "",
+                    imageURL: "",
+                    phoneNo: json["phone"] ?? "",
+                    email: "",
+                    profile: "")
     }
 }

@@ -115,8 +115,10 @@ class DataStore {
             fatalError("NOT IMPLEMENTED YET")
         case .deleteUserOrderItem(venueOrderId: _, itemId: _, callBack: _):
             fatalError("NOT IMPLEMENTED YET")
-        case .getUserOrders(venueOrderID: _, callBack: _):
-            break
+        case .getUserOrders(venueOrderID: _, callBack: let callBack):
+            callBack(ResponseParser.getUserOrdersFrom(result), error)
         }
     }
+    
+    
 }

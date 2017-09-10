@@ -18,6 +18,7 @@
 		8A28E9091F5EB35E00200B28 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A28E9081F5EB35E00200B28 /* Logger.swift */; };
 		8A28E90B1F5EC83000200B28 /* Venue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A28E90A1F5EC83000200B28 /* Venue.swift */; };
 		8A28E90D1F5ED3AB00200B28 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A28E90C1F5ED3AB00200B28 /* Item.swift */; };
+		8A2B4B011F65D5EF00E005AF /* TableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2B4B001F65D5EF00E005AF /* TableHeaderView.swift */; };
 		8A36B9B41F51FCAA00A5A847 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A36B9B31F51FCAA00A5A847 /* User.swift */; };
 		8A36B9B71F51FEAE00A5A847 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A36B9B61F51FEAE00A5A847 /* LoadingViewController.swift */; };
 		8A36B9B91F51FECA00A5A847 /* loadingView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A36B9B81F51FECA00A5A847 /* loadingView.storyboard */; };
@@ -27,6 +28,7 @@
 		8A38A9E21F589B8500DEEBAE /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A38A9E11F589B8500DEEBAE /* DataStore.swift */; };
 		8A38A9E41F589BA700DEEBAE /* ResponseParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A38A9E31F589BA700DEEBAE /* ResponseParser.swift */; };
 		8A38A9E61F58AC9700DEEBAE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A38A9E51F58AC9700DEEBAE /* Constants.swift */; };
+		8A7210061F65BF8B0055BD16 /* UserOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7210051F65BF8B0055BD16 /* UserOrder.swift */; };
 		8AA4FA671F32DFAE00048C90 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8AA4FA661F32DFAE00048C90 /* GoogleService-Info.plist */; };
 		8AA4FA681F32E00800048C90 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8AA4FA661F32DFAE00048C90 /* GoogleService-Info.plist */; };
 		8AA768E51F34C6D7005BF1AB /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA768E41F34C6D7005BF1AB /* LoginManager.swift */; };
@@ -66,6 +68,7 @@
 		8A28E9081F5EB35E00200B28 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		8A28E90A1F5EC83000200B28 /* Venue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Venue.swift; sourceTree = "<group>"; };
 		8A28E90C1F5ED3AB00200B28 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		8A2B4B001F65D5EF00E005AF /* TableHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableHeaderView.swift; sourceTree = "<group>"; };
 		8A36B9B31F51FCAA00A5A847 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		8A36B9B61F51FEAE00A5A847 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 		8A36B9B81F51FECA00A5A847 /* loadingView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = loadingView.storyboard; sourceTree = "<group>"; };
@@ -75,6 +78,7 @@
 		8A38A9E11F589B8500DEEBAE /* DataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 		8A38A9E31F589BA700DEEBAE /* ResponseParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseParser.swift; sourceTree = "<group>"; };
 		8A38A9E51F58AC9700DEEBAE /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		8A7210051F65BF8B0055BD16 /* UserOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserOrder.swift; sourceTree = "<group>"; };
 		8AA4FA661F32DFAE00048C90 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8AA768E41F34C6D7005BF1AB /* LoginManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginManager.swift; path = ../Business/LoginManager.swift; sourceTree = "<group>"; };
 		8AB517261F6415FF00080F1E /* ConfirmOrderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmOrderViewController.swift; sourceTree = "<group>"; };
@@ -121,7 +125,7 @@
 				8AD527A51F32DE5A00CDACA3 /* LoginViewController.swift */,
 				8A27FA941F62EE0400DC3391 /* OpenOrdersTab */,
 				8A27FA951F62F9D700DC3391 /* AddOrderViews */,
-				8A1F88E11F61233200A91D33 /* MyFoodViewController.swift */,
+				8A2B4AFF1F65D5CF00E005AF /* MyFoodViews */,
 				8A1F88E31F61233C00A91D33 /* ProfileViewcontroller.swift */,
 			);
 			path = Controllers;
@@ -151,6 +155,15 @@
 				8A28E9081F5EB35E00200B28 /* Logger.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		8A2B4AFF1F65D5CF00E005AF /* MyFoodViews */ = {
+			isa = PBXGroup;
+			children = (
+				8A1F88E11F61233200A91D33 /* MyFoodViewController.swift */,
+				8A2B4B001F65D5EF00E005AF /* TableHeaderView.swift */,
+			);
+			name = MyFoodViews;
 			sourceTree = "<group>";
 		};
 		8A36B9B51F51FE8D00A5A847 /* LoadingView */ = {
@@ -237,6 +250,7 @@
 				8A36B9B31F51FCAA00A5A847 /* User.swift */,
 				8A28E90A1F5EC83000200B28 /* Venue.swift */,
 				8A28E90C1F5ED3AB00200B28 /* Item.swift */,
+				8A7210051F65BF8B0055BD16 /* UserOrder.swift */,
 			);
 			name = Models;
 			path = Business/Models;
@@ -532,6 +546,8 @@
 				8A38A9DF1F589B5B00DEEBAE /* RequestManager.swift in Sources */,
 				4C7B79611F5A796300D9638A /* RequestBuilder.swift in Sources */,
 				8A38A9E61F58AC9700DEEBAE /* Constants.swift in Sources */,
+				8A2B4B011F65D5EF00E005AF /* TableHeaderView.swift in Sources */,
+				8A7210061F65BF8B0055BD16 /* UserOrder.swift in Sources */,
 				8A28E90B1F5EC83000200B28 /* Venue.swift in Sources */,
 				8AFD7E711F35EC5900E57A20 /* BaseTabBarController.swift in Sources */,
 				8A27FA971F62FA1200DC3391 /* MenuViewController.swift in Sources */,

@@ -88,11 +88,11 @@ class LoginManager {
                         
                         // Saving user data Object
                         self.userData = User(firebaseID: "",
-                                             name: userName ?? "user",
+                                             name: userName ?? "",
                                              imageURL: imageUrl ?? "http://menshealthnz.org.nz/wp-content/uploads/2016/05/placeholder-user-photo.png",
-                                             phoneNo: "not found",
-                                             email: userMail ?? "not found",
-                                             profile: userProfile ?? "no profile link")
+                                             phoneNo: "",
+                                             email: userMail ?? "",
+                                             profile: userProfile ?? "")
                         
                         //Continue login chain
                         self.loginUserToFirebase(token: token)
@@ -129,6 +129,7 @@ class LoginManager {
             
             self.userData?.firebaseID = userID
             Const.Global.userID = userID
+            Const.Global.loggedInUser = self.userData!
             self.writeUserDataToFirebase()
             self.completionHandler(LoginResult.success)
         }
