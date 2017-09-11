@@ -10,4 +10,8 @@ import UIKit
 
 class OpenOrdersViewController: BaseViewController {
     
+    override func viewDidLoad() {
+        
+    }
+    
 }

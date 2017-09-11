@@ -12,6 +12,8 @@ class MyFoodViewController: BaseViewController, UITableViewDelegate, UITableView
     
    //Constants
     let cellIdentifier = "orderItem"
+    let headerIdentifier = "header"
+    let headerNibFileName = "UserOrderHeader"
     let pageTitle = "My Food"
     
     //Instance Variables
@@ -31,6 +33,9 @@ class MyFoodViewController: BaseViewController, UITableViewDelegate, UITableView
         contentTable.dataSource = self
         contentTable.estimatedRowHeight = 40
         contentTable.rowHeight = UITableViewAutomaticDimension
+        
+        // Registering Header nib file
+        contentTable.register(UINib(nibName: headerNibFileName, bundle: nil) , forHeaderFooterViewReuseIdentifier: headerIdentifier)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -58,9 +63,10 @@ class MyFoodViewController: BaseViewController, UITableViewDelegate, UITableView
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: "header") as? TableHeaderView ?? TableHeaderView(reuseIdentifier: "header")
-        header.venueName.text = orders[section].venue.name
-        header.orderStatus.text = orders[section].orderStatus.rawValue
+        let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: headerIdentifier) as? TableHeaderView
+        header?.setupView(venue: orders[section].venue.name,
+                          user: orders[section].admin,
+                          orderStatus: TagLabel.LabelType(rawValue: orders[section].orderStatus.rawValue)!)
         return header
     }
     

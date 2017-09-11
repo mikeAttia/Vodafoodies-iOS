@@ -28,6 +28,7 @@
 		8A38A9E21F589B8500DEEBAE /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A38A9E11F589B8500DEEBAE /* DataStore.swift */; };
 		8A38A9E41F589BA700DEEBAE /* ResponseParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A38A9E31F589BA700DEEBAE /* ResponseParser.swift */; };
 		8A38A9E61F58AC9700DEEBAE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A38A9E51F58AC9700DEEBAE /* Constants.swift */; };
+		8A5F157D1F671E7400D9B8E4 /* TagLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5F157C1F671E7400D9B8E4 /* TagLabel.swift */; };
 		8A7210061F65BF8B0055BD16 /* UserOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7210051F65BF8B0055BD16 /* UserOrder.swift */; };
 		8AA4FA671F32DFAE00048C90 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8AA4FA661F32DFAE00048C90 /* GoogleService-Info.plist */; };
 		8AA4FA681F32E00800048C90 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8AA4FA661F32DFAE00048C90 /* GoogleService-Info.plist */; };
@@ -39,6 +40,7 @@
 		8AD527AE1F32DE5A00CDACA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AD527AD1F32DE5A00CDACA3 /* Assets.xcassets */; };
 		8AD527B11F32DE5A00CDACA3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AD527AF1F32DE5A00CDACA3 /* LaunchScreen.storyboard */; };
 		8AD527BC1F32DE5A00CDACA3 /* VodaFoodiesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD527BB1F32DE5A00CDACA3 /* VodaFoodiesTests.swift */; };
+		8ADA834C1F66768E006F486B /* UserOrderHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8ADA834B1F66768E006F486B /* UserOrderHeader.xib */; };
 		8AFD7E6B1F35EBF700E57A20 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFD7E6A1F35EBF700E57A20 /* BaseViewController.swift */; };
 		8AFD7E6F1F35EC4000E57A20 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFD7E6E1F35EC4000E57A20 /* BaseNavigationController.swift */; };
 		8AFD7E711F35EC5900E57A20 /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFD7E701F35EC5900E57A20 /* BaseTabBarController.swift */; };
@@ -78,6 +80,7 @@
 		8A38A9E11F589B8500DEEBAE /* DataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 		8A38A9E31F589BA700DEEBAE /* ResponseParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseParser.swift; sourceTree = "<group>"; };
 		8A38A9E51F58AC9700DEEBAE /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		8A5F157C1F671E7400D9B8E4 /* TagLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagLabel.swift; sourceTree = "<group>"; };
 		8A7210051F65BF8B0055BD16 /* UserOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserOrder.swift; sourceTree = "<group>"; };
 		8AA4FA661F32DFAE00048C90 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8AA768E41F34C6D7005BF1AB /* LoginManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginManager.swift; path = ../Business/LoginManager.swift; sourceTree = "<group>"; };
@@ -92,6 +95,7 @@
 		8AD527B71F32DE5A00CDACA3 /* VodaFoodiesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VodaFoodiesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AD527BB1F32DE5A00CDACA3 /* VodaFoodiesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VodaFoodiesTests.swift; sourceTree = "<group>"; };
 		8AD527BD1F32DE5A00CDACA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8ADA834B1F66768E006F486B /* UserOrderHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserOrderHeader.xib; sourceTree = "<group>"; };
 		8AFD7E6A1F35EBF700E57A20 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		8AFD7E6E1F35EC4000E57A20 /* BaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		8AFD7E701F35EC5900E57A20 /* BaseTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
@@ -162,6 +166,8 @@
 			children = (
 				8A1F88E11F61233200A91D33 /* MyFoodViewController.swift */,
 				8A2B4B001F65D5EF00E005AF /* TableHeaderView.swift */,
+				8ADA834B1F66768E006F486B /* UserOrderHeader.xib */,
+				8A5F157C1F671E7400D9B8E4 /* TagLabel.swift */,
 			);
 			name = MyFoodViews;
 			sourceTree = "<group>";
@@ -389,6 +395,7 @@
 			files = (
 				8AD527B11F32DE5A00CDACA3 /* LaunchScreen.storyboard in Resources */,
 				8A36B9BF1F52048700A5A847 /* loading.gif in Resources */,
+				8ADA834C1F66768E006F486B /* UserOrderHeader.xib in Resources */,
 				8A36B9B91F51FECA00A5A847 /* loadingView.storyboard in Resources */,
 				8AA4FA671F32DFAE00048C90 /* GoogleService-Info.plist in Resources */,
 				8AD527AE1F32DE5A00CDACA3 /* Assets.xcassets in Resources */,
@@ -534,6 +541,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8AA768E51F34C6D7005BF1AB /* LoginManager.swift in Sources */,
+				8A5F157D1F671E7400D9B8E4 /* TagLabel.swift in Sources */,
 				8A1F88E01F61231E00A91D33 /* OpenOrdersViewController.swift in Sources */,
 				8A1F88E41F61233C00A91D33 /* ProfileViewcontroller.swift in Sources */,
 				8AFD7E6B1F35EBF700E57A20 /* BaseViewController.swift in Sources */,
