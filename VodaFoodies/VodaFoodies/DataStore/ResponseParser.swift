@@ -66,19 +66,21 @@ class ResponseParser {
         
     }
     
-    static func getUserOrdersFrom(_ data: Any?) -> [UserOrder]{
+    static func getOrdersFrom(_ data: Any?) -> [Order]{
         guard let result = data as? [String: Any], let json = result["result"] as? [[String: Any]] else{
             return []
         }
-        var userOrders: [UserOrder] = []
+        var userOrders: [Order] = []
         for order in json{
-            userOrders.append(UserOrder(venueOrderId: order["venue_order_id"] as? String ?? "",
-                                        orderTime: order["venue_order_id"] as? Double ?? Date().timeIntervalSince1970,
+            userOrders.append(Order(venueOrderId: order["venue_order_id"] as? String ?? "",
+                                        orderTime: order["order_time"] as? Double ?? Date().timeIntervalSince1970,
                                         orderStatus: OrderStatus(rawValue: order["order_status"] as? String ?? "cancelled")!,
-                                        venue: Venue(id: order["venue_id"] as? String ?? "", name: order["venue_name"] as? String ?? "", img: "", phones: []),
-                                        admin: getUserDataFrom(order["venue_order_admin"]),
+                                        venue: Venue(id: order["venue_id"] as? String ?? "",
+                                                     name: order["venue_name"] as? String ?? "",
+                                                     img: order["venue_image"] as? String ?? "",
+                                                     phones: order["venue_phones"] as? [String] ?? []),
+                                        admin: getUserDataFrom(order["owner"]),
                                         items: getOrderItemsFrom(order["items"])))
-            
         }
         
         return userOrders
@@ -105,9 +107,9 @@ class ResponseParser {
         }
         return User(firebaseID: json["id"] ?? "",
                     name: json["name"] ?? "",
-                    imageURL: "",
+                    imageURL: json["image"] ?? "",
                     phoneNo: json["phone"] ?? "",
-                    email: "",
-                    profile: "")
+                    email: json["email"] ?? "",
+                    profile: json["profile"] ?? "")
     }
 }

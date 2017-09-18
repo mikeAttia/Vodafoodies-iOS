@@ -18,7 +18,6 @@ class RequestManager {
             switch response.result{
                 
             case .success(let value):
-                
                 if checkStatus(code: response.response?.statusCode) {
                     callBack(reqID, Result.success(result: value))
                 }else{

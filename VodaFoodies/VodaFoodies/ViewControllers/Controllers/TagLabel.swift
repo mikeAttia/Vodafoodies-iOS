@@ -10,7 +10,7 @@ import UIKit
 
 class TagLabel: UILabel {
 
-    var labelType: LabelType = LabelType.open
+    private var labelType: LabelType = LabelType.open
     var textInsets = UIEdgeInsets.init(top: 0, left: 3, bottom: 0, right: 3) {
         didSet { invalidateIntrinsicContentSize() }
     }

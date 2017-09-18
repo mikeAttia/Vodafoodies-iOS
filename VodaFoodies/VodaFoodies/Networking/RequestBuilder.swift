@@ -64,7 +64,7 @@ class RequestBuilder{
             return alamofireRequest(path: Const.Request.Path.addVenueOrderPath,
                                     method: .post,
                                     parameters: self.venueOrderParameters(vid: venueId,time: time, items: orderItems))
-        case .getOpenOrders:
+        case .getOpenOrders(callBack: _):
             return alamofireRequest(path: Const.Request.Path.getOpenOrdersPath)
         case .getOrderItemUsers(venueOrderId: _, itemId: _, callBack: _):
             fatalError("NOT IMPLEMENTED YET")

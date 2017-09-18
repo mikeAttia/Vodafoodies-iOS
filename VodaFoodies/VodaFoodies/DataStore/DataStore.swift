@@ -96,8 +96,8 @@ class DataStore {
         switch req {
         case .addVenueOrder(venueID: _, time: _, order: _, callBack: let callBack):
             callBack(error)
-        case .getOpenOrders(callBack: _):
-            break
+        case .getOpenOrders(callBack: let callBack):
+            callBack(ResponseParser.getOrdersFrom(result), error)
         case .getOrderItemUsers(venueOrderId: _, itemId: _, callBack: _):
             fatalError("NOT IMPLEMENTED YET")
         case .getOrderSum(venueOrderId: _, callBack: _):
@@ -116,7 +116,7 @@ class DataStore {
         case .deleteUserOrderItem(venueOrderId: _, itemId: _, callBack: _):
             fatalError("NOT IMPLEMENTED YET")
         case .getUserOrders(venueOrderID: _, callBack: let callBack):
-            callBack(ResponseParser.getUserOrdersFrom(result), error)
+            callBack(ResponseParser.getOrdersFrom(result), error)
         }
     }
     

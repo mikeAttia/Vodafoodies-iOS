@@ -17,7 +17,7 @@ class MyFoodViewController: BaseViewController, UITableViewDelegate, UITableView
     let pageTitle = "My Food"
     
     //Instance Variables
-    var orders : [UserOrder] = []
+    var orders : [Order] = []
     
     //View Outlets
     @IBOutlet weak var contentTable: UITableView!
@@ -45,7 +45,7 @@ class MyFoodViewController: BaseViewController, UITableViewDelegate, UITableView
         DataStore.shared.getData(req: req)
     }
     
-    private func handleRequestResult(orders: [UserOrder], err: RequestError?){
+    private func handleRequestResult(orders: [Order], err: RequestError?){
         //TODO: hide loading indicator
         if let error = err{
             //Show Error Message to user
@@ -88,8 +88,53 @@ class MyFoodViewController: BaseViewController, UITableViewDelegate, UITableView
         }else{
             cell?.itemPrice.text = ""
         }
-        
+        let backGroundView = UIView()
+        backGroundView.backgroundColor = UIColor.white
+        cell?.selectedBackgroundView = backGroundView
         return cell!
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        // guarding that order is open
+        guard orders[indexPath.section].orderStatus == .open else{
+            print("use can't edit order")
+            return
+        }
+        let item = orders[indexPath.section].items[indexPath.row]
+        let itemsCount = orders[indexPath.section].items.count
+        let isAdmin = Const.Global.userID == orders[indexPath.section].admin.firebaseID
+        
+        let alertView = UIAlertController(title: item.item.name, message: nil, preferredStyle: .actionSheet)
+        let request: Request?
+        
+        if itemsCount < 2 {
+            if isAdmin{
+                let deleteVenueOrder = UIAlertAction(title: "Delete Venue Order", style: .default, handler: { _ in
+                    //TODO : Make the delete venue order request
+                    print("Delete Venue Order")
+                })
+                alertView.addAction(deleteVenueOrder)
+            }else{
+                let deleteMyOrder = UIAlertAction(title: "Delete My Order", style: .default, handler: { _ in
+                    //TODO : Make the delete user order request
+                    print("Delete My Order")
+                })
+                alertView.addAction(deleteMyOrder)
+            }
+        
+        }else{
+            let deleteItem = UIAlertAction(title: "Delete this item", style: .default, handler: { _ in
+                //TODO: Make the delete user item request
+                print("Delete Item")
+            })
+            alertView.addAction(deleteItem)
+        }
+        let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        cancel.setValue(UIColor.red, forKey: "titleTextColor")
+        alertView.addAction(cancel)
+        
+     self.present(alertView, animated: true, completion: nil)
     }
     
 }

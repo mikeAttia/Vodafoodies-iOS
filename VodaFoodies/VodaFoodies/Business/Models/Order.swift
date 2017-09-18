@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct UserOrder {
+struct Order {
     let venueOrderId: String
     let orderTime: Double
     let orderStatus: OrderStatus
