@@ -66,12 +66,18 @@ class RequestBuilder{
                                     parameters: self.venueOrderParameters(vid: venueId,time: time, items: orderItems))
         case .getOpenOrders(callBack: _):
             return alamofireRequest(path: Const.Request.Path.getOpenOrdersPath)
-        case .getOrderItemUsers(venueOrderId: _, itemId: _, callBack: _):
-            fatalError("NOT IMPLEMENTED YET")
-        case .getOrderSum(venueOrderId: _):
-            fatalError("NOT IMPLEMENTED YET")
-        case .getVenueOrderUsers(venueOrderId: _):
-            fatalError("NOT IMPLEMENTED YET")
+        case .getOrderItemUsers(venueOrderId: let venueOrderId, itemId: let itemId, callBack: _):
+            let params: Parameters = ["venue_order_id" : venueOrderId, "item_id" : itemId]
+            return alamofireRequest(path: Const.Request.Path.getOrderItemUsersPath, method: .get, parameters: params)
+        case .getOrderSum(venueOrderId: let venueOrderId, callBack: _):
+            let params: Parameters = ["venue_order_id" : venueOrderId]
+            return alamofireRequest(path: Const.Request.Path.getOrderSumPath,
+                                    method: .get,
+                                    parameters: params)
+        case .getVenueOrderUsers(venueOrderId: let venueOrderID, callBack: _):
+            let params: Parameters = ["venue_order_id" : venueOrderID]
+            return alamofireRequest(path: Const.Request.Path.getVenueOrderUsersPath,
+                             method: .get, parameters: params)
         }
     }
     
@@ -100,7 +106,7 @@ class RequestBuilder{
         case .post:
             encoding = JSONEncoding.default
         case .get:
-            encoding = URLEncoding.methodDependent
+            encoding = URLEncoding.queryString
         default:
             encoding = URLEncoding.methodDependent
         }

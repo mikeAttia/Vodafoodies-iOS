@@ -98,12 +98,12 @@ class DataStore {
             callBack(error)
         case .getOpenOrders(callBack: let callBack):
             callBack(ResponseParser.getOrdersFrom(result), error)
-        case .getOrderItemUsers(venueOrderId: _, itemId: _, callBack: _):
-            fatalError("NOT IMPLEMENTED YET")
-        case .getOrderSum(venueOrderId: _, callBack: _):
-            fatalError("NOT IMPLEMENTED YET")
-        case .getVenueOrderUsers(venueOrderId: _, callBack: _):
-            fatalError("NOT IMPLEMENTED YET")
+        case .getOrderItemUsers(venueOrderId: _, itemId: _, callBack: let callBack):
+            callBack(ResponseParser.getOrderItemUsersFrom(result), error)
+        case .getOrderSum(venueOrderId: _, callBack: let callBack):
+            callBack(ResponseParser.getOrderSumItemsFrom(result), error)
+        case .getVenueOrderUsers(venueOrderId: _, callBack: let callBack):
+            callBack(ResponseParser.getListOfUsersFrom(result), error)
         }
     }
     

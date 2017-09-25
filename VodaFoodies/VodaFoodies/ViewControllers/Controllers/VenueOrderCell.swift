@@ -51,12 +51,7 @@ class VenueOrderCell: UITableViewCell {
         adminImage.layer.cornerRadius = adminImage.frame.height / 2
         
         // Calculating the time to show on the screen
-        let orderDate = Date(timeIntervalSince1970: order.orderTime)
-        let calendar = Calendar.current
-        let hours = calendar.component(.hour, from: orderDate) % 12
-        let minutes = calendar.component(.minute, from: orderDate)
-        let period = calendar.component(.hour, from: orderDate) > 12 ? "PM" : "AM"
-        orderTime.text = "\(hours) : \(minutes) \(period)"
+        orderTime.text = getTimeString(from: order.orderTime)
         
         // Configuring the view
         self.accessoryType = .disclosureIndicator
@@ -72,6 +67,4 @@ class VenueOrderCell: UITableViewCell {
     @IBAction func showAdminProfile(_ sender: Any) {
         
     }
-    
-
 }

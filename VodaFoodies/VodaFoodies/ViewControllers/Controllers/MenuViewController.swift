@@ -188,7 +188,7 @@ class MenuViewController: BaseViewController, UITableViewDelegate, UITableViewDa
     // Add the item to the Order list
     private func addItemToOrder(index: IndexPath, size: String){
         print("\(index) \(size)")
-        orderItems.append(OrderItem(item: menu![index.section].items[index.row], size: size))
+        orderItems.append(OrderItem(item: menu![index.section].items[index.row], size: size, count: 1))
     }
     
     // User pressed done button

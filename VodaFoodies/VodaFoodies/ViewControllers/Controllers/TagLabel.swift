@@ -15,7 +15,6 @@ class TagLabel: UILabel {
         didSet { invalidateIntrinsicContentSize() }
     }
     
-    
     func setLabelType(_ type: LabelType){
         self.textColor = UIColor.black
         

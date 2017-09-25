@@ -26,21 +26,16 @@ enum Request{
     
     enum VenueOrderRequest {
         case addVenueOrder(venueID: String, time: Double, order: [OrderItem],callBack: (_ error: RequestError?)->Void)
-        // TODO: Associated value is order object
         case getOpenOrders(callBack: (_ order: [Order], _ error: RequestError?)->Void)
-        case getOrderSum(venueOrderId: String, callBack: (_ error: RequestError?)->Void)
-        // TODO: Parameter in callback for list order sum
-        case getOrderItemUsers(venueOrderId: String, itemId: String, callBack: (_ error: RequestError?)->Void)
-        // TODO: Parameter in callback for order items users
-        case getVenueOrderUsers(venueOrderId: String, callBack: (_ error: RequestError?)->Void)
-        // TODO: Parameter in callback for venue ordre users
+        case getOrderSum(venueOrderId: String, callBack: (_ orderItems: [OrderItem], _ error: RequestError?)->Void)
+        case getOrderItemUsers(venueOrderId: String, itemId: String, callBack: (_ users: [(User, String)],_ error: RequestError?)->Void)
+        case getVenueOrderUsers(venueOrderId: String, callBack: (_ users: [User], _ error: RequestError?)->Void)
     }
     
     enum UserOrderRequest{
         case addUserOrder(callBack: (_ error: RequestError?)->Void)
         // TODO: Associated value is order object
         case getUserOrders(venueOrderID: String?, callBack: (_ order: [Order], _ error: RequestError?)->Void)
-        // TODO: Parameter in callback list of user orders
         case deleteUserOrderItem(venueOrderId: String, itemId: String, callBack: (_ error: RequestError?)->Void)
         case deleteUserOrder(venueOrderId: String, callBack: (_ error: RequestError?)->Void)
     }

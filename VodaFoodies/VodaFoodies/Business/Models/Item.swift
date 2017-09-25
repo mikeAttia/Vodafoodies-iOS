@@ -18,4 +18,5 @@ struct Item {
 struct OrderItem{
     let item: Item
     let size: String
+    let count: Int
 }

@@ -61,6 +61,15 @@ class OpenOrdersViewController: BaseViewController, UITableViewDelegate, UITable
         return UIView()
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: "viewOrderDetails", sender: indexPath.row)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let index = sender as! Int
+        let vc = segue.destination as? OrderDetailsViewController
+        vc?.order = orders?[index]
+    }
     
     
 }

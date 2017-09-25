@@ -10,6 +10,7 @@
 		49CEEB9ABAA3EF7A1CCA6F61 /* Pods_VodaFoodies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 554FF41C2F0035BC9D671657 /* Pods_VodaFoodies.framework */; };
 		4C7B79611F5A796300D9638A /* RequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7B79601F5A796300D9638A /* RequestBuilder.swift */; };
 		6B680607037036D3EFDF3850 /* Pods_VodaFoodiesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48B353CC71B73EAB1795DF76 /* Pods_VodaFoodiesTests.framework */; };
+		8A015E891F71A90000E825C9 /* OrderDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A015E881F71A90000E825C9 /* OrderDetailsViewController.swift */; };
 		8A06AEC81F69AB38009713A5 /* VenueOrderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A06AEC71F69AB38009713A5 /* VenueOrderCell.xib */; };
 		8A06AECA1F69AE09009713A5 /* VenueOrderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A06AEC91F69AE09009713A5 /* VenueOrderCell.swift */; };
 		8A1F88E01F61231E00A91D33 /* OpenOrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1F88DF1F61231E00A91D33 /* OpenOrdersViewController.swift */; };
@@ -32,6 +33,7 @@
 		8A38A9E61F58AC9700DEEBAE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A38A9E51F58AC9700DEEBAE /* Constants.swift */; };
 		8A5F157D1F671E7400D9B8E4 /* TagLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5F157C1F671E7400D9B8E4 /* TagLabel.swift */; };
 		8A7210061F65BF8B0055BD16 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7210051F65BF8B0055BD16 /* Order.swift */; };
+		8A9F76851F798D90003BBCBD /* TimeString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9F76841F798D90003BBCBD /* TimeString.swift */; };
 		8AA4FA671F32DFAE00048C90 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8AA4FA661F32DFAE00048C90 /* GoogleService-Info.plist */; };
 		8AA4FA681F32E00800048C90 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8AA4FA661F32DFAE00048C90 /* GoogleService-Info.plist */; };
 		8AA768E51F34C6D7005BF1AB /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA768E41F34C6D7005BF1AB /* LoginManager.swift */; };
@@ -64,6 +66,7 @@
 		4EE5A742978F522433889DAC /* Pods-VodaFoodies.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VodaFoodies.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VodaFoodies/Pods-VodaFoodies.debug.xcconfig"; sourceTree = "<group>"; };
 		554FF41C2F0035BC9D671657 /* Pods_VodaFoodies.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VodaFoodies.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		64F11B373F515E4507C26797 /* Pods-VodaFoodiesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VodaFoodiesTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VodaFoodiesTests/Pods-VodaFoodiesTests.debug.xcconfig"; sourceTree = "<group>"; };
+		8A015E881F71A90000E825C9 /* OrderDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailsViewController.swift; sourceTree = "<group>"; };
 		8A06AEC71F69AB38009713A5 /* VenueOrderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VenueOrderCell.xib; sourceTree = "<group>"; };
 		8A06AEC91F69AE09009713A5 /* VenueOrderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VenueOrderCell.swift; sourceTree = "<group>"; };
 		8A1F88DF1F61231E00A91D33 /* OpenOrdersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenOrdersViewController.swift; sourceTree = "<group>"; };
@@ -86,6 +89,7 @@
 		8A38A9E51F58AC9700DEEBAE /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		8A5F157C1F671E7400D9B8E4 /* TagLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagLabel.swift; sourceTree = "<group>"; };
 		8A7210051F65BF8B0055BD16 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		8A9F76841F798D90003BBCBD /* TimeString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeString.swift; sourceTree = "<group>"; };
 		8AA4FA661F32DFAE00048C90 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8AA768E41F34C6D7005BF1AB /* LoginManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginManager.swift; path = ../Business/LoginManager.swift; sourceTree = "<group>"; };
 		8AB517261F6415FF00080F1E /* ConfirmOrderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmOrderViewController.swift; sourceTree = "<group>"; };
@@ -127,6 +131,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8A015E871F71A8E400E825C9 /* OrderDetails */ = {
+			isa = PBXGroup;
+			children = (
+				8A015E881F71A90000E825C9 /* OrderDetailsViewController.swift */,
+			);
+			name = OrderDetails;
+			sourceTree = "<group>";
+		};
 		8A1F88DE1F6122B900A91D33 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -142,6 +154,7 @@
 		8A27FA941F62EE0400DC3391 /* OpenOrdersTab */ = {
 			isa = PBXGroup;
 			children = (
+				8A015E871F71A8E400E825C9 /* OrderDetails */,
 				8A1F88DF1F61231E00A91D33 /* OpenOrdersViewController.swift */,
 				8A06AEC71F69AB38009713A5 /* VenueOrderCell.xib */,
 				8A06AEC91F69AE09009713A5 /* VenueOrderCell.swift */,
@@ -163,6 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				8A28E9081F5EB35E00200B28 /* Logger.swift */,
+				8A9F76841F798D90003BBCBD /* TimeString.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -551,6 +565,8 @@
 				8A5F157D1F671E7400D9B8E4 /* TagLabel.swift in Sources */,
 				8A1F88E01F61231E00A91D33 /* OpenOrdersViewController.swift in Sources */,
 				8A1F88E41F61233C00A91D33 /* ProfileViewcontroller.swift in Sources */,
+				8A015E891F71A90000E825C9 /* OrderDetailsViewController.swift in Sources */,
+				8A9F76851F798D90003BBCBD /* TimeString.swift in Sources */,
 				8AFD7E6B1F35EBF700E57A20 /* BaseViewController.swift in Sources */,
 				8A28E90D1F5ED3AB00200B28 /* Item.swift in Sources */,
 				8AFD7E6F1F35EC4000E57A20 /* BaseNavigationController.swift in Sources */,
