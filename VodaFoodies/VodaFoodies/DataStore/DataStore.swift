@@ -77,7 +77,7 @@ class DataStore {
     private func handleUserResult(_ req: Request.UserRequest, result: Any?, error: RequestError?){
         
         switch req {
-        case .updateUserData(userData: _, callBack: let callBack):
+        case .updateUserData(_, callBack: let callBack):
             callBack(error)
         }
     }
@@ -87,35 +87,37 @@ class DataStore {
         switch req {
         case .listedVenues(callBack: let callBack):
             callBack(ResponseParser.getVenuesFrom(result), error)
-        case .venueMenu(venueID: _, callBack: let callBack):
+        case .venueMenu(_, callBack: let callBack):
             callBack(ResponseParser.getMenuFrom(result), error)
         }
     }
     
     private func handleVenueOrderResult(_ req: Request.VenueOrderRequest, result: Any?, error: RequestError?){
         switch req {
-        case .addVenueOrder(venueID: _, time: _, order: _, callBack: let callBack):
+        case .addVenueOrder(_, _, _, callBack: let callBack):
             callBack(error)
         case .getOpenOrders(callBack: let callBack):
             callBack(ResponseParser.getOrdersFrom(result), error)
-        case .getOrderItemUsers(venueOrderId: _, itemId: _, callBack: let callBack):
+        case .getOrderItemUsers( _, _, callBack: let callBack):
             callBack(ResponseParser.getOrderItemUsersFrom(result), error)
-        case .getOrderSum(venueOrderId: _, callBack: let callBack):
+        case .getOrderSum( _, callBack: let callBack):
             callBack(ResponseParser.getOrderSumItemsFrom(result), error)
-        case .getVenueOrderUsers(venueOrderId: _, callBack: let callBack):
+        case .getVenueOrderUsers( _, callBack: let callBack):
             callBack(ResponseParser.getListOfUsersFrom(result), error)
+        case .deleteVenueOrder( _, callBack: let callBack):
+            callBack(error)
         }
     }
     
     private func handleUserOrderRequest(_ req: Request.UserOrderRequest, result: Any?, error: RequestError?){
         switch req {
-        case .addUserOrder(callBack: _):
-            fatalError("NOT IMPLEMENTED YET")
-        case .deleteUserOrder(venueOrderId: _, callBack: _):
-            fatalError("NOT IMPLEMENTED YET")
-        case .deleteUserOrderItem(venueOrderId: _, itemId: _, callBack: _):
-            fatalError("NOT IMPLEMENTED YET")
-        case .getUserOrders(venueOrderID: _, callBack: let callBack):
+        case .addUserOrder( _,  _, callBack: let callBack):
+            callBack(error)
+        case .deleteUserOrder( _, callBack: let callBack):
+            callBack(error)
+        case .deleteUserOrderItem(_, _, _, callBack: let callBack):
+            callBack(error)
+        case .getUserOrders( _, _, callBack: let callBack):
             callBack(ResponseParser.getOrdersFrom(result), error)
         }
     }

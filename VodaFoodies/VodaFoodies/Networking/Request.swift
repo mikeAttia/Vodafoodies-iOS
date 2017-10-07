@@ -30,13 +30,14 @@ enum Request{
         case getOrderSum(venueOrderId: String, callBack: (_ orderItems: [OrderItem], _ error: RequestError?)->Void)
         case getOrderItemUsers(venueOrderId: String, itemId: String, callBack: (_ users: [(User, String)],_ error: RequestError?)->Void)
         case getVenueOrderUsers(venueOrderId: String, callBack: (_ users: [User], _ error: RequestError?)->Void)
+        case deleteVenueOrder(venueOrderId: String, callBack: (_ error: RequestError?)->Void)
     }
     
     enum UserOrderRequest{
-        case addUserOrder(callBack: (_ error: RequestError?)->Void)
+        case addUserOrder(venueOrderId: String, order: [OrderItem], callBack: (_ error: RequestError?)->Void)
         // TODO: Associated value is order object
-        case getUserOrders(venueOrderID: String?, callBack: (_ order: [Order], _ error: RequestError?)->Void)
-        case deleteUserOrderItem(venueOrderId: String, itemId: String, callBack: (_ error: RequestError?)->Void)
+        case getUserOrders(venueOrderID: String?,userID: String? , callBack: (_ order: [Order], _ error: RequestError?)->Void)
+        case deleteUserOrderItem(venueOrderId: String, itemId: String, itemSize: String, callBack: (_ error: RequestError?)->Void)
         case deleteUserOrder(venueOrderId: String, callBack: (_ error: RequestError?)->Void)
     }
 }

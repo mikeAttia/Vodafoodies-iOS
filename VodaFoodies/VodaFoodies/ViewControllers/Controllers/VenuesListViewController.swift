@@ -26,13 +26,7 @@ class VenuesListViewController: BaseViewController, UITableViewDelegate, UITable
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = pageTitle
-        contentTable.delegate = self
-        contentTable.dataSource = self
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        // TODO: View the loading indicator and make the request
+        fillTable(contentTable, withTempCell: .imgWithLabel)
         let req = Request.venue(.listedVenues(callBack: handleRequestResult))
         DataStore.shared.getData(req: req)
     }
@@ -50,7 +44,7 @@ class VenuesListViewController: BaseViewController, UITableViewDelegate, UITable
         }
         
         self.venues = venuesList
-        self.contentTable.reloadData()
+        fillTable(contentTable, withObject: self)
     }
     
     
@@ -61,7 +55,6 @@ class VenuesListViewController: BaseViewController, UITableViewDelegate, UITable
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier)
-        
         cell?.textLabel?.text = venues[indexPath.row].name
         cell?.imageView?.kf.indicatorType = .activity
         cell?.imageView?.kf.setImage(with: URL(string: venues[indexPath.row].img), placeholder: UIImage(named: venuePlaceHolder), options: nil, progressBlock: nil, completionHandler: nil)

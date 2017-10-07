@@ -18,6 +18,7 @@ class ConfirmOrderViewController: BaseViewController, UITableViewDelegate, UITab
     
     // Instance variables
     var venue: Venue?
+    var venueOrderId: String?
     var orderItems: [OrderItem]?
     var owner = false
     
@@ -72,7 +73,11 @@ class ConfirmOrderViewController: BaseViewController, UITableViewDelegate, UITab
     @IBAction func PlaceOrder(_ sender: Any) {
         // TODO: View the loading indicator
         if !owner{
-        
+            if let venueOrderId = venueOrderId, let orderItems = orderItems{
+                let request = Request.userOrder(.addUserOrder(venueOrderId: venueOrderId, order: orderItems, callBack: handleRequestResult))
+                DataStore.shared.getData(req: request)
+            }
+            
         }else{
             let timeInterval = datePicker.date.timeIntervalSince1970
             DataStore.shared.getData(req: .venueOrder(.addVenueOrder(venueID: self.venue!.id,
@@ -88,6 +93,8 @@ class ConfirmOrderViewController: BaseViewController, UITableViewDelegate, UITab
         //TODO: Dismiss the loading indicator
         guard let error = err else{
             self.navigationController?.dismiss(animated: true, completion: nil)
+            self.navigationController?.popToRootViewController(animated: true)
+            // Show success message
             return
         }
         // TODO: View dialouge to the user
@@ -96,6 +103,7 @@ class ConfirmOrderViewController: BaseViewController, UITableViewDelegate, UITab
     
     @IBAction func cancelOrder(_ sender: Any) {
         self.navigationController?.dismiss(animated: true, completion: nil)
+        self.navigationController?.popToRootViewController(animated: true)
     }
     
     //MARK: - Table view methods

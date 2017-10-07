@@ -13,10 +13,11 @@ class RequestManager {
     
     static func sendRequest(_ req: Request, reqID: String, callBack: @escaping (_ reqID: String, _ result:Result)->Void){
         let request = RequestBuilder.buildRequest(req)
+        print(request.debugDescription)
+//        print(request)
         request.validate().responseJSON { response in
             switch response.result{
             case .success(let value):
-                print(value)
                 if checkStatus(code: response.response?.statusCode) {
                     callBack(reqID, Result.success(result: value))
                 }else{

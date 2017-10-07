@@ -48,7 +48,6 @@ class VenueOrderCell: UITableViewCell {
                                options: nil,
                                progressBlock: nil,
                                completionHandler: nil)
-        adminImage.layer.cornerRadius = adminImage.frame.height / 2
         
         // Calculating the time to show on the screen
         orderTime.text = getTimeString(from: order.orderTime)

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="LabelWithDetail" customModule="VodaFoodies" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zIH-ny-NuL">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lNb-O8-rUS" customClass="GradientContainerView" customModule="VodaFoodies" customModuleProvider="target">
+                            <rect key="frame" x="8" y="15" width="200" height="10"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="200" id="uXk-2M-whM"/>
+                                <constraint firstAttribute="height" constant="10" id="yLV-YK-lmj"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0gb-Ii-s6u" customClass="GradientContainerView" customModule="VodaFoodies" customModuleProvider="target">
+                            <rect key="frame" x="295" y="15" width="72" height="10"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="72" id="O9E-Kx-vHy"/>
+                                <constraint firstAttribute="height" constant="10" id="wbO-0z-gmw"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="0gb-Ii-s6u" secondAttribute="trailing" constant="8" id="0PI-DX-Amo"/>
+                        <constraint firstItem="lNb-O8-rUS" firstAttribute="leading" secondItem="zIH-ny-NuL" secondAttribute="leading" constant="8" id="Ybe-XW-gvZ"/>
+                        <constraint firstItem="0gb-Ii-s6u" firstAttribute="centerY" secondItem="lNb-O8-rUS" secondAttribute="centerY" id="bbE-R4-fwh"/>
+                        <constraint firstItem="lNb-O8-rUS" firstAttribute="centerY" secondItem="zIH-ny-NuL" secondAttribute="centerY" id="m6Q-6k-meZ"/>
+                        <constraint firstAttribute="height" constant="40" id="vFo-Rn-1eW"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="zIH-ny-NuL" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="AaJ-nk-qlO"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="zIH-ny-NuL" secondAttribute="trailing" id="DLL-Vd-3V8"/>
+                <constraint firstAttribute="bottom" secondItem="zIH-ny-NuL" secondAttribute="bottom" id="Uxe-1s-97u"/>
+                <constraint firstItem="zIH-ny-NuL" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="sxD-Vm-k6T"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="detailLabel" destination="0gb-Ii-s6u" id="R8A-3n-WIA"/>
+                <outlet property="mainLabel" destination="lNb-O8-rUS" id="XD2-BL-Xwy"/>
+            </connections>
+            <point key="canvasLocation" x="32.5" y="412"/>
+        </view>
+    </objects>
+</document>

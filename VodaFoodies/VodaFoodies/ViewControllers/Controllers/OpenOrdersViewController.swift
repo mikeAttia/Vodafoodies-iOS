@@ -13,6 +13,8 @@ class OpenOrdersViewController: BaseViewController, UITableViewDelegate, UITable
     // Constants
     let cellNibName = "VenueOrderCell"
     let orderCellIdentifier = "orderItem"
+    let orderDetailsSegue = "viewOrderDetails"
+    let viewTitle = "Open Orders"
     
     // View Outlets
     @IBOutlet weak var contentTable: UITableView!
@@ -21,17 +23,17 @@ class OpenOrdersViewController: BaseViewController, UITableViewDelegate, UITable
     var orders: [Order]?
     
     override func viewDidLoad() {
+        //View title
+        self.title = viewTitle
         
         // Setting up table view
-        contentTable.delegate = self
-        contentTable.dataSource = self
-        contentTable.estimatedRowHeight = 50
-        contentTable.rowHeight = UITableViewAutomaticDimension
         contentTable.register(UINib(nibName: cellNibName , bundle: nil) , forCellReuseIdentifier: orderCellIdentifier)
+        //Creating and firing temp delegate
+        fillTable(contentTable, withTempCell: .openOrderCell)
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        // TODO: Show the loading indicator
+        contentTable.reloadData()
         DataStore.shared.getData(req: .venueOrder(.getOpenOrders(callBack: handleRequestresult)))
     }
     
@@ -44,7 +46,7 @@ class OpenOrdersViewController: BaseViewController, UITableViewDelegate, UITable
         }
         
         self.orders = orders
-        contentTable.reloadData()
+        fillTable(contentTable, withObject: self)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -62,13 +64,16 @@ class OpenOrdersViewController: BaseViewController, UITableViewDelegate, UITable
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.performSegue(withIdentifier: "viewOrderDetails", sender: indexPath.row)
+        self.performSegue(withIdentifier: orderDetailsSegue, sender: indexPath.row)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let index = sender as! Int
-        let vc = segue.destination as? OrderDetailsViewController
-        vc?.order = orders?[index]
+        if segue.identifier == orderDetailsSegue{
+            let index = sender as! Int
+            let vc = segue.destination as? OrderDetailsViewController
+            vc?.order = orders?[index]
+        }
+        
     }
     
     

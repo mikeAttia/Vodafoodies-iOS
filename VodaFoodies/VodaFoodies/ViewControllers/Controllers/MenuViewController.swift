@@ -16,6 +16,7 @@ class MenuViewController: BaseViewController, UITableViewDelegate, UITableViewDa
     let confirmSegueID = "confirmOrder"
     
     //Instance variables
+    var venueOrderId: String?
     var venue: Venue?
     var menu: [(label: String, items: [Item])]?
     var selectedCategoryIndex: Int?
@@ -47,19 +48,12 @@ class MenuViewController: BaseViewController, UITableViewDelegate, UITableViewDa
         doneBtn.isEnabled = false
         
         // Setting up table view
-        contentTable.delegate = self
-        contentTable.dataSource = self
-        contentTable.estimatedRowHeight = 50
-        contentTable.rowHeight = UITableViewAutomaticDimension
+        fillTable(contentTable, withTempCell: .labelWithDetail)
         
         // Filling venue data
         venueLogo.kf.setImage(with: URL(string: venue!.img))
         venueNameLabel.text = venue!.name
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        //TODO: View loading indicator and get data
+        
         if let venueID = venue?.id{
             let req = Request.venue(.venueMenu(venueID: venueID, callBack: handleRequestResult))
             DataStore.shared.getData(req: req)
@@ -79,7 +73,7 @@ class MenuViewController: BaseViewController, UITableViewDelegate, UITableViewDa
         }
         
         self.menu = venueMenu
-        contentTable.reloadData()
+        fillTable(contentTable, withObject: self)
     }
     
     //MARK: - Table View Delegate
@@ -98,7 +92,7 @@ class MenuViewController: BaseViewController, UITableViewDelegate, UITableViewDa
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 33.0
+        return 40.0
     }
     
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
@@ -193,7 +187,6 @@ class MenuViewController: BaseViewController, UITableViewDelegate, UITableViewDa
     
     // User pressed done button
     @IBAction func finalizeAction(_ sender: Any) {
-        print("final order \(selectedIndexes), item: \(orderItems)")
         performSegue(withIdentifier: confirmSegueID, sender: nil)
     }
     
@@ -202,6 +195,7 @@ class MenuViewController: BaseViewController, UITableViewDelegate, UITableViewDa
             confirmView.owner = self.owner
             confirmView.venue = self.venue
             confirmView.orderItems = self.orderItems
+            confirmView.venueOrderId = venueOrderId
         }
     }
 }

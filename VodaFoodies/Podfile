@@ -19,6 +19,8 @@ target 'VodaFoodies' do
   pod 'Kingfisher', '~> 3.0'
   # gif support
   pod 'Gifu'
+  # login screen gradient animation
+  pod "Pastel"
 
 
   target 'VodaFoodiesTests' do

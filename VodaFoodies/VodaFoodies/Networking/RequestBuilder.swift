@@ -78,20 +78,32 @@ class RequestBuilder{
             let params: Parameters = ["venue_order_id" : venueOrderID]
             return alamofireRequest(path: Const.Request.Path.getVenueOrderUsersPath,
                              method: .get, parameters: params)
+        case .deleteVenueOrder(venueOrderId: let veneuOrderId, callBack: _):
+            let params: Parameters = ["venue_order_id" : veneuOrderId]
+            return alamofireRequest(path: Const.Request.Path.deleteVenueOrderPath, method: .delete, parameters: params)
         }
     }
     
     private static func buildUserOrderRequest(_ req: Request.UserOrderRequest)-> DataRequest{
         switch req {
-        case .addUserOrder:
-            fatalError("NOT IMPLEMENTED YET")
-        case .deleteUserOrder(venueOrderId: _):
-            fatalError("NOT IMPLEMENTED YET")
-        case .deleteUserOrderItem(venueOrderId: _, itemId: _, callBack: _):
-            fatalError("NOT IMPLEMENTED YET")
-        case .getUserOrders(venueOrderID: let venueOrderID, callBack: _):
+        case .addUserOrder(venueOrderId: let venueOrderId, order: let order, callBack: _):
+            let params: Parameters = ["venue_order_id" : venueOrderId,
+                                      "order_items" : orderItemsList(items: order) ]
+            return alamofireRequest(path: Const.Request.Path.addUserOrderPath, method: .post, parameters: params)
+        case .deleteUserOrder(venueOrderId: let venueOrderId, callBack: _):
+            let params: Parameters = ["venue_order_id" : venueOrderId]
+            return alamofireRequest(path: Const.Request.Path.deleteUserOrderPath, method: .delete, parameters: params)
+        case .deleteUserOrderItem(venueOrderId: let venueOrderId, itemId: let itemId ,itemSize: let ItemSize, callBack: _):
+            let params: Parameters = ["venue_order_id": venueOrderId,
+                                      "item_id" : itemId,
+                                      "item_size" : ItemSize]
+            return alamofireRequest(path: Const.Request.Path.deleteUserOrderItemPath, method: .delete, parameters: params)
+        case .getUserOrders(venueOrderID: let venueOrderID,userID: let userId, callBack: _):
             if let voID = venueOrderID{
-                let params: Parameters = ["venue_order_id" : voID]
+                var params: Parameters = ["venue_order_id" : voID]
+                if let userId = userId{
+                    params["user_id"] = userId
+                }
                 return alamofireRequest(path: Const.Request.Path.getUserOrdersPath,
                                         parameters: params)
             }

@@ -28,20 +28,18 @@ class MyFoodViewController: BaseViewController, UITableViewDelegate, UITableView
         //setup view
         self.title = pageTitle
         
-        // Setting up table view
-        contentTable.delegate = self
-        contentTable.dataSource = self
-        contentTable.estimatedRowHeight = 40
-        contentTable.rowHeight = UITableViewAutomaticDimension
-        
         // Registering Header nib file
         contentTable.register(UINib(nibName: headerNibFileName, bundle: nil) , forHeaderFooterViewReuseIdentifier: headerIdentifier)
+        
+        //Filling table with temp cells
+        fillTable(contentTable, withTempCell: .labelWithDetail)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         //TODO: View Loading indicator
-        let req = Request.userOrder(.getUserOrders(venueOrderID: nil, callBack: handleRequestResult))
+        contentTable.reloadData()
+        let req = Request.userOrder(.getUserOrders(venueOrderID: nil, userID: nil, callBack: handleRequestResult))
         DataStore.shared.getData(req: req)
     }
     
@@ -53,7 +51,14 @@ class MyFoodViewController: BaseViewController, UITableViewDelegate, UITableView
             return
         }
         self.orders = orders
-        self.contentTable.reloadData()
+        fillTable(contentTable, withObject: self)
+    }
+    
+    private func handleDeletionResult(err: RequestError?){
+        
+        //TODO: IMPlement methods to delete item
+        let req = Request.userOrder(.getUserOrders(venueOrderID: nil, userID: nil, callBack: handleRequestResult))
+        DataStore.shared.getData(req: req)
     }
     
     //MARK: - Table View Delegate
@@ -101,34 +106,42 @@ class MyFoodViewController: BaseViewController, UITableViewDelegate, UITableView
             print("use can't edit order")
             return
         }
-        let item = orders[indexPath.section].items[indexPath.row]
-        let itemsCount = orders[indexPath.section].items.count
+        let order = orders[indexPath.section]
+        let item = order.items[indexPath.row]
+        let itemsCount = order.items.count
         let isAdmin = Const.Global.userID == orders[indexPath.section].admin.firebaseID
         
         let alertView = UIAlertController(title: item.item.name, message: nil, preferredStyle: .actionSheet)
-        let request: Request?
+        
+        var request: Request?
         
         if itemsCount < 2 {
+            
             if isAdmin{
-                let deleteVenueOrder = UIAlertAction(title: "Delete Venue Order", style: .default, handler: { _ in
-                    //TODO : Make the delete venue order request
+                let deleteVenueOrder = UIAlertAction(title: "Delete Venue Order", style: .default, handler: {[weak self] _ in
+                    request = Request.venueOrder(.deleteVenueOrder(venueOrderId: order.venueOrderId, callBack: self!.handleDeletionResult))
+                    DataStore.shared.getData(req: request!)
                     print("Delete Venue Order")
                 })
                 alertView.addAction(deleteVenueOrder)
             }else{
-                let deleteMyOrder = UIAlertAction(title: "Delete My Order", style: .default, handler: { _ in
-                    //TODO : Make the delete user order request
+                let deleteMyOrder = UIAlertAction(title: "Delete My Order", style: .default, handler: {[weak self] _ in
+                    request = Request.userOrder(.deleteUserOrder(venueOrderId: order.venueOrderId, callBack: self!.handleDeletionResult))
+                    DataStore.shared.getData(req: request!)
                     print("Delete My Order")
                 })
                 alertView.addAction(deleteMyOrder)
             }
-        
+            
         }else{
-            let deleteItem = UIAlertAction(title: "Delete this item", style: .default, handler: { _ in
-                //TODO: Make the delete user item request
+            
+            let deleteItem = UIAlertAction(title: "Delete this item", style: .default, handler: {[weak self] _ in
+                request = Request.userOrder(.deleteUserOrderItem(venueOrderId: order.venueOrderId, itemId: item.item.id, itemSize: item.size, callBack: self!.handleDeletionResult))
+                DataStore.shared.getData(req: request!)
                 print("Delete Item")
             })
             alertView.addAction(deleteItem)
+            
         }
         let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         cancel.setValue(UIColor.red, forKey: "titleTextColor")

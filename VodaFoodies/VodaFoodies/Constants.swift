@@ -94,6 +94,7 @@ struct Const {
             static let getOrderSumPath = "/getOrderSum"
             static let getOrderItemUsersPath = "/getOrderItemUsers"
             static let getVenueOrderUsersPath = "/getVenueOrderUsers"
+            static let deleteVenueOrderPath = "/deleteVenueOrder"
             
             //User orders requests
             static let addUserOrderPath = "/addUserOrder"
