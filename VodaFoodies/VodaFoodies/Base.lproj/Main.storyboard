@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -8,6 +8,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -15,16 +16,12 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="VodaFoodies" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CgH-RM-hUw">
-                                <rect key="frame" x="40" y="552" width="295" height="45"/>
+                                <rect key="frame" x="40" y="562" width="295" height="45"/>
                                 <color key="backgroundColor" red="0.23137254901960785" green="0.34901960784313724" blue="0.59607843137254901" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="hik-jw-fNA"/>
@@ -37,23 +34,48 @@
                                     <action selector="signIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hkE-f8-Tm0"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Vodafoodies" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PhE-JQ-fY1">
-                                <rect key="frame" x="60" y="273" width="254" height="49"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="41"/>
-                                <color key="textColor" red="0.90196078430000004" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="H1h-x0-qU0">
+                                <rect key="frame" x="57" y="203.5" width="260" height="260"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="H1h-x0-qU0" secondAttribute="height" multiplier="1:1" id="Esp-Jf-cXu"/>
+                                    <constraint firstAttribute="height" constant="260" id="pDH-q8-mtl"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="catchPhrase" translatesAutoresizingMaskIntoConstraints="NO" id="9FP-XT-MSo">
+                                <rect key="frame" x="99" y="503.5" width="176" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="HzF-a1-vA7"/>
+                                    <constraint firstAttribute="width" constant="176" id="dVP-GD-zFK"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Made with 💜 by Spain 🇪🇸 team" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="URZ-ov-BnY">
+                                <rect key="frame" x="96" y="632" width="183" height="15"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
-                                <size key="shadowOffset" width="3" height="-1"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="CgH-RM-hUw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eSB-Sz-ifJ"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="CgH-RM-hUw" secondAttribute="bottom" constant="70" id="mTe-Sx-61T"/>
+                            <constraint firstItem="9FP-XT-MSo" firstAttribute="centerX" secondItem="PgP-TL-gh8" secondAttribute="centerX" id="0mI-1G-hBG"/>
+                            <constraint firstItem="PgP-TL-gh8" firstAttribute="bottom" secondItem="URZ-ov-BnY" secondAttribute="bottom" constant="20" id="GsM-kE-N4D"/>
+                            <constraint firstItem="9FP-XT-MSo" firstAttribute="top" secondItem="H1h-x0-qU0" secondAttribute="bottom" constant="40" id="TMY-1b-yiq"/>
+                            <constraint firstItem="URZ-ov-BnY" firstAttribute="centerX" secondItem="PgP-TL-gh8" secondAttribute="centerX" id="a6w-Oy-ph8"/>
+                            <constraint firstItem="CgH-RM-hUw" firstAttribute="centerX" secondItem="PgP-TL-gh8" secondAttribute="centerX" id="eSB-Sz-ifJ"/>
+                            <constraint firstItem="H1h-x0-qU0" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="kXu-5n-akn"/>
+                            <constraint firstItem="PgP-TL-gh8" firstAttribute="bottom" secondItem="CgH-RM-hUw" secondAttribute="bottom" constant="60" id="mTe-Sx-61T"/>
+                            <constraint firstItem="H1h-x0-qU0" firstAttribute="centerX" secondItem="PgP-TL-gh8" secondAttribute="centerX" id="sUm-oS-eDa"/>
                             <constraint firstItem="CgH-RM-hUw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="24" id="ws2-h9-2M8"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="PgP-TL-gh8"/>
                     </view>
                     <connections>
+                        <outlet property="catchPhraseImg" destination="9FP-XT-MSo" id="NM9-5s-EdP"/>
+                        <outlet property="fbLoginBtn" destination="CgH-RM-hUw" id="Od7-5b-w2R"/>
+                        <outlet property="logoCenterConstraint" destination="kXu-5n-akn" id="X5D-Jf-O8N"/>
+                        <outlet property="logoImg" destination="H1h-x0-qU0" id="9kJ-VF-fgI"/>
+                        <outlet property="madeLabel" destination="URZ-ov-BnY" id="UTH-9l-60V"/>
                         <segue destination="FUR-93-wAE" kind="presentation" identifier="gotohome" id="Fuf-ne-PNs"/>
                         <segue destination="Fax-Ff-7CV" kind="presentation" id="d3q-hV-bSB"/>
                     </connections>
@@ -66,10 +88,6 @@
         <scene sceneID="Vz9-sk-scs">
             <objects>
                 <viewController id="Fhi-Yg-821" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="bof-J6-LUa"/>
-                        <viewControllerLayoutGuide type="bottom" id="Alh-RM-WcA"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="BCl-If-kQ8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -126,28 +144,29 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="6K7-Xh-3F4" firstAttribute="leading" secondItem="BCl-If-kQ8" secondAttribute="leading" constant="40" id="1pL-KR-5W8"/>
+                            <constraint firstItem="6K7-Xh-3F4" firstAttribute="leading" secondItem="NtI-wP-miz" secondAttribute="leading" constant="40" id="1pL-KR-5W8"/>
                             <constraint firstItem="dwL-ST-Ykl" firstAttribute="leading" secondItem="idz-8C-sUL" secondAttribute="leading" id="3dD-kx-inE"/>
-                            <constraint firstItem="crv-qf-2jW" firstAttribute="leading" secondItem="BCl-If-kQ8" secondAttribute="leading" constant="45" id="3tk-0q-wZ0"/>
-                            <constraint firstAttribute="trailing" secondItem="NtQ-lj-DoA" secondAttribute="trailing" constant="100" id="6J8-Ca-IWZ"/>
-                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="dwL-ST-Ykl" secondAttribute="trailing" constant="20" symbolic="YES" id="Fot-6g-K5m"/>
+                            <constraint firstItem="crv-qf-2jW" firstAttribute="leading" secondItem="NtI-wP-miz" secondAttribute="leading" constant="45" id="3tk-0q-wZ0"/>
+                            <constraint firstItem="NtI-wP-miz" firstAttribute="trailing" secondItem="NtQ-lj-DoA" secondAttribute="trailing" constant="100" id="6J8-Ca-IWZ"/>
+                            <constraint firstItem="NtI-wP-miz" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="dwL-ST-Ykl" secondAttribute="trailing" constant="20" symbolic="YES" id="Fot-6g-K5m"/>
                             <constraint firstItem="bZL-h9-IRi" firstAttribute="top" secondItem="dwL-ST-Ykl" secondAttribute="bottom" constant="8" id="Izb-DH-SHt"/>
-                            <constraint firstItem="NtQ-lj-DoA" firstAttribute="leading" secondItem="BCl-If-kQ8" secondAttribute="leading" constant="100" id="Kmg-kT-a1F"/>
-                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="X9h-F0-iPR" secondAttribute="trailing" constant="20" symbolic="YES" id="M6V-Cn-lQP"/>
-                            <constraint firstAttribute="trailing" secondItem="ywU-Fe-2nF" secondAttribute="trailing" constant="100" id="R7L-DE-O4C"/>
+                            <constraint firstItem="NtQ-lj-DoA" firstAttribute="leading" secondItem="NtI-wP-miz" secondAttribute="leading" constant="100" id="Kmg-kT-a1F"/>
+                            <constraint firstItem="NtI-wP-miz" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="X9h-F0-iPR" secondAttribute="trailing" constant="20" symbolic="YES" id="M6V-Cn-lQP"/>
+                            <constraint firstItem="NtI-wP-miz" firstAttribute="trailing" secondItem="ywU-Fe-2nF" secondAttribute="trailing" constant="100" id="R7L-DE-O4C"/>
                             <constraint firstItem="bZL-h9-IRi" firstAttribute="width" secondItem="idz-8C-sUL" secondAttribute="width" id="X3e-Ii-nnL"/>
                             <constraint firstItem="X9h-F0-iPR" firstAttribute="leading" secondItem="idz-8C-sUL" secondAttribute="leading" id="a4R-Yd-I4Y"/>
-                            <constraint firstItem="crv-qf-2jW" firstAttribute="top" secondItem="bof-J6-LUa" secondAttribute="bottom" constant="100" id="c7x-se-xPE"/>
-                            <constraint firstAttribute="trailing" secondItem="6K7-Xh-3F4" secondAttribute="trailing" constant="40" id="e7e-r3-aea"/>
+                            <constraint firstItem="crv-qf-2jW" firstAttribute="top" secondItem="NtI-wP-miz" secondAttribute="top" constant="100" id="c7x-se-xPE"/>
+                            <constraint firstItem="NtI-wP-miz" firstAttribute="trailing" secondItem="6K7-Xh-3F4" secondAttribute="trailing" constant="40" id="e7e-r3-aea"/>
                             <constraint firstItem="NtQ-lj-DoA" firstAttribute="top" secondItem="ywU-Fe-2nF" secondAttribute="bottom" constant="25" id="fJi-mF-jwM"/>
                             <constraint firstItem="bZL-h9-IRi" firstAttribute="leading" secondItem="dwL-ST-Ykl" secondAttribute="leading" id="hGh-VS-lvn"/>
                             <constraint firstItem="dwL-ST-Ykl" firstAttribute="top" secondItem="idz-8C-sUL" secondAttribute="bottom" constant="30" id="iY5-oh-VaK"/>
-                            <constraint firstItem="ywU-Fe-2nF" firstAttribute="leading" secondItem="BCl-If-kQ8" secondAttribute="leading" constant="100" id="lUk-Fg-DbZ"/>
+                            <constraint firstItem="ywU-Fe-2nF" firstAttribute="leading" secondItem="NtI-wP-miz" secondAttribute="leading" constant="100" id="lUk-Fg-DbZ"/>
                             <constraint firstItem="6K7-Xh-3F4" firstAttribute="top" secondItem="X9h-F0-iPR" secondAttribute="bottom" constant="8" id="nQc-5P-oEk"/>
-                            <constraint firstItem="Alh-RM-WcA" firstAttribute="top" secondItem="NtQ-lj-DoA" secondAttribute="bottom" constant="75" id="uMa-7a-dFb"/>
-                            <constraint firstAttribute="trailing" secondItem="crv-qf-2jW" secondAttribute="trailing" constant="45" id="v7t-mA-sKX"/>
+                            <constraint firstItem="NtI-wP-miz" firstAttribute="bottom" secondItem="NtQ-lj-DoA" secondAttribute="bottom" constant="75" id="uMa-7a-dFb"/>
+                            <constraint firstItem="NtI-wP-miz" firstAttribute="trailing" secondItem="crv-qf-2jW" secondAttribute="trailing" constant="45" id="v7t-mA-sKX"/>
                             <constraint firstItem="X9h-F0-iPR" firstAttribute="top" secondItem="crv-qf-2jW" secondAttribute="bottom" constant="40" id="vLa-CS-MXw"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="NtI-wP-miz"/>
                     </view>
                     <navigationItem key="navigationItem" id="iiF-Eu-fml"/>
                     <connections>
@@ -162,10 +181,6 @@
         <scene sceneID="Jt7-4u-t9M">
             <objects>
                 <viewController id="0G4-cj-a3M" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="rLX-rf-zUT"/>
-                        <viewControllerLayoutGuide type="bottom" id="TDx-U0-CKB"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Y0R-Km-Xvy">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -200,17 +215,18 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="iHk-zw-FjS" firstAttribute="top" secondItem="V58-h7-3rz" secondAttribute="bottom" constant="37" id="2Ws-5j-qPN"/>
-                            <constraint firstAttribute="trailing" secondItem="DWY-J0-NLb" secondAttribute="trailing" constant="45" id="5Zx-z2-j0k"/>
+                            <constraint firstItem="Nhv-ju-NFy" firstAttribute="trailing" secondItem="DWY-J0-NLb" secondAttribute="trailing" constant="45" id="5Zx-z2-j0k"/>
                             <constraint firstItem="vTV-zh-Orr" firstAttribute="leading" secondItem="V58-h7-3rz" secondAttribute="leading" id="9Q5-Yd-UZw"/>
-                            <constraint firstAttribute="trailing" secondItem="V58-h7-3rz" secondAttribute="trailing" constant="100" id="Cxd-LT-4ZW"/>
-                            <constraint firstItem="V58-h7-3rz" firstAttribute="leading" secondItem="Y0R-Km-Xvy" secondAttribute="leading" constant="100" id="JgM-C8-Lts"/>
+                            <constraint firstItem="Nhv-ju-NFy" firstAttribute="trailing" secondItem="V58-h7-3rz" secondAttribute="trailing" constant="100" id="Cxd-LT-4ZW"/>
+                            <constraint firstItem="V58-h7-3rz" firstAttribute="leading" secondItem="Nhv-ju-NFy" secondAttribute="leading" constant="100" id="JgM-C8-Lts"/>
                             <constraint firstItem="iHk-zw-FjS" firstAttribute="leading" secondItem="V58-h7-3rz" secondAttribute="leading" id="UJd-j8-0ZX"/>
-                            <constraint firstItem="DWY-J0-NLb" firstAttribute="top" secondItem="rLX-rf-zUT" secondAttribute="bottom" constant="100" id="VtG-vY-rIX"/>
+                            <constraint firstItem="DWY-J0-NLb" firstAttribute="top" secondItem="Nhv-ju-NFy" secondAttribute="top" constant="100" id="VtG-vY-rIX"/>
                             <constraint firstItem="V58-h7-3rz" firstAttribute="top" secondItem="DWY-J0-NLb" secondAttribute="bottom" constant="40" id="Wk2-B6-M8U"/>
                             <constraint firstItem="vTV-zh-Orr" firstAttribute="top" secondItem="V58-h7-3rz" secondAttribute="bottom" constant="2" id="ham-iJ-2g2"/>
                             <constraint firstItem="iHk-zw-FjS" firstAttribute="trailing" secondItem="V58-h7-3rz" secondAttribute="trailing" id="lTM-2l-k3l"/>
-                            <constraint firstItem="DWY-J0-NLb" firstAttribute="leading" secondItem="Y0R-Km-Xvy" secondAttribute="leading" constant="45" id="lXR-Rn-zBZ"/>
+                            <constraint firstItem="DWY-J0-NLb" firstAttribute="leading" secondItem="Nhv-ju-NFy" secondAttribute="leading" constant="45" id="lXR-Rn-zBZ"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="Nhv-ju-NFy"/>
                     </view>
                     <connections>
                         <segue destination="FUR-93-wAE" kind="presentation" id="92b-2j-oHO"/>
@@ -262,10 +278,6 @@
         <scene sceneID="PTs-0I-MUM">
             <objects>
                 <viewController automaticallyAdjustsScrollViewInsets="NO" id="rwW-6b-KRB" customClass="VenuesListViewController" customModule="VodaFoodies" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="gnJ-hE-BXv"/>
-                        <viewControllerLayoutGuide type="bottom" id="Nf1-vt-SiK"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8VZ-X9-ecU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -301,11 +313,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="qfp-Mc-H5J" secondAttribute="trailing" id="K0Q-pu-iXT"/>
-                            <constraint firstItem="qfp-Mc-H5J" firstAttribute="top" secondItem="gnJ-hE-BXv" secondAttribute="bottom" id="Qac-2H-Wkc"/>
-                            <constraint firstItem="qfp-Mc-H5J" firstAttribute="leading" secondItem="8VZ-X9-ecU" secondAttribute="leading" id="Uda-dE-Jce"/>
-                            <constraint firstItem="Nf1-vt-SiK" firstAttribute="top" secondItem="qfp-Mc-H5J" secondAttribute="bottom" id="oKM-19-kVW"/>
+                            <constraint firstItem="2Ag-OC-Xzq" firstAttribute="trailing" secondItem="qfp-Mc-H5J" secondAttribute="trailing" id="K0Q-pu-iXT"/>
+                            <constraint firstItem="qfp-Mc-H5J" firstAttribute="top" secondItem="2Ag-OC-Xzq" secondAttribute="top" id="Qac-2H-Wkc"/>
+                            <constraint firstItem="qfp-Mc-H5J" firstAttribute="leading" secondItem="2Ag-OC-Xzq" secondAttribute="leading" id="Uda-dE-Jce"/>
+                            <constraint firstItem="2Ag-OC-Xzq" firstAttribute="bottom" secondItem="qfp-Mc-H5J" secondAttribute="bottom" id="oKM-19-kVW"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="2Ag-OC-Xzq"/>
                     </view>
                     <navigationItem key="navigationItem" id="z6m-KQ-pr9">
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="cancel" id="AQ0-F1-2eN">
@@ -327,10 +340,6 @@
         <scene sceneID="MRH-Mh-4S6">
             <objects>
                 <viewController hidesBottomBarWhenPushed="YES" id="qHW-z3-vys" customClass="OrderItemDetailViewController" customModule="VodaFoodies" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Qxz-6D-XCK"/>
-                        <viewControllerLayoutGuide type="bottom" id="Cy2-j5-cRk"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="VID-3Q-KqG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -396,11 +405,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="udW-18-Qfh" firstAttribute="top" secondItem="Qxz-6D-XCK" secondAttribute="bottom" id="8dy-VO-bsU"/>
-                            <constraint firstItem="Cy2-j5-cRk" firstAttribute="top" secondItem="udW-18-Qfh" secondAttribute="bottom" id="FKP-ir-5HL"/>
-                            <constraint firstAttribute="trailing" secondItem="udW-18-Qfh" secondAttribute="trailing" id="O4N-7M-3Ib"/>
-                            <constraint firstItem="udW-18-Qfh" firstAttribute="leading" secondItem="VID-3Q-KqG" secondAttribute="leading" id="yoe-mU-55w"/>
+                            <constraint firstItem="udW-18-Qfh" firstAttribute="top" secondItem="YzD-ha-bCv" secondAttribute="top" id="8dy-VO-bsU"/>
+                            <constraint firstItem="YzD-ha-bCv" firstAttribute="bottom" secondItem="udW-18-Qfh" secondAttribute="bottom" id="FKP-ir-5HL"/>
+                            <constraint firstItem="YzD-ha-bCv" firstAttribute="trailing" secondItem="udW-18-Qfh" secondAttribute="trailing" id="O4N-7M-3Ib"/>
+                            <constraint firstItem="udW-18-Qfh" firstAttribute="leading" secondItem="YzD-ha-bCv" secondAttribute="leading" id="yoe-mU-55w"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="YzD-ha-bCv"/>
                     </view>
                     <connections>
                         <outlet property="contentTable" destination="udW-18-Qfh" id="2In-xW-2ey"/>
@@ -414,10 +424,6 @@
         <scene sceneID="wAk-P0-RIj">
             <objects>
                 <viewController hidesBottomBarWhenPushed="YES" id="U41-Sk-kAY" customClass="PersonOrderDetailsViewController" customModule="VodaFoodies" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="f9e-0v-DOx"/>
-                        <viewControllerLayoutGuide type="bottom" id="pPp-I1-V5F"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="11U-SN-pkk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -506,11 +512,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="pPp-I1-V5F" firstAttribute="top" secondItem="b4v-vm-fd7" secondAttribute="bottom" id="DnZ-Ul-Swm"/>
-                            <constraint firstAttribute="trailing" secondItem="b4v-vm-fd7" secondAttribute="trailing" id="PMu-nl-xa7"/>
-                            <constraint firstItem="b4v-vm-fd7" firstAttribute="top" secondItem="f9e-0v-DOx" secondAttribute="bottom" id="TwN-86-mKF"/>
-                            <constraint firstItem="b4v-vm-fd7" firstAttribute="leading" secondItem="11U-SN-pkk" secondAttribute="leading" id="rqs-Em-aMZ"/>
+                            <constraint firstItem="5Fe-w9-BuG" firstAttribute="bottom" secondItem="b4v-vm-fd7" secondAttribute="bottom" id="DnZ-Ul-Swm"/>
+                            <constraint firstItem="5Fe-w9-BuG" firstAttribute="trailing" secondItem="b4v-vm-fd7" secondAttribute="trailing" id="PMu-nl-xa7"/>
+                            <constraint firstItem="b4v-vm-fd7" firstAttribute="top" secondItem="5Fe-w9-BuG" secondAttribute="top" id="TwN-86-mKF"/>
+                            <constraint firstItem="b4v-vm-fd7" firstAttribute="leading" secondItem="5Fe-w9-BuG" secondAttribute="leading" id="rqs-Em-aMZ"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="5Fe-w9-BuG"/>
                     </view>
                     <connections>
                         <outlet property="contentTable" destination="b4v-vm-fd7" id="Cjd-Fc-a5x"/>
@@ -524,10 +531,6 @@
         <scene sceneID="FAP-1Z-gUA">
             <objects>
                 <viewController automaticallyAdjustsScrollViewInsets="NO" id="Sc8-ad-hdI" customClass="MenuViewController" customModule="VodaFoodies" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Kv6-ZV-40W"/>
-                        <viewControllerLayoutGuide type="bottom" id="Bwu-WB-BgD"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="6xu-78-lsO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -607,11 +610,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Bwu-WB-BgD" firstAttribute="top" secondItem="s0y-fF-5VH" secondAttribute="bottom" id="HgN-jI-qlq"/>
-                            <constraint firstItem="s0y-fF-5VH" firstAttribute="leading" secondItem="6xu-78-lsO" secondAttribute="leading" id="MD6-zp-hl1"/>
-                            <constraint firstAttribute="trailing" secondItem="s0y-fF-5VH" secondAttribute="trailing" id="ai5-zf-aON"/>
-                            <constraint firstItem="s0y-fF-5VH" firstAttribute="top" secondItem="Kv6-ZV-40W" secondAttribute="bottom" id="l4e-c5-iN9"/>
+                            <constraint firstItem="soz-2t-8Gj" firstAttribute="bottom" secondItem="s0y-fF-5VH" secondAttribute="bottom" id="HgN-jI-qlq"/>
+                            <constraint firstItem="s0y-fF-5VH" firstAttribute="leading" secondItem="soz-2t-8Gj" secondAttribute="leading" id="MD6-zp-hl1"/>
+                            <constraint firstItem="soz-2t-8Gj" firstAttribute="trailing" secondItem="s0y-fF-5VH" secondAttribute="trailing" id="ai5-zf-aON"/>
+                            <constraint firstItem="s0y-fF-5VH" firstAttribute="top" secondItem="soz-2t-8Gj" secondAttribute="top" id="l4e-c5-iN9"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="soz-2t-8Gj"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="GbP-fE-645">
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="done" id="bl6-98-Ex4">
@@ -636,10 +640,6 @@
         <scene sceneID="n4V-5n-WAS">
             <objects>
                 <viewController automaticallyAdjustsScrollViewInsets="NO" id="xWR-V2-OMX" customClass="ConfirmOrderViewController" customModule="VodaFoodies" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="WyB-U7-DXw"/>
-                        <viewControllerLayoutGuide type="bottom" id="hZI-G6-bfX"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="2nR-TV-Lgb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -814,18 +814,19 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="zNd-rQ-Jtg" secondAttribute="trailing" constant="10" id="0eF-bd-HpZ"/>
+                            <constraint firstItem="gAi-vo-RGb" firstAttribute="trailing" secondItem="zNd-rQ-Jtg" secondAttribute="trailing" constant="10" id="0eF-bd-HpZ"/>
                             <constraint firstItem="lT6-b9-9ui" firstAttribute="top" secondItem="zNd-rQ-Jtg" secondAttribute="bottom" constant="10" id="6or-eR-oyP"/>
-                            <constraint firstItem="Bn0-tk-PmO" firstAttribute="top" secondItem="WyB-U7-DXw" secondAttribute="bottom" id="BQf-Iz-8bs"/>
+                            <constraint firstItem="Bn0-tk-PmO" firstAttribute="top" secondItem="gAi-vo-RGb" secondAttribute="top" id="BQf-Iz-8bs"/>
                             <constraint firstAttribute="trailingMargin" secondItem="lT6-b9-9ui" secondAttribute="trailing" constant="100" id="Kyz-tD-YK3"/>
-                            <constraint firstAttribute="trailing" secondItem="hER-I8-7Ud" secondAttribute="trailing" constant="5" id="NQ0-nC-HF5"/>
+                            <constraint firstItem="gAi-vo-RGb" firstAttribute="trailing" secondItem="hER-I8-7Ud" secondAttribute="trailing" constant="5" id="NQ0-nC-HF5"/>
                             <constraint firstItem="hER-I8-7Ud" firstAttribute="top" secondItem="Bn0-tk-PmO" secondAttribute="bottom" constant="5" id="Nui-15-jEA"/>
-                            <constraint firstItem="Bn0-tk-PmO" firstAttribute="centerX" secondItem="2nR-TV-Lgb" secondAttribute="centerX" id="PEc-P5-Mlw"/>
-                            <constraint firstItem="hER-I8-7Ud" firstAttribute="leading" secondItem="2nR-TV-Lgb" secondAttribute="leading" constant="5" id="aL8-gi-cyT"/>
-                            <constraint firstItem="zNd-rQ-Jtg" firstAttribute="leading" secondItem="2nR-TV-Lgb" secondAttribute="leading" constant="10" id="iZJ-fR-O0Y"/>
+                            <constraint firstItem="Bn0-tk-PmO" firstAttribute="centerX" secondItem="gAi-vo-RGb" secondAttribute="centerX" id="PEc-P5-Mlw"/>
+                            <constraint firstItem="hER-I8-7Ud" firstAttribute="leading" secondItem="gAi-vo-RGb" secondAttribute="leading" constant="5" id="aL8-gi-cyT"/>
+                            <constraint firstItem="zNd-rQ-Jtg" firstAttribute="leading" secondItem="gAi-vo-RGb" secondAttribute="leading" constant="10" id="iZJ-fR-O0Y"/>
                             <constraint firstItem="lT6-b9-9ui" firstAttribute="leading" secondItem="2nR-TV-Lgb" secondAttribute="leadingMargin" constant="100" id="jXb-OZ-F2f"/>
                             <constraint firstItem="zNd-rQ-Jtg" firstAttribute="top" secondItem="hER-I8-7Ud" secondAttribute="bottom" constant="15" id="nf3-h9-X0n"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="gAi-vo-RGb"/>
                     </view>
                     <navigationItem key="navigationItem" id="cb8-gM-dC6">
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="cancel" id="c8r-GW-Cdx">
@@ -851,10 +852,6 @@
         <scene sceneID="0db-Jd-5ed">
             <objects>
                 <viewController automaticallyAdjustsScrollViewInsets="NO" id="eoY-Fy-CHg" customClass="OpenOrdersViewController" customModule="VodaFoodies" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="K6D-S3-tDr"/>
-                        <viewControllerLayoutGuide type="bottom" id="5Cm-5A-odk"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="2dJ-aG-nHT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -866,11 +863,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="3dU-pv-wNe" secondAttribute="trailing" id="4VH-S2-3IZ"/>
-                            <constraint firstItem="5Cm-5A-odk" firstAttribute="top" secondItem="3dU-pv-wNe" secondAttribute="bottom" id="FkK-yv-xp1"/>
-                            <constraint firstItem="3dU-pv-wNe" firstAttribute="top" secondItem="K6D-S3-tDr" secondAttribute="bottom" id="puW-l5-8HD"/>
-                            <constraint firstItem="3dU-pv-wNe" firstAttribute="leading" secondItem="2dJ-aG-nHT" secondAttribute="leading" id="vhW-fk-oKk"/>
+                            <constraint firstItem="K7n-YM-6pm" firstAttribute="trailing" secondItem="3dU-pv-wNe" secondAttribute="trailing" id="4VH-S2-3IZ"/>
+                            <constraint firstItem="K7n-YM-6pm" firstAttribute="bottom" secondItem="3dU-pv-wNe" secondAttribute="bottom" id="FkK-yv-xp1"/>
+                            <constraint firstItem="3dU-pv-wNe" firstAttribute="top" secondItem="K7n-YM-6pm" secondAttribute="top" id="puW-l5-8HD"/>
+                            <constraint firstItem="3dU-pv-wNe" firstAttribute="leading" secondItem="K7n-YM-6pm" secondAttribute="leading" id="vhW-fk-oKk"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="K7n-YM-6pm"/>
                     </view>
                     <navigationItem key="navigationItem" id="k3n-xB-HbL">
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="nzd-c2-grn">
@@ -892,10 +890,6 @@
         <scene sceneID="Yrn-T2-DUm">
             <objects>
                 <viewController automaticallyAdjustsScrollViewInsets="NO" id="zms-Wq-3kN" customClass="MyFoodViewController" customModule="VodaFoodies" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="cbH-Hy-sVz"/>
-                        <viewControllerLayoutGuide type="bottom" id="rOa-Vx-qY3"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="GRu-XN-z3h">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -952,11 +946,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="0iA-Ly-3OU" firstAttribute="top" secondItem="cbH-Hy-sVz" secondAttribute="bottom" id="5ar-Og-vR1"/>
-                            <constraint firstItem="0iA-Ly-3OU" firstAttribute="leading" secondItem="GRu-XN-z3h" secondAttribute="leading" id="63G-ej-B2w"/>
-                            <constraint firstAttribute="trailing" secondItem="0iA-Ly-3OU" secondAttribute="trailing" id="dOA-Jo-FNW"/>
-                            <constraint firstItem="rOa-Vx-qY3" firstAttribute="top" secondItem="0iA-Ly-3OU" secondAttribute="bottom" id="xOW-Sl-76J"/>
+                            <constraint firstItem="0iA-Ly-3OU" firstAttribute="top" secondItem="rV6-QJ-c6H" secondAttribute="top" id="5ar-Og-vR1"/>
+                            <constraint firstItem="0iA-Ly-3OU" firstAttribute="leading" secondItem="rV6-QJ-c6H" secondAttribute="leading" id="63G-ej-B2w"/>
+                            <constraint firstItem="rV6-QJ-c6H" firstAttribute="trailing" secondItem="0iA-Ly-3OU" secondAttribute="trailing" id="dOA-Jo-FNW"/>
+                            <constraint firstItem="rV6-QJ-c6H" firstAttribute="bottom" secondItem="0iA-Ly-3OU" secondAttribute="bottom" id="xOW-Sl-76J"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="rV6-QJ-c6H"/>
                     </view>
                     <navigationItem key="navigationItem" id="Ivt-oS-cLX"/>
                     <connections>
@@ -971,10 +966,6 @@
         <scene sceneID="Ao3-aa-avb">
             <objects>
                 <viewController id="HLm-Ai-Bec" customClass="ProfileViewController" customModule="VodaFoodies" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="ATE-b6-2Jr"/>
-                        <viewControllerLayoutGuide type="bottom" id="Lmw-zL-1EM"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="9A5-lb-hIX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1016,6 +1007,7 @@
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="fP9-3L-bPi"/>
                     </view>
                     <navigationItem key="navigationItem" id="NtX-Fx-BsZ"/>
                     <connections>
@@ -1089,10 +1081,6 @@
         <scene sceneID="f1m-F4-pJX">
             <objects>
                 <viewController id="aha-lX-JZD" customClass="OrderDetailsViewController" customModule="VodaFoodies" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="h3J-Tf-wIf"/>
-                        <viewControllerLayoutGuide type="bottom" id="Mhz-cq-tgb"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="IvU-kh-cV6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1134,7 +1122,7 @@
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k5w-TV-OeA">
-                                        <rect key="frame" x="89" y="64" width="38" height="27"/>
+                                        <rect key="frame" x="89" y="63.5" width="38" height="27"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <state key="normal" title="Button"/>
                                     </button>
@@ -1303,17 +1291,18 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="JIp-tG-Kly" firstAttribute="leading" secondItem="IvU-kh-cV6" secondAttribute="leading" constant="15" id="4Cc-73-fsu"/>
+                            <constraint firstItem="JIp-tG-Kly" firstAttribute="leading" secondItem="fVy-Dc-uiY" secondAttribute="leading" constant="15" id="4Cc-73-fsu"/>
                             <constraint firstItem="JIp-tG-Kly" firstAttribute="top" secondItem="8x1-RL-FB4" secondAttribute="bottom" constant="8" id="526-uz-vXz"/>
-                            <constraint firstAttribute="trailing" secondItem="JIp-tG-Kly" secondAttribute="trailing" constant="15" id="FnN-aw-Pn8"/>
-                            <constraint firstItem="8x1-RL-FB4" firstAttribute="leading" secondItem="IvU-kh-cV6" secondAttribute="leading" id="Kfx-K2-FPR"/>
-                            <constraint firstItem="Urz-Ys-PLf" firstAttribute="leading" secondItem="IvU-kh-cV6" secondAttribute="leading" constant="16" id="bR7-L2-Cfz"/>
-                            <constraint firstItem="8x1-RL-FB4" firstAttribute="top" secondItem="h3J-Tf-wIf" secondAttribute="bottom" id="cfT-dg-b4b"/>
+                            <constraint firstItem="fVy-Dc-uiY" firstAttribute="trailing" secondItem="JIp-tG-Kly" secondAttribute="trailing" constant="15" id="FnN-aw-Pn8"/>
+                            <constraint firstItem="8x1-RL-FB4" firstAttribute="leading" secondItem="fVy-Dc-uiY" secondAttribute="leading" id="Kfx-K2-FPR"/>
+                            <constraint firstItem="Urz-Ys-PLf" firstAttribute="leading" secondItem="fVy-Dc-uiY" secondAttribute="leading" constant="16" id="bR7-L2-Cfz"/>
+                            <constraint firstItem="8x1-RL-FB4" firstAttribute="top" secondItem="fVy-Dc-uiY" secondAttribute="top" id="cfT-dg-b4b"/>
                             <constraint firstItem="Urz-Ys-PLf" firstAttribute="top" secondItem="JIp-tG-Kly" secondAttribute="bottom" constant="8" id="d04-2X-w7L"/>
-                            <constraint firstAttribute="trailing" secondItem="Urz-Ys-PLf" secondAttribute="trailing" constant="16" id="lh8-nw-G4v"/>
-                            <constraint firstAttribute="trailing" secondItem="8x1-RL-FB4" secondAttribute="trailing" id="s4Q-vb-aZb"/>
-                            <constraint firstItem="Mhz-cq-tgb" firstAttribute="top" secondItem="Urz-Ys-PLf" secondAttribute="bottom" constant="8" id="twj-jY-Zia"/>
+                            <constraint firstItem="fVy-Dc-uiY" firstAttribute="trailing" secondItem="Urz-Ys-PLf" secondAttribute="trailing" constant="16" id="lh8-nw-G4v"/>
+                            <constraint firstItem="fVy-Dc-uiY" firstAttribute="trailing" secondItem="8x1-RL-FB4" secondAttribute="trailing" id="s4Q-vb-aZb"/>
+                            <constraint firstItem="fVy-Dc-uiY" firstAttribute="bottom" secondItem="Urz-Ys-PLf" secondAttribute="bottom" constant="8" id="twj-jY-Zia"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="fVy-Dc-uiY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Order Details" id="cdv-EI-LeB">
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="XBS-yR-RDz">
@@ -1365,6 +1354,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Logo" width="556" height="556"/>
+        <image name="catchPhrase" width="245" height="131"/>
         <image name="orderList" width="256" height="256"/>
     </resources>
     <inferredMetricsTieBreakers>

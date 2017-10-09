@@ -14,10 +14,52 @@ import Pastel
 
 class LoginViewController: BaseViewController {
     
+    //View Outlets
+    
+    @IBOutlet weak var logoImg: UIImageView!
+    @IBOutlet weak var fbLoginBtn: UIButton!
+    @IBOutlet weak var logoCenterConstraint: NSLayoutConstraint!
+    @IBOutlet weak var catchPhraseImg: UIImageView!
+    @IBOutlet weak var madeLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        addGradientBackground()
+        fbLoginBtn.layer.cornerRadius = 5
+        fbLoginBtn.clipsToBounds = true
         
+        catchPhraseImg.transform = CGAffineTransform(scaleX: 0, y: 0)
+        fbLoginBtn.alpha = 0
+        madeLabel.alpha = 0
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        logoCenterConstraint.constant = -100
+        
+        UIView.animate(withDuration: 1, animations: { [weak self] in
+            self!.view.layoutIfNeeded()
+            self!.catchPhraseImg.transform = CGAffineTransform(scaleX: 1, y: 1)
+        }) { [weak self] (done) in
+            if done{
+                UIView.animate(withDuration: 1, animations: {
+                    self!.fbLoginBtn.alpha = 1
+                }, completion: { [weak self] (done) in
+                    if done{
+                        UIView.animate(withDuration: 0.5, animations: {
+                            self!.madeLabel.alpha = 1
+                        })
+                    }
+                })
+                
+            }
+        }
+        
+        
+    }
+    
+    private func addGradientBackground(){
         // Adding the gradient animated background
         let pastelView = PastelView(frame: view.bounds)
         
@@ -29,18 +71,10 @@ class LoginViewController: BaseViewController {
         pastelView.animationDuration = 3.0
         
         // Custom Color
-        pastelView.setColors([UIColor(red: 156/255, green: 39/255, blue: 176/255, alpha: 1.0),
-                              UIColor(red: 255/255, green: 64/255, blue: 129/255, alpha: 1.0),
-                              UIColor(red: 123/255, green: 31/255, blue: 162/255, alpha: 1.0),
-                              UIColor(red: 32/255, green: 76/255, blue: 255/255, alpha: 1.0),
-                              UIColor(red: 32/255, green: 158/255, blue: 255/255, alpha: 1.0),
-                              UIColor(red: 90/255, green: 120/255, blue: 127/255, alpha: 1.0),
-                              UIColor(red: 58/255, green: 255/255, blue: 217/255, alpha: 1.0)
-            ])
+        pastelView.setColors([UIColor(red: 223/255, green: 233/255, blue: 243/255, alpha: 1.0),UIColor.white ])
         
         pastelView.startAnimation()
         view.insertSubview(pastelView, at: 0)
-        
     }
     
 //    @IBAction func tryAnimation(_ sender: Any) {
