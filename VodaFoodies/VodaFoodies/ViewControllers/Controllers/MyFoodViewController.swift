@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import DZNEmptyDataSet
 
 class MyFoodViewController: BaseViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -30,6 +31,10 @@ class MyFoodViewController: BaseViewController, UITableViewDelegate, UITableView
         
         // Registering Header nib file
         contentTable.register(UINib(nibName: headerNibFileName, bundle: nil) , forHeaderFooterViewReuseIdentifier: headerIdentifier)
+        
+        // Setting empty set placeholder
+        contentTable.emptyDataSetDelegate = self
+        contentTable.emptyDataSetSource = self
         
         //Filling table with temp cells
         fillTable(contentTable, withTempCell: .labelWithDetail)
@@ -149,5 +154,34 @@ class MyFoodViewController: BaseViewController, UITableViewDelegate, UITableView
         
      self.present(alertView, animated: true, completion: nil)
     }
-    
 }
+
+//MARK: - DZN Empty Datasource and delegate
+
+extension MyFoodViewController: DZNEmptyDataSetSource, DZNEmptyDataSetDelegate{
+    
+    func title(forEmptyDataSet scrollView: UIScrollView!) -> NSAttributedString! {
+        let attrs = [NSFontAttributeName: UIFont.boldSystemFont(ofSize: 21),
+                     NSForegroundColorAttributeName: UIColor.darkGray]
+        return NSAttributedString(string: "Aren't You hungry?", attributes: attrs)
+    }
+    
+    func image(forEmptyDataSet scrollView: UIScrollView!) -> UIImage! {
+        return #imageLiteral(resourceName: "tasa")
+    }
+    
+    func description(forEmptyDataSet scrollView: UIScrollView!) -> NSAttributedString! {
+        let paragraph = NSMutableParagraphStyle()
+        paragraph.lineBreakMode = NSLineBreakMode.byWordWrapping
+        paragraph.alignment = NSTextAlignment.center
+        let attrs = [NSFontAttributeName: UIFont.systemFont(ofSize: 17),
+                     NSForegroundColorAttributeName: UIColor.lightGray,
+                     NSParagraphStyleAttributeName: paragraph]
+        return NSAttributedString(string: "Go ahead and make an order with someone. \rOr start a new order", attributes: attrs)
+    }
+    
+    func backgroundColor(forEmptyDataSet scrollView: UIScrollView!) -> UIColor! {
+        return UIColor(red: 240/255, green: 240/255, blue: 245/255, alpha: 1.0)
+    }
+}
+

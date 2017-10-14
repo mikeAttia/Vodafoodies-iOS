@@ -33,6 +33,17 @@ class LoginManager {
         
     }
     
+    func logoutUser(){
+        // Logout from facebook
+        FacebookLogin.LoginManager().logOut()
+        // Logout from Firebase
+        do {try Auth.auth().signOut()}
+        catch let error as NSError{print  (error.localizedDescription)}
+        
+        // Going back to the loginView
+        UIApplication.shared.delegate?.window??.rootViewController = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()
+    }
+    
     private func startLoginChain(controller: UIViewController){
         loginUserWithFb(controller: controller)
     }

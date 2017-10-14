@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import DZNEmptyDataSet
 
 class OpenOrdersViewController: BaseViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -15,6 +16,7 @@ class OpenOrdersViewController: BaseViewController, UITableViewDelegate, UITable
     let orderCellIdentifier = "orderItem"
     let orderDetailsSegue = "viewOrderDetails"
     let viewTitle = "Open Orders"
+    let startAnOrderSegueId = "startAnOrder"
     
     // View Outlets
     @IBOutlet weak var contentTable: UITableView!
@@ -28,6 +30,9 @@ class OpenOrdersViewController: BaseViewController, UITableViewDelegate, UITable
         
         // Setting up table view
         contentTable.register(UINib(nibName: cellNibName , bundle: nil) , forCellReuseIdentifier: orderCellIdentifier)
+        // Setting table placeholder delegate and datasrouce
+        contentTable.emptyDataSetSource = self
+        contentTable.emptyDataSetDelegate = self
         //Creating and firing temp delegate
         fillTable(contentTable, withTempCell: .openOrderCell)
     }
@@ -38,7 +43,6 @@ class OpenOrdersViewController: BaseViewController, UITableViewDelegate, UITable
     }
     
     private func handleRequestresult(orders: [Order], err: RequestError?){
-        // TODO: hide the loading indicator
         guard err == nil else {
             printError((err?.error)!)
             //TODO: Show error message to user
@@ -73,8 +77,44 @@ class OpenOrdersViewController: BaseViewController, UITableViewDelegate, UITable
             let vc = segue.destination as? OrderDetailsViewController
             vc?.order = orders?[index]
         }
-        
+    }
+}
+
+
+//MARK: - DZN Empty Datasource and delegate
+
+extension OpenOrdersViewController: DZNEmptyDataSetSource, DZNEmptyDataSetDelegate{
+    
+    func title(forEmptyDataSet scrollView: UIScrollView!) -> NSAttributedString! {
+        let attrs = [NSFontAttributeName: UIFont.boldSystemFont(ofSize: 21),
+                     NSForegroundColorAttributeName: UIColor.darkGray]
+        return NSAttributedString(string: "No Orders!", attributes: attrs)
     }
     
+    func image(forEmptyDataSet scrollView: UIScrollView!) -> UIImage! {
+        return #imageLiteral(resourceName: "pot")
+    }
     
+    func description(forEmptyDataSet scrollView: UIScrollView!) -> NSAttributedString! {
+        let paragraph = NSMutableParagraphStyle()
+        paragraph.lineBreakMode = NSLineBreakMode.byWordWrapping
+        paragraph.alignment = NSTextAlignment.center
+        let attrs = [NSFontAttributeName: UIFont.systemFont(ofSize: 17),
+                     NSForegroundColorAttributeName: UIColor.lightGray,
+                     NSParagraphStyleAttributeName: paragraph]
+        return NSAttributedString(string: "Looks like no body started any orders yet. \n Be a hero and start one now", attributes: attrs)
+    }
+    
+    func buttonTitle(forEmptyDataSet scrollView: UIScrollView!, for state: UIControlState) -> NSAttributedString! {
+        let attrs = [NSForegroundColorAttributeName: UIColor.red ]
+        return NSAttributedString(string: "Start An Order", attributes: attrs)
+    }
+    
+    func emptyDataSet(_ scrollView: UIScrollView!, didTap button: UIButton!) {
+        performSegue(withIdentifier: startAnOrderSegueId, sender: nil)
+    }
+    
+    func backgroundColor(forEmptyDataSet scrollView: UIScrollView!) -> UIColor! {
+        return UIColor(red: 240/255, green: 240/255, blue: 245/255, alpha: 1.0)
+    }
 }

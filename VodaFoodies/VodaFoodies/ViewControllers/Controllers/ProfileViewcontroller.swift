@@ -17,27 +17,42 @@ class ProfileViewController: BaseViewController {
     @IBOutlet weak var profilePic: UIImageView!
     @IBOutlet weak var nameBtn: UIButton!
     @IBOutlet weak var phoneBtn: UIButton!
-    @IBOutlet weak var emailBtn: UIButton!
+    @IBOutlet weak var contactCard: UIView!
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+    override func viewDidLoad() {
+        // setting view
+        self.navigationController?.isNavigationBarHidden = true
+        view.backgroundColor = UIColor(red: 240/255, green: 240/255, blue: 245/255, alpha: 1.0)
+        
+        // Setup pic
+        profilePic.layer.cornerRadius = profilePic.frame.height / 2
+        profilePic.clipsToBounds = true
+//        profilePic.layer.borderColor = UIColor(red: 240/255, green: 240/255, blue: 245/255, alpha: 1.0).cgColor
+//        profilePic.layer.borderWidth = 1
+        
+        // setup contact card
+        contactCard.backgroundColor = UIColor.white
+        contactCard.layer.cornerRadius = 7
+        
+        fillUserData()
+    }
+    
+    func fillUserData(){
         //TESTING
         user.phoneNo = "01285294378"
         ////////
         profilePic.kf.setImage(with: URL(string: user.imageURL))
         nameBtn.setTitle(user.name, for: .normal)
-        emailBtn.setTitle(user.email, for: .normal)
         phoneBtn.setTitle(user.phoneNo, for: .normal)
         nameBtn.titleLabel?.text = user.name
-        emailBtn.titleLabel?.text = user.email
         phoneBtn.titleLabel?.text = user.phoneNo
-        
-        
     }
     
     //MARK: - View actions
     @IBAction func goToFBProfile(_ sender: Any) {
     }
+    
+    
     @IBAction func callUser(_ sender: Any) {
         
         if let url = URL(string: "tel://\(user.phoneNo)"), UIApplication.shared.canOpenURL(url) {
@@ -48,7 +63,9 @@ class ProfileViewController: BaseViewController {
             }
         }
     }
-    @IBAction func openEmail(_ sender: Any) {
+    
+    @IBAction func logoutUser(_ sender: UIButton) {
+        LoginManager().logoutUser()
     }
     
 }

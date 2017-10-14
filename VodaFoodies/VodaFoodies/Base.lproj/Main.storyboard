@@ -22,7 +22,6 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CgH-RM-hUw">
                                 <rect key="frame" x="40" y="562" width="295" height="45"/>
-                                <color key="backgroundColor" red="0.23137254901960785" green="0.34901960784313724" blue="0.59607843137254901" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="hik-jw-fNA"/>
                                 </constraints>
@@ -873,12 +872,12 @@
                     <navigationItem key="navigationItem" id="k3n-xB-HbL">
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="nzd-c2-grn">
                             <connections>
-                                <segue destination="7OD-Nl-RpV" kind="presentation" id="AAD-b2-qew"/>
+                                <segue destination="7OD-Nl-RpV" kind="presentation" identifier="startAnOrder" id="AAD-b2-qew"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="contentTable" destination="3dU-pv-wNe" id="U8K-Ds-qpu"/>
+                        <outlet property="contentTable" destination="3dU-pv-wNe" id="LnV-Og-e3u"/>
                         <segue destination="aha-lX-JZD" kind="show" identifier="viewOrderDetails" id="hai-kG-pmD"/>
                     </connections>
                 </viewController>
@@ -970,48 +969,65 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VHf-hL-7aN">
-                                <rect key="frame" x="33" y="233" width="309" height="231"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VHf-hL-7aN">
+                                <rect key="frame" x="33" y="249" width="309" height="250"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hWq-ui-INC">
-                                        <rect key="frame" x="79" y="-79" width="150" height="150"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hWq-ui-INC">
+                                        <rect key="frame" x="79" y="-75" width="150" height="150"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="150" id="Zjv-zt-hUr"/>
+                                            <constraint firstAttribute="width" constant="150" id="tUu-Ep-BIC"/>
+                                        </constraints>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vn5-ZA-Omm">
-                                        <rect key="frame" x="79" y="79" width="158" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Name"/>
-                                        <connections>
-                                            <action selector="goToFBProfile:" destination="HLm-Ai-Bec" eventType="touchUpInside" id="H4C-rg-J8d"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w9q-Rr-pM3">
-                                        <rect key="frame" x="79" y="117" width="165" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w9q-Rr-pM3">
+                                        <rect key="frame" x="125" y="140" width="59" height="38"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                         <state key="normal" title="Phone"/>
                                         <connections>
                                             <action selector="callUser:" destination="HLm-Ai-Bec" eventType="touchUpInside" id="dhL-WY-xEY"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wTQ-MZ-pSJ">
-                                        <rect key="frame" x="79" y="146" width="165" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Email"/>
-                                        <connections>
-                                            <action selector="openEmail:" destination="HLm-Ai-Bec" eventType="touchUpInside" id="AgR-hH-CcW"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="hWq-ui-INC" firstAttribute="top" secondItem="VHf-hL-7aN" secondAttribute="top" constant="-75" id="8Nz-TH-odu"/>
+                                    <constraint firstItem="w9q-Rr-pM3" firstAttribute="centerX" secondItem="VHf-hL-7aN" secondAttribute="centerX" id="Dxt-aB-8aI"/>
+                                    <constraint firstItem="hWq-ui-INC" firstAttribute="centerX" secondItem="VHf-hL-7aN" secondAttribute="centerX" id="ehD-Qc-32o"/>
+                                    <constraint firstAttribute="height" constant="250" id="paY-bF-kxN"/>
+                                </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vn5-ZA-Omm">
+                                <rect key="frame" x="153" y="334" width="69" height="45"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <state key="normal" title="Name"/>
+                                <connections>
+                                    <action selector="goToFBProfile:" destination="HLm-Ai-Bec" eventType="touchUpInside" id="H4C-rg-J8d"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yPz-gV-uce">
+                                <rect key="frame" x="163" y="463" width="48" height="30"/>
+                                <state key="normal" title="Logout"/>
+                                <connections>
+                                    <action selector="logoutUser:" destination="HLm-Ai-Bec" eventType="touchUpInside" id="btc-4A-acK"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="yPz-gV-uce" firstAttribute="top" secondItem="VHf-hL-7aN" secondAttribute="bottom" constant="-36" id="66t-Jc-yAK"/>
+                            <constraint firstItem="vn5-ZA-Omm" firstAttribute="centerX" secondItem="VHf-hL-7aN" secondAttribute="centerX" id="DSW-Uj-u3q"/>
+                            <constraint firstItem="vn5-ZA-Omm" firstAttribute="top" secondItem="hWq-ui-INC" secondAttribute="bottom" constant="10" id="fXX-ey-V2W"/>
+                            <constraint firstItem="VHf-hL-7aN" firstAttribute="centerY" secondItem="fP9-3L-bPi" secondAttribute="centerY" constant="33" id="nKl-Er-WbT"/>
+                            <constraint firstItem="VHf-hL-7aN" firstAttribute="leading" secondItem="fP9-3L-bPi" secondAttribute="leading" constant="33" id="ngb-1Y-YFh"/>
+                            <constraint firstItem="w9q-Rr-pM3" firstAttribute="top" secondItem="vn5-ZA-Omm" secondAttribute="bottom" constant="10" id="smy-it-eWm"/>
+                            <constraint firstItem="fP9-3L-bPi" firstAttribute="trailing" secondItem="VHf-hL-7aN" secondAttribute="trailing" constant="33" id="tFJ-Vr-dGS"/>
+                            <constraint firstItem="yPz-gV-uce" firstAttribute="centerX" secondItem="VHf-hL-7aN" secondAttribute="centerX" id="vRo-5Z-EFL"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="fP9-3L-bPi"/>
                     </view>
                     <navigationItem key="navigationItem" id="NtX-Fx-BsZ"/>
                     <connections>
-                        <outlet property="emailBtn" destination="wTQ-MZ-pSJ" id="l44-34-0fN"/>
+                        <outlet property="contactCard" destination="VHf-hL-7aN" id="Gml-Qw-IAX"/>
                         <outlet property="nameBtn" destination="vn5-ZA-Omm" id="wSs-pn-TMC"/>
                         <outlet property="phoneBtn" destination="w9q-Rr-pM3" id="i7B-nP-d7A"/>
                         <outlet property="profilePic" destination="hWq-ui-INC" id="wsv-dr-CcI"/>
@@ -1122,7 +1138,7 @@
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k5w-TV-OeA">
-                                        <rect key="frame" x="89" y="63.5" width="38" height="27"/>
+                                        <rect key="frame" x="89" y="64" width="38" height="27"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <state key="normal" title="Button"/>
                                     </button>

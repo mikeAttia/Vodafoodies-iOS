@@ -34,6 +34,7 @@
 		8A38A9E21F589B8500DEEBAE /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A38A9E11F589B8500DEEBAE /* DataStore.swift */; };
 		8A38A9E41F589BA700DEEBAE /* ResponseParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A38A9E31F589BA700DEEBAE /* ResponseParser.swift */; };
 		8A38A9E61F58AC9700DEEBAE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A38A9E51F58AC9700DEEBAE /* Constants.swift */; };
+		8A519D8D1F911A10002B45F1 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A519D8C1F911A10002B45F1 /* Colors.swift */; };
 		8A5F157D1F671E7400D9B8E4 /* TagLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5F157C1F671E7400D9B8E4 /* TagLabel.swift */; };
 		8A7210061F65BF8B0055BD16 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7210051F65BF8B0055BD16 /* Order.swift */; };
 		8A9F76851F798D90003BBCBD /* TimeString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9F76841F798D90003BBCBD /* TimeString.swift */; };
@@ -108,6 +109,7 @@
 		8A38A9E11F589B8500DEEBAE /* DataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 		8A38A9E31F589BA700DEEBAE /* ResponseParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseParser.swift; sourceTree = "<group>"; };
 		8A38A9E51F58AC9700DEEBAE /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		8A519D8C1F911A10002B45F1 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		8A5F157C1F671E7400D9B8E4 /* TagLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagLabel.swift; sourceTree = "<group>"; };
 		8A7210051F65BF8B0055BD16 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		8A9F76841F798D90003BBCBD /* TimeString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeString.swift; sourceTree = "<group>"; };
@@ -217,6 +219,7 @@
 				8A9F76841F798D90003BBCBD /* TimeString.swift */,
 				8AD702F21F890E2A0098BF2F /* UIColor+brighten.swift */,
 				8AD703041F8926F10098BF2F /* TempViewSetup.swift */,
+				8A519D8C1F911A10002B45F1 /* Colors.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -591,6 +594,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-VodaFoodies/Pods-VodaFoodies-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/DZNEmptyDataSet/DZNEmptyDataSet.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework",
@@ -606,6 +610,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DZNEmptyDataSet.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookCore.framework",
@@ -678,6 +683,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8AD702ED1F890AE80098BF2F /* GradientTransition.swift in Sources */,
+				8A519D8D1F911A10002B45F1 /* Colors.swift in Sources */,
 				8AA768E51F34C6D7005BF1AB /* LoginManager.swift in Sources */,
 				8AD702F71F8910200098BF2F /* OpenOrderdTempCellTableViewCell.swift in Sources */,
 				8AD702E91F890AE80098BF2F /* CAGradientLayer+Slide.swift in Sources */,

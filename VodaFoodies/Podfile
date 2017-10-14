@@ -20,8 +20,9 @@ target 'VodaFoodies' do
   # gif support
   pod 'Gifu'
   # login screen gradient animation
-  pod "Pastel"
-
+  pod 'Pastel'
+  # placeholder for Empty dataset tableviews
+  pod 'DZNEmptyDataSet'
 
   target 'VodaFoodiesTests' do
     inherit! :search_paths
